@@ -1,0 +1,352 @@
+/* pages/brandShop/brandShop.wxss */
+
+page {
+  background: #ebebeb;
+}
+
+.brandShopBox {
+  width: 100%;
+}
+
+.brandShop {
+  width: 100%;
+}
+
+.topGearMap {
+  width: 100%;
+  height: 300rpx;
+}
+
+.topGearMap {
+  width: 100%;
+}
+
+.topGearMapSwiper {
+  width: 100%;
+}
+
+.topGearMap swiper {
+  height: 300rpx !important;
+}
+
+.topGearMapSwiper image {
+  width: 100%;
+  height: 300rpx;
+}
+
+.topGearMap navigator {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/*分类标题  */
+
+.topGearMap {
+  width: 100%;
+}
+
+.scroll-view_H {
+  width: 100%;
+  height: 50rpx;
+  display: flex;
+  white-space: nowrap;
+}
+
+.classifiedTitleBox {
+  width: 100%;
+  height: 80rpx;
+}
+
+.scroll-header {
+  white-space: nowrap;
+  width: 100%;
+  height: 80rpx;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #fff;
+  padding:absolute;
+ z-index:100;
+
+}
+
+.scroll-view-item {
+  display: inline-block;
+  padding: 0 30rpx;
+  height: 80rpx;
+  font-size: 26rpx;
+  color: #999;
+  background: #fff;
+  text-align: center;
+  line-height: 80rpx;
+  position: relative;
+}
+
+.greenLine {
+  height: 2rpx;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: none;
+  background: #06881c;
+}
+
+.activeShopLine {
+  color: #06881c !important;
+}
+
+.activeShopLine .greenLine {
+  display: block;
+}
+
+.shopName {
+  font-size: 26rpx;
+  border-top: 2rpx solid #ebebeb;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+.shopItemCell {
+  width: 340rpx;
+}
+
+.shopImage {
+  width: 300rpx;
+  height: 300rpx;
+}
+
+.shopMoney {
+  font-size: 22rpx;
+  color: #f00;
+}
+
+.shopXiaoshou {
+  font-size: 22rpx;
+  color: #999;
+}
+
+.shopInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shopItemCell {
+  background: #fff;
+  padding: 20rpx;
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+}
+
+.shopItemList {
+  padding: 20rpx 20rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.shopItemCell navigator {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.jionshop {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.shopInMationNow {
+  position: fixed;
+  top: 110%;
+  left: 0;
+  opacity: 0.5;
+  background: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+}
+
+.shopInMationNowBox01 {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  
+}
+
+.shopInMationNowBox {
+  width: 100%;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+
+.shopInMationName {
+  height: 140rpx;
+  background: #fff;
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 2rpx solid #ddd;
+  position: relative;
+}
+
+.shopImgSize {
+  width:100rpx;
+  height:100rpx;
+  position:relative;
+  top:15rpx;
+
+}
+
+.shopInMationTitle {
+  height: 140rpx;
+  width: calc(100% - 300rpx);
+  margin-left: 20rpx;
+}
+
+.shopInMationName01 {
+ height:70rpx;
+line-height:70rpx;
+font-size:26rpx;
+-webkit-line-clamp:1;
+-webkit-box-orient:vertical;
+width:448rpx;
+display:-webkit-box;
+overflow:hidden;
+text-overflow:ellipsis;
+
+}
+
+.shopInMationPrice {
+  color: #f00;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 22rpx;
+}
+
+.Specifi {
+  border-bottom: 2rpx solid #ddd;
+}
+
+.SpecifiName {
+  font-size: 26rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.SpecifiItem {
+  height: 45rpx;
+  color: #333;
+  line-height: 45rpx;
+  padding: 0 20rpx;
+  font-size: 22rpx;
+  margin-bottom: 20rpx;
+  background: #eee;
+  margin-right: 20rpx;
+}
+
+.SpecifiContent {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.isSelect {
+  background: #06881c;
+  color: #fff;
+}
+
+.shoppurchaseTitle {
+  font-size: 24rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+}
+
+.shoppurchaseName {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 100rpx;
+}
+
+.jionShopCar {
+  background: #06881c;
+  color: #fff;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 30rpx;
+}
+
+/*网上找的插件  */
+
+/*主容器*/
+
+.stepper {
+  /* width:80px; */
+  height: 50rpx;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+/*加号和减号*/
+
+.stepper text {
+  float: left;
+  width: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+}
+
+/*数值*/
+
+.stepper input {
+  width: 80rpx;
+  height: 50rpx;
+  float: left;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 22rpx;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  min-height: 50rpx !important;
+  line-height: 50rpx;
+}
+
+/*普通样式*/
+
+.stepper .normal {
+  color: black;
+}
+
+/*禁用样式*/
+
+.stepper .disable {
+  color: #ccc;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 20rpx;
+  right: 0;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.yangshiBox
+{
+  position: relative
+}
+
+.zhezhao
+{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  top: 0;
+  left: 0;
+
+}

@@ -1,0 +1,25 @@
+<view class="cu-timeline">
+ <!-- <view class="bg-green cu-btn {{toggleDelay?'animation-slide-bottom':''}} margin-sm basis-sm shadow" style="animation-delay: {{(index+1)*0.1}}s;" wx:for="{{indexmessage}}" wx:key="{{index}}"> -->
+  <view class="cu-item text-green" wx:for="{{indexmessage}}" wx:key>
+    <view class="bg-green content shadow-blur">
+      <view class="cu-capsule radius">
+        <!-- <view class="cu-tag bg-white text-green"></view>
+        <view class="cu-tag line-white">2019/02/25</view> -->
+        <view class="cu-capsule radius">
+          <view class="cu-tag bg-brown ">
+            <text class="icon-likefill"></text>
+          </view>
+          <view class="cu-tag line-brown">
+            {{item.add_time}}
+          </view>
+        </view>
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>{{item.content}}</view>
+      </view>
+    </view>
+    </view>
+  <!-- </view>
+
+   -->
+</view>

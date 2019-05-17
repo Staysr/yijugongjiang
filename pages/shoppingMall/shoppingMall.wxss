@@ -1,0 +1,294 @@
+/* pages/shoppingMall/shoppingMall.wxss */
+
+page {
+  background: #ebebeb;
+  min-height: 100%;
+  display: block;
+}
+
+.searchBoxView {
+  background: #ebebeb;
+  padding: 20rpx;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index:999;
+
+}
+
+.searchBoxViewNav {
+  height: 75rpx;
+  width: 100%;
+  background: #fff;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 75rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchImg {
+  height: 38rpx;
+  width: 38rpx;
+}
+
+/*左侧  */
+
+.classifiedGoodsName {
+  /* background: #fff; */
+}
+
+.scroll-view-item {
+  padding: 20rpx;
+  font-size: 26rpx;
+  text-align: center;
+  line-height: 40rpx;
+  border-bottom: 2rpx solid #ebebeb;
+}
+
+.classifiedGoodsName {
+  width: 160rpx;
+  height: 2rpx;
+  text-align: justify;
+  position: relative;
+}
+
+.classifiedGoodScroll {
+  position: fixed;
+  left: 0;
+  width: 160rpx;
+  letter-spacing: 3rpx;
+  text-align: justify;
+  background: #fff;
+}
+
+.classifiedGoodsContentScroll {
+  position: fixed;
+  right: 20rpx;
+  width: 550rpx;
+  letter-spacing: 3rpx;
+  text-align: justify;
+  /* background: #fff; */
+  font-family: "微软雅黑";
+}
+
+.activeViewItem {
+  color: #fff;
+  background: #06881c;
+}
+
+/*左侧结束  */
+
+/*右侧  */
+
+.classifiedGoods {
+  display: flex;
+  justify-content: space-between;
+}
+
+.classifiedGoodsContent {
+  width: 550rpx;
+  margin-right: 20rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.classifiedGoodShopCell {
+  width: 100%;
+}
+
+.classifiedGoodShopList {
+  width: 100%;
+  margin-bottom: 20rpx;
+}
+
+.classifiedGoodShopTitleBox {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10rpx;
+}
+
+.classifiedGoodShopTitle {
+  font-size: 26rpx;
+  line-height: 60rpx;
+  color: #333;
+  width: 350rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.classifiedGoodShopShowMore {
+  font-size: 22rpx;
+  color: #999;
+  line-height: 60rpx;
+}
+
+.classShopNameCell {
+  width: 267rpx;
+  background: #fff;
+  padding: 20rpx 10rpx;
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+  border-radius: 8rpx;
+  
+}
+
+.classShopNameCell navigator {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.classShopImg {
+  /* 340 / 300  */
+  width: 240rpx;
+  height: 240rpx;
+  display: block;
+  margin: 0 auto;
+}
+
+.shopName {
+  height: 35rpx;
+  font-size: 22rpx;
+  line-height: 35rpx;
+  /* border-top: 2rpx solid #ddd; */
+  /* margin-top: 30rpx; */
+  /* padding-top: 20rpx; */
+  margin-top: 20rpx;
+  position: relative;
+display: inline-block;
+   padding-right: 60rpx;
+   box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+   word-wrap:break-word;
+white-space:pre-wrap;
+}
+
+.shopMuchInfo {
+  font-size: 20rpx;
+}
+
+.shopMuchInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.redColor {
+  color: #f00;
+  width: 50%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.xiaoshou {
+  color: #999;
+  width: 50%;
+  text-align: right;
+}
+
+.classShopNameList {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top:23rpx;
+  width: 50%;
+  float: left;
+}
+
+/*右侧结束  */
+
+.classPlac {
+  height: 120rpx;
+  width: 100%;
+}
+
+.brandShopContent {
+  width: 550rpx;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+}
+
+.brandShopItem {
+  width: 170rpx;
+  margin-right: 20rpx;
+ 
+  margin-bottom: 10rpx;
+  
+}
+.brandShopItem image
+{
+  height: 170rpx;
+  width: 170rpx;
+}
+.brandText
+{
+  width: 100%;
+  font-size: 24rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #333;
+  text-align: center;
+  text-overflow: ellipsis;
+  /* overflow: hidden; */
+  white-space: nowrap;
+
+}
+.brandShopItem:nth-child(3n)
+{
+  margin-right: 0;
+}
+.brandShopItem navigator
+{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.zanwu
+{
+  height: 350rpx;
+  line-height: 350rpx;
+  text-align: center;
+  font-size: 30rpx;
+}
+
+
+.isziying1::after
+{
+
+  content: "自营";
+  background: #f00;
+border-radius: 5rpx;
+  position: absolute;
+ right: 0;
+ top: 0;
+  height: 35rpx;
+  width: 44rpx;
+  font-size: 22rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 35rpx;
+
+
+}
+.shopBox
+{
+  border-top: 2rpx solid #ddd;
+  margin-top: 30rpx;
+}
+
+.bodred{
+  border:  1rpx red solid
+}
+.brandRecommendCell{
+  display:inline;
+}

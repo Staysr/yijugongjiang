@@ -1,0 +1,62 @@
+<!--pages/quickOrder/quickOrder.wxml-->
+<view class='container'>
+
+
+  <view class='quickOrderBox'>
+    <view class='quickOrder'>
+      <!--品牌筛选标题  -->
+      <view class='quickOrderTitle'>
+        <view class='quickOrderTitleBox'>
+          品牌筛选
+        </view>
+      </view>
+      <!--品牌筛选标题  -->
+
+
+
+      <!--品牌内容  -->
+
+      <view class='brandListContent' wx:if="{{brand}}">
+
+        <view class='brandListList'>
+          <view class='brandListCell' wx:for="{{brand}}" wx:for-item="brandE" wx:for-index="brandEindex">
+            <view class='brandListCellTitle'>
+              {{brandE.classname}}
+            </view>
+
+            <view class='brandListContentList'>
+              <view wx:for="{{brandE.seller}}" bindtap='selectBrand' data-brandindex='{{brandEindex}}' data-shopindex='{{allindex}}' data-nowselect="{{branditem.isSelect}}" wx:for-item="branditem" wx:for-index="allindex" class='brandListItem  {{branditem.isSelect?"activeShop":""}}'
+                wx:if="{{allindex < brandE.isShowNum}}">
+                {{branditem.brand}}
+              </view>
+              <view data-activeindex='{{brandEindex}}' class='brandListItem greenImg' wx:if="{{brandE.seller.length > brandE.isShowNum}}" bindtap='allShopItem'>
+                全部
+              </view>
+
+            </view>
+          </view>
+        </view>
+
+
+      </view>
+
+      <!--品牌内容 结束  -->
+
+
+
+
+
+      <!--确定跳转  -->
+      <view class='btnNav1'>
+
+
+        <view class='btnNav okNavtion' bindtap='isOkNav'>
+          确定
+        </view>
+      </view>
+      <!----确定跳转 end  -->
+    </view>
+  </view>
+
+
+</view>

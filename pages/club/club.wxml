@@ -1,0 +1,167 @@
+<!--pages/club/club.wxml-->
+<import src="../../utils/template.wxml" />
+<wxs module="filter" src="../../utils/filter.wxs"></wxs>
+<view class="container">
+  <!--顶部轮播图  -->
+  <view class='topGearMap'>
+    <swiper class='topGearMapSwiper' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}} " indicator-dots="true" indicator-color="rgba(255,255,255,1)" indicator-active-color="#ff9606" circular="true">
+      <block wx:for="{{indexbanner}}" wx:key="{{indexbanner.id}}">
+        <swiper-item>
+          <navigator url='' hover-class='none'>
+            <image src="{{item.pic}}" mode="aspectFill" class="slide-image" />
+          </navigator>
+        </swiper-item>
+
+      </block>
+    </swiper>
+  </view>
+  <!--顶部轮播图结束  -->
+
+  <!--工种分类  -->
+
+  <!-- <view class='classificationWorkBox' wx:if="{{workclass}}">
+    <view class='classificationWork'>
+      <view class='classificationWorkCell' wx:for="{{workclass}}">
+        <navigator url='../clubList/clubList?userid={{item.id}}' hover-class='none'>
+          <image class='classifiImage' src='{{item.pic}}'>
+          </image>
+          <view class='classifiText'>
+          {{item.name}}
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </view> -->
+
+  <!--公众分类结束  -->
+
+
+<!-- 搜索框 -->
+
+
+<!-- <form bindsubmit="formSubmit" >
+
+  <view class='searchBox'>
+    <input class='inputSerach' bindinput='searchInput' name="name" placeholder="姓名、工种、需求" maxlength="-1"
+     confirm-type="search"  
+     />
+    <button class='searchBtn' form-type="submit">搜索</button>
+  </view>
+</form> -->
+<!-- 宜居工匠 二期 俱乐部修改  -->
+<view class='classifications'>
+    <view class='classificationsBox'>
+      <view class='classificationsCell'  bindtap='navtoShopHome' data-classid='{{indexgoods[0].id}}'>
+        <image src='{{image}}julebu/decoration.png'></image>
+        <view class='classifiCationText'>装修公司</view>
+      </view>
+      <view class='classificationsCell'  bindtap='navtoShopHome1' data-classid='2'>
+        <image src='{{image}}julebu//designer.png'></image>
+        <view class='classifiCationText'>设计师</view>
+      </view>
+      <view class='classificationsCell'  bindtap='navtoShopHome1' data-classid='3'>
+          <image src='{{image}}julebu//foreman.png'></image>
+          <view class='classifiCationText'>工长</view>
+      </view>
+         <block wx:for="{{clubclass}}"  wx:key="{{index}}">
+      <view class='classificationsCell' data-id="{{item.id}}" data-name="{{item.name}}" bindtap='clubclasstype'>
+        <!-- <navigator url='../clubList/clubList?userid={{item.id}}' hover-class='none'> -->
+          <image src='{{item.pic}}'></image>
+          <view class='classifiCationText'>{{item.name}}</view>
+        <!-- </navigator> -->
+      </view>
+</block>
+    </view>
+  </view>
+
+<!-- 结束 -->
+
+<!--信息  -->
+ <!-- <view class='workInformation'>
+      <view class='workInformationBox'>
+              <view class='workInformationCell' wx:for="{{users}}">
+                    <navigator url='' hover-class='none'>
+                    <view class='workinForSection'>
+                    <view class='wx_portrait'>
+                     <image src="{{item.pic}}" mode="aspectFill" class="slide-image" />
+                    </view>
+                        <view class='workinForItem'>
+                        姓名：{{item.name}}
+                        </view>
+                        <!-- <view class='workinForItem'>
+                        工种：{{!item.workclass ?"未认证":item.workclass}}
+                        </view> -->
+                    <!-- </view>
+                    <view  class='workinForSection'>
+                        <view class='workinForItem'>
+                        工种：{{item.pricerange}}
+                        </view>
+                     <view  class='workinForSection'>
+                        <view class='workinForItem'>
+                        价格区间：{{item.pricerange}}
+                        </view>
+                        <view class='workinForItem'>
+                        从业年限：{{item.workyear}}
+                        </view>
+                    </view> -->
+                    <!-- 新版图片 -->
+                    <!-- <view class='workinForText'>
+                    {{item.introduce}}
+                    </view> -->
+                    <!-- 字体 -->
+                    <!-- <view class='workinForText'>
+                    {{item.introduce}}
+                    </view> -->
+                     <!-- <view class='workinForSection bordernone'>
+                     
+                        <view class='workinForItem widhtAuto'>
+                           联系电话：{{filter.getTimeNumebr(item.phone)}}
+                        </view>
+                    </view> -->
+                    <!-- </view>
+                    </navigator>
+              </view> -->
+      <!-- </view> -->
+ <!-- </view> -->
+<!--信息展示  -->
+
+
+<view class="cu-bar bg-white margin-top solid-bottom">
+<scroll-view scroll-x class="bg-white nav">
+  <view class="flex text-center">
+    <view class="cu-item flex-sub {{index==TabCur?'text-green cur':''}}" wx:for="{{zgsclass}}" wx:key bindtap="tabSelect" data-class="{{item.id}}" data-type="{{item.type}}" data-id="{{index}}">
+      {{item.name}}
+    </view>
+  </view>
+</scroll-view>
+</view>
+
+<!-- 间距 -->
+<view class='searchBox'></view>
+
+<view class="cu-list menu menu-avatar">
+  <view class="cu-item" bindtap='wx_details' data-name="{{item.name}}" data-type="{{item.type}}" data-id='{{item.id}}' wx:for="{{club}}" wx:key>
+    <view class="cu-avatar round lg" style="background-image:url({{item.head}}); margin-top:12rpx;"></view>
+    <view class='content'>
+      <view class='text-grey' style="float:left;margin-left: 20rpx;color:black;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;width:64px;">{{item.name}}</view>
+      <view class='cu-tag bg-green' style="margin-left: 25rpx;width:107rpx;height:40rpx; ">已认证</view>
+       <view class='cu-tag bg-red' style="margin-left: 25rpx;width:107rpx;height:40rpx; " wx:if="{{item.strict==1}}">严选</view>
+      <view class='text-gray text-sm' style="margin-left: 20rpx">
+        口碑评分:{{item.praise}}   成交量:{{item.turnover}}</view>
+        
+    </view>
+  </view>
+</view>
+
+<view class='pladiv'></view>
+        
+  <!--加载中样式  -->
+      <template is="loadNow"  wx:if="{{isLoadding}}" ></template>
+<!--加载中样式  --> 
+ <!--暂无数据  -->
+  <template is="noMoreCell" wx:if="{{isHasData}}"> </template>
+ <!--暂无数据  -->
+
+
+
+</view>

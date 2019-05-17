@@ -1,0 +1,54 @@
+<!--pages/decoration/decoration.wxml-->
+<!-- <text>pages/decoration/decoration.wxml</text> -->
+<import src="../../utils/template.wxml" />
+<form bindsubmit="formSubmit">
+  <view class="cu-bar search bg-white">
+    <view class='search-form round'>
+      <text class="icon-search"></text>
+      <input type="text" placeholder="搜索" name="name" confirm-type="search"></input>
+    </view>
+    <view class='action'>
+      <button class='cu-btn bg-green shadow-blur round' form-type="submit">搜索</button>
+    </view>
+  </view>
+</form>
+<scroll-view scroll-x class="bg-white nav" scroll-with-animation scroll-left="{{scrollLeft}}">
+  <view class="cu-item {{index==TabCur?'text-green cur':''}}" wx:for="{{wx_class}}" wx:key bindtap='strategyList' data-id="{{index}}" data-classid="{{item.id}}">
+    {{item.name}}
+  </view>
+</scroll-view>
+
+<view class="cu-card article {{isCard?'no-card':''}}" >
+  <view wx:for="{{strategy}}"  wx:key class="cu-item shadow" style='background-color:transparent;box-shadow:0 1rpx 6rpx rgba(0, 0, 0, 0.0)' bindtap='wx_list' data-id="{{item.id}}">
+    <view class="title" style='line-height:100rpx;padding-top:29rpx;'></view>
+    <view class="content">
+      <image src="{{item.pic}}" mode="aspectFill" style='width:263rpx;height:8.4em'></image>
+      <view class="desc" style='justify-content:transparent;'>
+        <view class='fost-size'>{{item.title}}....</view>
+        <view class='' style="font-size:11px">{{item.add_time}} 游览量:{{item.pageview}}</view>
+        <view class='text-zize'>{{item.intro}}.....</view>
+        <view>
+
+        </view>
+      </view>
+    </view>
+    <view style='border-bottom:1px solid rgb(194,194,194);margin-top:67rpx;'></view>
+  </view>
+  
+</view>
+
+<!--加载中样式  -->
+<template is="loadNow" wx:if="{{isLoadding}}"></template>
+<!--加载中样式  -->
+<!--暂无数据  -->
+<template is="noMoreCell" wx:if="{{isHasData}}"> </template>
+<!--暂无数据  -->
+
+<!-- <view class='pladiv'></view> -->
+
+<!--加载中样式  -->
+<!-- <view style='text-align:center;font-size:30rpx;' wx:if="{{isLoadding}}">没有更多了.....</view> -->
+<!--加载中样式  -->
+<!--暂无数据  -->
+<!-- <view  style='text-align:center;font-size:30rpx;' wx:if="{{isHasData}}">没有更多了.....</view> -->
+<!--暂无数据  -->

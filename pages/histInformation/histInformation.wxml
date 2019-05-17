@@ -1,0 +1,70 @@
+
+
+<view class='container'>
+    
+       <view class='bulleInformationBox'>
+            <view class='bulleInformation'>
+                    
+                    <view class='bulleInformationItem'>
+                       <view class='bulleInfoTitle1'>我的历史信心</view>
+                       <view class='bulleInfoTitle2'>我的历史信心我的历史信心我的历史信心我的历史信心我的历史信心我的历史信心我的历史信心我的历史信心我的历史信心我的历史信心我的历史信心我的历史信心</view>
+                       <view class='bulleInfoTitle3'>
+                               <view> 联系方式：陈先生  18888888888</view>
+                              <view>2018-06-14  10:5</view>
+                       </view>
+                    </view>
+                    <!----------------------------  -->
+
+                      <view class='bulleInformationItem'>
+                       <view class='bulleInfoTitle1'>我的历史信心</view>
+                       <view class='bulleInfoTitle2'>我的历史信心我的历史信心我的历史信心我的历史信心我的历史信心我的历史信心我的历史信心我的历史信心我的历史信心我的历史信心我的历史信心我的历史信心</view>
+                       <view class='bulleInfoTitle3'>
+                               <view> 联系方式：陈先生  18888888888</view>
+                              <view>2018-06-14  10:5</view>
+                       </view>
+                    </view>
+                    <!----------------------------  -->
+                      <view class='bulleInformationItem'>
+                       <view class='bulleInfoTitle1'>我的历史信心</view>
+                       <view class='bulleInfoTitle2'>我的历史信心我的历史信心我的历史信心我的历史信心我的历史信心我的历史信心我的历史信心我的历史信心我的历史信心我的历史信心我的历史信心我的历史信心</view>
+                       <view class='bulleInfoTitle3'>
+                               <view> 联系方式：陈先生  18888888888</view>
+                              <view>2018-06-14  10:5</view>
+                       </view>
+                    </view>
+                    <!----------------------------  -->
+                      <view class='bulleInformationItem'>
+                       <view class='bulleInfoTitle1'>我的历史信心</view>
+                       <view class='bulleInfoTitle2'>我的历史信心我的历史信心我的历史信心我的历史信心我的历史信心我的历史信心我的历史信心我的历史信心我的历史信心我的历史信心我的历史信心我的历史信心</view>
+                       <view class='bulleInfoTitle3'>
+                               <view> 联系方式：陈先生  18888888888</view>
+                              <view>2018-06-14  10:5</view>
+                       </view>
+                    </view>
+                    <!----------------------------  -->
+                      <view class='bulleInformationItem'>
+                       <view class='bulleInfoTitle1'>我的历史信心</view>
+                       <view class='bulleInfoTitle2'>我的历史信心我的历史信心我的历史信心我的历史信心我的历史信心我的历史信心我的历史信心我的历史信心我的历史信心我的历史信心我的历史信心我的历史信心</view>
+                       <view class='bulleInfoTitle3'>
+                               <view> 联系方式：陈先生  18888888888</view>
+                              <view>2018-06-14  10:5</view>
+                       </view>
+                    </view>
+                    <!----------------------------  -->
+                      <view class='bulleInformationItem'>
+                       <view class='bulleInfoTitle1'>我的历史信心</view>
+                       <view class='bulleInfoTitle2'>我的历史信心我的历史信心我的历史信心我的历史信心我的历史信心我的历史信心我的历史信心我的历史信心我的历史信心我的历史信心我的历史信心我的历史信心</view>
+                       <view class='bulleInfoTitle3'>
+                               <view> 联系方式：陈先生  18888888888</view>
+                              <view>2018-06-14  10:5</view>
+                       </view>
+                    </view>
+                    <!----------------------------  -->
+
+
+            </view>
+       </view>
+
+
+
+</view>

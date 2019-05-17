@@ -1,0 +1,26 @@
+/* pages/platRegulation/platRegulation.wxss */
+
+.container
+{
+  padding:  40rpx 20rpx;
+}
+rich-text
+{
+  text-align: justify
+}
+.wx_code{
+width:263rpx;
+height:218rpx;
+padding:0 aotu;
+margin-left:217rpx;
+margin-top:32rpx;
+
+
+}
+.textl{
+  padding-top:22rpx;
+padding-bottom:25rpx;
+/* text-align:cent; */
+text-align:center;
+
+}

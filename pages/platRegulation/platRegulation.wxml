@@ -1,0 +1,46 @@
+<!--pages/platRegulation/platRegulation.wxml-->
+<import src="../../wxParse/wxParse.wxml"/> 
+<view class='container'>
+        
+<!--平台规则  -->
+<view class='platRegulation' wx:if="{{isWhoCome == 1}}">
+    <view> 平台规则</view>
+    <view class="wxParse">
+              <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+            </view>
+</view>       
+<!--平台规则  结束-->
+
+<!--平台协议  -->
+<view class='platRegulation' wx:if="{{isWhoCome == 2}}">
+    <view> 平台协议</view>
+      <view class="wxParse">
+              <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+            </view>
+</view>       
+<!--平台协议  结束-->
+
+
+<!--服务介绍  -->
+<view class='platRegulation' wx:if="{{isWhoCome == 3}}">
+    <view> 服务介绍</view>
+       <view class="wxParse">
+              <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+            </view>
+</view>       
+<!--服务介绍  结束-->
+
+<!--关注微信公众号  -->
+<view class='platRegulation' wx:if="{{isWhoCome == 4}}">
+    <view> 关注微信公众号</view>
+       
+      <view>
+        <image class="wx_code"  bindtouchstart='timestart' bindtouchend='timeend' bindtap='saveImg' data-image="{{wx_code}}" src="{{wx_code}}"></image>
+        <view class="textl">长按下载二维码</view>
+      </view>
+       <view class="wxParse">
+              <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+            </view>
+</view>       
+<!--关注微信公众号  结束-->
+</view>

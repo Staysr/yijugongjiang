@@ -1,0 +1,13 @@
+/* pages/infotitle/infotitle.wxss */
+@import "../productDetails/productDetails.wxss";
+.title{
+  margin: 30rpx;
+  color: block;
+  font-size: 38rpx;
+  font-weight:600;
+  letter-spacing:3rpx;
+}
+/* .sharBtn{
+  /* width:20rpx;
+  height:20rpx;
+} */

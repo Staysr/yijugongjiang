@@ -1,0 +1,217 @@
+/* pages/refreshService/refreshService.wxss */
+@import "../addEditAddress/addEditAddress.wxss";
+
+page {
+  background: #ffffff;
+}
+.viewPage {
+  background: #ebebeb;
+}
+.topGearMap {
+  width: 100%;
+  height: 300rpx;
+}
+
+.topGearMap {
+  width: 100%;
+}
+
+.topGearMapSwiper {
+  width: 100%;
+}
+
+.topGearMap swiper {
+  height: 300rpx !important;
+}
+
+.topGearMapSwiper image {
+  width: 100%;
+  height: 300rpx;
+}
+
+.searchBoxView {
+  background: #ebebeb;
+  padding: 20rpx;
+}
+
+.searchBoxViewNav {
+  height: 90rpx;
+  width: 100%;
+  background: #fff;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 90rpx;
+}
+
+.topGearMap navigator {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.refreshServiceTitle {
+  height: 100rpx;
+  width: 100%;
+  /* margin: 20rpx 0; */
+  text-align: center;
+  line-height: 100rpx;
+  background-color: #fff;
+  font-size: 39rpx;
+  position: relative;
+}
+
+.fillInformation {
+  padding: 10rpx 20rpx;
+}
+
+.inputCell {
+  width: 100%;
+  height: 80rpx;
+  font-size: 30rpx;
+  margin-bottom: 20rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  border-radius: 8rpx;
+}
+
+.texttareaCell {
+  height: 240rpx;
+  width: 100%;
+  font-size: 30rpx;
+  background: #fff;
+  line-height: 40rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+  border-radius: 8rpx;
+}
+
+.submitInforMation {
+  padding: 0 20rpx;
+  margin: 40rpx 0 0;
+}
+
+.submitInforMationBtn {
+  color: #fff;
+  width: 100%;
+  height: 85rpx;
+  text-align: center;
+  line-height: 85rpx;
+  font-size: 32rpx;
+}
+
+.palView {
+  height: 18rpx;
+  width: 100%;
+}
+
+.userid {
+  position: absolute;
+  top: -10000%;
+  left: -10000%;
+  opacity: 0;
+}
+
+.fucaiBg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.fucaiBgText {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  text-align: center;
+  line-height: 100rpx;
+}
+
+.getCodebutton {
+  width: 210rpx;
+  height: 80rpx;
+  background: #06881c;
+  color: #fff;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 80rpx;
+  border-radius: 8rpx;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 333;
+}
+
+.getCode {
+  position: relative;
+}
+
+.getCodebutton::before {
+  border: none;
+}
+
+.refresmoney {
+  height: 264rpx;
+  width: 100%;
+  /* margin: 20rpx 0; */
+  text-align: center;
+  line-height: 100rpx;
+  background-color: #fff;
+  font-size: 30rpx;
+  position: relative;
+}
+
+.moneyText {
+  background-color: rgb(6, 136, 28);
+  font-size: 40rpx;
+  color: #fff;
+  text-align: right;
+  margin-right: 42rpx;
+  margin-left: 42rpx;
+  padding:20rpx 10rpx 0 10rpx;
+}
+
+.nomoeny {
+  width: 100%;
+  height: 80rpx;
+}
+
+.text_money {
+  color: rgb(83, 83, 83);
+  width: 75%;
+  margin-right: 100px;
+}
+
+.lifang {
+  text-align: center;
+}
+
+.te {
+  display: inline-block;
+  width: 70%;
+}
+
+.imag {
+  margin-left: 126rpx;
+  top: 37rpx;
+  width: 99rpx;
+  height: 99rpx;
+}
+
+.calculator {
+  color: #06881c;
+  margin-bottom: 15px;
+  padding-left:47rpx;
+
+}
+.kefu{
+  font-size:77rpx;
+margin-left:28rpx;
+}
+
+

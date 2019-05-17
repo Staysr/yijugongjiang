@@ -1,0 +1,57 @@
+<!--pages/babyEvaluation/babyEvaluation.wxml-->
+<import src="../../utils/template.wxml" />
+<view class='container'>
+      <!--评价信息  -->
+        <view class='prevInforMation' wx:for="{{evaluate}}" wx:for-item="evaluateitem">
+          <view class='userOtherEvel'>
+            <view class='userHearderBox'>
+              <image class='userHearder' src='{{evaluateitem.upic}}'></image> {{evaluateitem.name}}
+            </view>
+            <view class='startComsBox'>
+              <view class='starCom' bindtap='userComStart' data-starindex="1">
+                <image src='{{image}}com02.png' wx:if="{{evaluateitem.state<1}}"></image>
+                <image src='{{image}}com01.png' wx:if="{{evaluateitem.state>=1}}"></image>
+              </view>
+              <view class='starCom' bindtap='userComStart' data-starindex="2">
+                <image src='{{image}}com02.png' wx:if="{{evaluateitem.state<2}}"></image>
+                <image src='{{image}}com01.png' wx:if="{{evaluateitem.state>=2}}"></image>
+              </view>
+              <view class='starCom' bindtap='userComStart' data-starindex="3">
+                <image src='{{image}}com02.png' wx:if="{{evaluateitem.state<3}}"></image>
+                <image src='{{image}}com01.png' wx:if="{{evaluateitem.state>=3}}"></image>
+              </view>
+              <view class='starCom' bindtap='userComStart' data-starindex="4">
+                <image src='{{image}}com02.png' wx:if="{{evaluateitem.state<4}}"></image>
+                <image src='{{image}}com01.png' wx:if="{{evaluateitem.state>=4}}"></image>
+              </view>
+              <view class='starCom' bindtap='userComStart' data-starindex="5">
+                <image src='{{image}}com02.png' wx:if="{{evaluateitem.state<5}}"></image>
+                <image src='{{image}}com01.png' wx:if="{{evaluateitem.state>=5}}"></image>
+              </view>
+            </view>
+          </view>
+          <view class='userEvatime'>{{evaluateitem.add_time}} 规格：{{evaluateitem.specsname}}</view>
+          <view class='userInforText'>
+           {{evaluateitem.content}}
+          </view>
+          <view class='userInforImg'>   
+            <view class='imgitem' wx:for="{{evaluateitem.pic}}" wx:for-item="piclist">
+              <image mode="aspectFill" bindtap='bindImgbox' data-imgbox='{{evaluateitem.pic}}' data-imgitem="{{piclist}}" src='{{piclist}}'></image>
+            </view>
+          </view>
+        </view>
+        <!--评价信息 结束  -->
+</view>
+
+
+<view class='yangshiBox'>
+   <!--加载中样式  -->
+  <template is="loadNow" wx:if="{{isLoadding}}"></template>
+  <!--加载中样式  -->
+  <!--暂无数据  -->
+  <template is="isDataNull" wx:if="{{isHasShop}}"> </template>
+  <!--暂无数据  -->
+  <!--暂无数据  -->
+  <template is="noMoreCell" wx:if="{{isHasMoredata}}"> </template>
+  <!--暂无数据  -->
+</view>

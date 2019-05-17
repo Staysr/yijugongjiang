@@ -1,0 +1,99 @@
+<!--pages/publicationEvaluation/publicationEvaluation.wxml-->
+
+
+<view class='container'>
+
+  <view class='publiEvalContainerBox'>
+    <view class='publiEvalContainer'>
+
+      <!-- 评分等级 -->
+      <view class='publiEvalComment'>
+        <view>描述相符</view>
+
+        <view class='startComsBox'>
+          <view class='starCom' bindtap='userComStart' data-starindex="1">
+            <image src='{{image}}com02.png' wx:if="{{userComStat<1}}"></image>
+            <image src='{{image}}com01.png' wx:if="{{userComStat>=1}}"></image>
+          </view>
+          <view class='starCom' bindtap='userComStart' data-starindex="2">
+            <image src='{{image}}com02.png' wx:if="{{userComStat<2}}"></image>
+            <image src='{{image}}com01.png' wx:if="{{userComStat>=2}}"></image>
+          </view>
+          <view class='starCom' bindtap='userComStart' data-starindex="3">
+            <image src='{{image}}com02.png' wx:if="{{userComStat<3}}"></image>
+            <image src='{{image}}com01.png' wx:if="{{userComStat>=3}}"></image>
+          </view>
+          <view class='starCom' bindtap='userComStart' data-starindex="4">
+            <image src='{{image}}com02.png' wx:if="{{userComStat<4}}"></image>
+            <image src='{{image}}com01.png' wx:if="{{userComStat>=4}}"></image>
+          </view>
+          <view class='starCom' bindtap='userComStart' data-starindex="5">
+            <image src='{{image}}com02.png' wx:if="{{userComStat<5}}"></image>
+            <image src='{{image}}com01.png' wx:if="{{userComStat>=5}}"></image>
+          </view>
+        </view>
+
+        <view>
+          {{startComsText}}
+        </view>
+
+
+      </view>
+      <!-- 评分等级 结束 -->
+
+
+      <!--评分寄语  -->
+
+     <view class='publiEvalMessage'>
+        <textarea class='publiEvalTextarea' placeholder='宝贝满足你的期待吗？说说你的使用心得，分享给想买的他 们吧' bindinput='inputText' value='{{content}}'  placeholder-style="line-height: 45rpx;c">
+        
+        </textarea>
+     </view>
+
+      <!--评分寄语 结束  -->
+
+      <!--上传图片  -->
+          <view class='userUploadImg'>
+                   <view class='userUpLoadList'>
+                        <view wx:for="{{userUploadsImg}}" class='userUpLoadItem' 
+                        wx:if="{{index<  5}}"  bindtap='addUserImg' data-isindex="{{index}}">
+                              <view class='imgDefalutBox' wx:if="{{index>=userUploadsImg.length - 1}}">
+                              <image class='campng' src='{{image}}cam.png'></image>
+                              <view class='camtex'> {{userUploadsImg.length==1?"添加图片":index +"/5"}}
+                              </view>
+                               
+                              </view>
+                              <image class='showImgUser' wx:if="{{index<userUploadsImg.length - 1}}" mode="aspectFill" src='{{item}}'>
+                              
+                              </image>
+
+                              <view class='closeBtn' catchtap='removeUpload' data-activeindex='{{index}}' wx:if="{{index<userUploadsImg.length - 1}}">
+                                <image src='{{image}}closbt.png'>
+                                
+                                </image>
+                              </view>
+                                
+                        </view>
+                   </view>
+          </view>  
+
+      <!--上传图片 结束  -->
+
+  <!--寄语  -->
+<view class='jiyu'>你的评价能帮助其他小伙伴呦</view>
+   <!--寄语结束  -->
+    </view>
+
+       <!--提交按钮  -->
+   
+   <view class='tijiao'>
+        <view class='tijiaoBtn' bindtap='tijiaoBtn'>
+        提交
+        </view>
+   </view>
+
+      <!--提交按钮 结束  -->
+
+  </view>
+
+</view>

@@ -1,0 +1,76 @@
+/* pages/bulleInformation/bulleInformation.wxss */
+page
+{
+  background: #ebebeb;
+}
+.bulleInfoTitle1
+{
+  height: 75rpx;
+  font-size: 26rpx;
+  color: #333;
+  line-height: 75rpx ;padding: 0 20rpx;
+  border-bottom: 2rpx solid #ddd;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.bulleInfoTitle2
+{
+ 
+  line-height: 50rpx;
+  font-size: 26rpx;
+  color: #333; padding: 15rpx 20rpx;
+  border-bottom: 2rpx solid #ddd;
+}
+.bulleInfoTitle3
+{
+  padding: 0 20rpx;
+  height: 60rpx;
+  font-size: 24rpx;
+  color: #666;
+  line-height: 60rpx;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2rpx solid #ddd;
+}
+.bulleInformationItem
+{
+  background: #fff;
+  margin-top: 20rpx;
+
+}
+.releaseInformation
+{
+  height: 100rpx;
+  width: 100%;
+}
+.releaseInformation navigator
+{
+  width: 100%;
+  display: block;
+  height: 100rpx;
+  background: #06881c;
+  text-align: center;
+  line-height: 100rpx;
+  color: #fff;
+  font-size: 30rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.bulleInfoTitle3 view
+{
+  
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+.bulleInfoTitle3 view:nth-child(1)
+{
+ width: 60%;
+}
+.bulleInfoTitle3 view:nth-child(2)
+{
+  width: 35%;
+  text-align: right;
+}

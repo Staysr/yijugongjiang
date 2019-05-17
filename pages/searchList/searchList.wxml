@@ -1,0 +1,119 @@
+<!--pages/searchList/searchList.wxml-->
+
+<import src="../../utils/template.wxml" />
+
+<view class='container'>
+   <view class="searchPla"></view><form bindsubmit="formSubmit">
+  <!--搜索框  -->
+  <view class='searchBox'>
+    <input class='inputSerach' bindinput='searchInput' name="name" placeholder="五金工具" maxlength="-1"
+     confirm-type="search"  
+     auto-focus/>
+    <button class='searchBtn' form-type="submit">搜索</button>
+  </view>
+  <!--搜索框结束  -->
+</form>
+  <!--图片尺寸为 180 * 160  -->
+
+  <!--列表  -->
+  <view class='listOfgoods'>
+    <view class='listOfgoodsTitleBox '>
+      <view class='listOfgoodsName {{activeListName?"activeList":""}}' bindtap='changSearchName'>
+        商品
+        <view class='greenLine'></view>
+      </view>
+      <view class='listOfgoodsName  {{!activeListName?"activeList":""}}' bindtap='changSearchName'>
+        店铺
+        <view class='greenLine'></view>
+      </view>
+    </view>
+    <view class='listOfgoodsList'>
+      <!--商品  -->
+      <view wx:if="{{activeListName}}" class='listOfgoodsCell {{goods.length>0?"activeWhite":""}}'>
+        <view class='listOfgoodsCellList' wx:for="{{goods}}" >
+          <navigator url="../productDetails/productDetails?goodid={{item.id}}" hover-class='none'>
+            <image class='listOfgoodsCellImage' mode='aspectFill' src=' {{item.pic}}'></image>
+            <view class='listOfgoodsCellInfor'>
+              <view class='goodsText'>
+               {{item.name}}
+              </view>
+              <view class='goodsMuch'>
+                <view class='goodsMoney'>￥{{item.discount}}</view>
+                <view class='cachNum'>销量：{{item.sum}}</view>
+              </view>
+              <view class='goodsLink'>
+               {{item.brand}}
+              </view>
+            </view>
+          </navigator>
+        </view>
+        <!-------------------------------  -->
+        <!--加载中样式  -->
+              <template is="loadNow"  wx:if="{{isShopLoadding}}"></template>
+              <template is="noMoreCell"  wx:if="{{!isShopLoadding&&goods.length>0}}"></template>
+        <!--加载中样式  --> 
+
+      </view>
+      <!--商品结束  -->
+
+      <!--店铺  -->
+      <view wx:if="{{!activeListName}}" class='listOfgoodsCell' style='background:#ebebeb'>
+
+        <view class='shopListCell'  wx:for="{{admin}}">
+          <view class='shopListCellTitle'>
+
+            <view class='shopListCellTitleName '>
+              <image src='{{item.logo}}'></image>
+             <view class='shopNamea'>
+              {{item.brand}}
+              </view>
+            </view>
+
+            <view class='comeOnShop'>
+              <navigator url='../brandShop/brandShop?shopid={{item.id}}&shopname={{item.brand}}' hover-class='none'>进店</navigator>
+            </view>
+
+          </view>
+
+          <view class='shopInfoMation' wx:if="{{item.goods.length >0}}">
+             
+             <navigator url='../productDetails/productDetails?goodid={{goodsImg.id}}' class='shopInforImg' wx:for="{{item.goods}}" wx:for-item="goodsImg">
+                 <image  mode='aspectFill'  src='{{goodsImg.pic}}'></image>
+             </navigator>
+        
+
+          </view>
+        </view>
+
+        <!-- <view class='shopListCell'>
+          <view class='shopListCellTitle'>
+            <view class='shopListCellTitleName '>
+              <image src='../images/sico2.png'></image>
+              公牛专卖店</view>
+            <view class='comeOnShop'>
+              <navigator>进店</navigator>
+            </view>
+          </view>
+          <view class='shopInfoMation'>
+            <image src='../images/sp01.jpg'>
+            </image>
+            <image src='../images/sp01.jpg'>
+            </image>
+            <image src='../images/sp01.jpg'>
+            </image>
+          </view>
+
+
+        </view> -->
+         <!--加载中样式  -->
+              <template is="loadNow"  wx:if="{{isAdminLoadding}}"></template>
+              <template is="noMoreCell"  wx:if="{{!isAdminLoadding&&admin.length>0}}"></template>
+        <!--加载中样式  --> 
+      </view>
+      <!--店铺结束  -->
+
+    </view>
+  </view>
+
+  <!--列表 结束 -->
+</view>

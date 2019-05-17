@@ -1,0 +1,217 @@
+/* pages/addEditAddress/addEditAddress.wxss */
+page
+{
+  background: #ebebeb;
+
+}
+.addEditAddressInfeo
+{
+  margin-top: 40rpx;
+}
+.addEditAddressInfeoCell
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;  padding: 0 20rpx;
+  height: 85rpx;
+  border-bottom: 2rpx solid #ddd;
+
+}
+.addEditAddressInfeoCell:last-child
+{
+  border: none
+}
+.isSelectAddress
+{
+  padding:  0 20rpx;
+}
+.cellName
+{
+  font-size: 30rpx
+}
+.cellInput
+{
+  font-size: 26rpx;
+  width: 450rpx;
+color: #333;
+  text-align: right;
+  
+}
+.isSelectAddress
+{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 110rpx;
+
+}
+.setDefalutText
+{
+  margin-left: 10rpx;
+  font-size: 30rpx;
+  color: #333;
+}
+
+
+
+
+
+
+
+
+.setUp02 ,.setUp01
+{
+
+    width: 34rpx;
+  height: 34rpx;
+}
+.setUp02
+{
+  display: none;
+}
+.selectAddress .setUp01
+{
+  display: none;
+}
+.selectAddress .setUp02
+{
+  display: block;
+}
+
+
+
+
+.saveOrChange
+{
+  padding:  0 20rpx;
+}
+.saveOrChangeBtn
+{
+  height: 85rpx;
+  background: #06881c;
+  color: #fff;
+  line-height: 85rpx;
+  text-align: center;
+}
+.placClass
+{
+  color: #333;
+}
+.placClassd
+{
+  color: #999;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*城市联动  */
+
+/*--------------------------------  */
+/**index.wxss**/
+.input {
+  padding-top: 300rpx;
+  width: 100%;
+}
+.citybody
+{
+   /* background: #06881c; 
+  /* background: #bde7f3; */
+  /* color: #dcdcdc;  */
+}
+.input input {
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px #d9d9d9 solid;
+  border-top: 1px #d9d9d9 solid;
+  padding: 20rpx 50rpx;
+}
+
+.section {
+  padding-top: 20rpx;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+.citypicker
+{
+  position: fixed;
+  width: 100%;
+  left: 0;
+  /* height: 300rpx; */
+  bottom: 0rpx;
+  background: #fff;
+  z-index: 300;
+
+
+}
+.cityheader
+{
+  height: 100rpx;
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+
+}
+.city-true
+{
+  width: 100%;
+  height: 100rpx;
+  color: #dcdcdc;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  background:#06881c;
+}
+.citySelect
+{
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 30rpx;
+  padding-left: 20rpx;
+  float: left;
+}
+
+
+
+.bindCitys
+{
+  width: 450rpx;
+  height: 50rpx;
+  line-height:50rpxt;
+  font-size: 26rpx; 
+  box-sizing: border-box;
+  text-align: right;
+ 
+}
+
+
+.formSubmit
+{
+  position: fixed;
+  top: -300%;
+  left: -300%;
+  z-index: -1;
+}

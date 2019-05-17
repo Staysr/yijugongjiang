@@ -1,0 +1,35 @@
+<!--pages/preBalance/preBalance.wxml-->
+<view class="container">
+
+<form bindsubmit="formSubmit">
+<input class='userid' type='text' name="userid" value='{{userid}}' ></input>
+<input class='userid' type='text' name="moneydata" value='{{money}}' ></input>
+  <view class='preBalanceBox'>
+    <view class='preBalance'>
+               <!--提现金额  -->
+               
+                <view class='preBalanceTopBox'>
+                   <view class='preBalanceTitle'>
+                    提现金额
+                  </view>
+                   <view class='preBalanceGetBalance'>
+                   <view class='fontsBlod'>￥</view>
+                        <input class='balanceInput' maxlength='5' name="money" bindinput='bindInputMoney' value="{{moneyGet}}" type='text'></input>
+                  </view>
+                  <view class='nowMuchBalance'>当前余额{{money}}元</view>
+                      <view class='hintInformation'>{{msgWaring?"提示信息："+msgWaring :""}}</view>
+                </view>
+
+               <view class='btnClickBox'>
+                <button class='preBalanceDesInfo {{issatisfy?"colorActive":"colorNormal"}}' form-type="submit">提现</button>
+                <navigator url='../preBalanceDetailed/preBalanceDetailed'  hover-class='none' class='preBalanceNav'>提现明细</navigator>
+               </view>
+
+
+               <!--提现金额结束  -->
+    </view>
+  </view>
+
+
+</form>
+</view>

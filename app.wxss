@@ -1,0 +1,194 @@
+/**app.wxss**/
+/* .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}  */
+@import "/wxParse/wxParse.wxss"; 
+@import "icon.wxss";
+@import "colorui.wxss";
+
+.grayLine
+{
+  height: 25rpx;
+  background: #ebebeb;
+  width: 100%;
+}
+.pladiv
+{
+  height: 50rpx;
+  width: 100%;
+}
+
+
+/*userid  */
+.userid
+{
+position: fixed;
+top: -1000%;
+left: -1000%;
+opacity: 0;
+
+}
+
+
+
+.colorNormal
+{
+    background: #a6cdac;
+}
+.colorActive
+{
+  background: #06881c;
+}
+
+
+
+
+
+/*加载中的样式  */
+.loadNow
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90rpx;
+  width: 100%;
+  font-size: 30rpx;
+  color: #bbb;
+}
+.loadIcon
+{
+  width:45rpx;
+  height: 45rpx;
+}
+/*加载中的样式  */
+
+
+/*没有数据  */
+
+.noShopInfo
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  flex-wrap: wrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 222
+}
+.noShopInfo text
+{
+  height: 100rpx;
+  line-height: 0;
+  font-size: 34rpx;
+}
+/*没有数据  */
+
+
+.isDataNull
+{
+  height: 100%;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ebebeb;
+  position: absolute;
+  left: 0;
+  top: 50rpx;
+  color: #666;
+  font-size: 28rpx;
+}
+
+
+.shopName
+{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.shopName1
+{
+  position: relative;
+}
+
+
+
+.gouImg
+{
+  width: 150rpx;
+  height: 150rpx;
+}
+.goshop
+{
+  width: 6em;
+  height:60rpx;
+  background: #06891c;
+  font-size: 28rpx;
+  color: #fff;
+  margin: 0 auto;
+  line-height: 60rpx;
+  text-align: center;
+}
+.gouwutext
+{
+  width: 100%;
+  font-size: 26rpx;
+  color: #999;
+  text-align: center;
+height: 80rpx;
+line-height: 60rpx;
+letter-spacing: 1px;
+
+}
+.gowuchebox
+{
+  margin-bottom: 170rpx;
+  text-align: center;
+}
+.gouwuceh
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  
+
+}
+
+.wxParse image
+{
+  max-width: 100%;
+  width: 100%!important;
+}
+.wxParse view
+{
+  word-break: break-all;
+  word-wrap: break-word;
+  text-align: justify;
+}
+.wxParse-inline
+{
+  display: inline;
+}
+.chaochu {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

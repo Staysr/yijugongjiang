@@ -1,0 +1,34 @@
+<!--pages/infotitle/infotitle.wxml-->
+<!-- <text>pages/infotitle/infotitle.wxml</text> -->
+<import src="../../wxParse/wxParse.wxml" />
+
+
+<view class='title'>
+  <view>{{case.title}}</view>
+</view>
+<view style='height:400rpx;margin:0 30rpx;'>
+  <image style='height:100%;width:100%;' src="{{case.pic}}"></image>
+</view>
+
+<view style='padding-bottom:80rpx;margin-top:20px;margin:30rpx;'>
+  <view class='vrBtn' data-address='{{case.vr}}'  catchtap='goAddress' style='right:30rpx;margin-left:10px'>
+    <image src='../images/VR.png'></image>
+  </view>
+  <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+</view>
+
+<view class="cu-bar bg-white tabbar border shop" style='background-color:rgb(122,206,133);margin-top:24rpx;bottom:0;position:fixed;width:100%;'>
+  <button class="action" bindtap='onShareAppMessage' open-type="share">
+    <view class='icon-share'>
+
+    </view>
+    分享
+  </button>
+  <view class="action" bindtap='phone' data-phone="{{phone}}">
+    <view class='icon-service'>
+
+    </view>
+    客服
+  </view>
+  <view bindtap='myiszhuangxiou' data-id="" class='bg-red submit' style='background-color:rgb(18,120,22)'>我要装修</view>
+</view>

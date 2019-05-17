@@ -1,0 +1,110 @@
+/* pages/quickOrder/quickOrder.wxss */
+page
+{
+  background: #ebebeb;
+}
+.quickOrderTitle
+{
+  /* background:#fff; */
+  color: #333;
+  font-size: 34rpx;
+  height: 90rpx;
+  width: 100%;
+  text-align: center;
+  line-height: 90rpx;
+}
+.brandListCellTitle
+{
+  font-size: 30rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #333;padding: 0 20rpx;
+  border-bottom: 2rpx solid #ddd; 
+}
+.brandListCell
+{
+  background: #fff;
+  margin-top: 20rpx;
+  width: 100%;
+}
+.brandListContentList
+{
+  display: flex;
+  justify-content:flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 20rpx 20rpx 0;
+  box-sizing: border-box;
+
+}
+.brandListItem
+{
+  width: 160rpx;
+  height: 65rpx;
+  line-height: 65rpx;
+  font-size: 26rpx;
+  border: 2rpx solid #ddd;
+  text-align: center; 
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+  margin-right: calc((100% - 640rpx) / 3);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0 10rpx;
+  border-radius: 5rpx;
+
+}
+.brandListItem:nth-child(4n)
+{
+  margin-right: 0
+}
+.greenImg
+{
+  color: #06881c;
+}
+.activeShop
+{
+  background: #06881c;
+  color: #fff;
+  border: 2rpx solid #06881c;
+}
+.btnNav
+{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100rpx;
+  font-size: 36rpx;
+  text-align: center;
+  line-height: 100rpx;
+}
+.btnNav1
+{
+  width: 100%;
+  height: 100rpx;
+}
+.isNonavation
+{
+    background: #d9d9d9;
+  color: #fff;
+}
+.okNavtion
+{
+  background: #06881c;
+  color: #fff;
+}
+
+.quickOrderTitleBox
+{
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #fff;
+
+}

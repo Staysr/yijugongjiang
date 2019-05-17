@@ -1,0 +1,47 @@
+<!--pages/preBalanceDetailed/preBalanceDetailed.wxml-->
+<import src="../../utils/template.wxml" />
+<view class="container" wx:if="{{zhaibi}}">
+     
+
+<!--提现明细  -->
+
+<view class='preBalanceDetailedBox'>
+    <view class='preBalanceDetailed'>
+            
+            <view class='preBalanceDetailedList'>
+                  <view class='preBalTiBox'>
+                     <view class='preBalTiBoxF'>
+                      <view class='preBalanceDetailedCell'>
+                         <view class='preBalMuch'>提现时间</view>
+                         <view class='preBalTime'>提现金额</view>
+                       </view>
+                        </view>
+                  </view>
+                
+
+
+                 <view class='preBalanceDetailedItemList'>
+                 
+                  <!-----------------------------  -->
+                    <view class='preBalanceDetailedItem' wx:for="{{zhaibi}}">
+                      <view class='preBalMuch'>{{item.add_time}}</view>
+                        <view class='preBalTime'>{{item.zhaibi}}</view>
+                    </view>
+                  <!-----------------------------  -->
+         
+
+
+                  </view>
+            </view>
+    </view>
+</view>
+
+<!--提现明细 结束  -->
+  <!--加载中样式  -->
+      <template is="loadNow"  wx:if="{{isLoadding}}"></template>
+<!--加载中样式  --> 
+ <!--暂无数据  -->
+  <template is="loadFail" wx:if="{{isHasData}}"> </template>
+ <!--暂无数据  -->
+
+</view>

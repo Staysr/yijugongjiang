@@ -1,0 +1,309 @@
+/* pages/myOrderDetails/myOrderDetails.wxss */
+
+page {
+  background: #ebebeb;
+}
+
+.myOrderDetailsTopCell {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 180rpx;
+  background: #06881c;
+  padding: 0 70rpx;
+}
+
+.grtext {
+  color: #fff;
+  font-size: 26rpx;
+}
+
+.grimg image {
+  width: 140rpx;
+  height: 140rpx;
+}
+.myAddress
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx;background: #fff;
+}
+
+.myAddress image {
+  width: 44rpx;
+  height: 44rpx;
+}
+.addressInfoMation
+{
+  width: calc(100%  - 84rpx);
+font-size: 26rpx;
+color: #333;text-align: justify
+}
+.aduserName
+{
+  height: 50rpx;
+  line-height: 50rpx;
+  display: flex;
+  justify-content: space-between;
+  text-align: justify
+}
+.aduserAd
+{
+  line-height: 45rpx;
+  
+}
+.shopInforMationCellBox
+{
+  display: flex;
+  justify-content: space-between;
+}
+.shopInforMationCellBox image
+{
+width: 40rpx;
+height: 40rpx;
+}
+
+
+
+.shopInforMationCellBox
+{
+  height: 85rpx;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20rpx; font-size: 26rpx;
+  color: #333;
+}
+.goodPrice
+{
+  color:#06881c;
+}
+.shopNameInforTime
+{
+  font-size: 22rpx;
+  color: #999;
+}
+.goodsInforMation
+{
+  background: #f8f8f8;
+}
+
+.goodsInforMationCellBox
+{
+  display: flex;  
+  padding:  20rpx;
+  justify-content: space-between;
+  margin-bottom: 20rpx;
+  background: #ebebeb;
+  flex-wrap: wrap;
+}
+.goodsInforMationCellBox:last-child
+{
+  margin-bottom: 0;
+}
+.shopGoodAllPrice
+{
+  height: 85rpx;
+  line-height: 85rpx;
+  background: #fff;
+  border-bottom: 2rpx solid #ddd;
+}
+.btnBox
+{
+  display: flex;
+  justify-content: flex-end;
+  height: 90rpx;
+  align-items: center;
+
+}
+.btnBox
+{
+ border-top: 2rpx solid #ddd; padding: 0 20rpx; 
+}
+.shopbtnBox
+{
+  width: 100%;
+  height: 90rpx;
+  display: flex;
+  justify-content:flex-end;
+  align-items: flex-end;
+
+}
+.pingjia
+{
+  height: 60rpx;
+  width: 100rpx;
+  border-radius: 60rpx;
+  color: #06881c;font-size: 22rpx;
+  text-align: center;line-height: 60rpx;
+  border: 2rpx solid #06881c;
+  margin-left: 20rpx;
+}
+.goodImg
+{
+  width: 205rpx;
+  height: 205rpx;
+}
+.userGetGoods
+{
+  padding: 20rpx 20rpx;
+}
+.userGetGoodsCell
+{
+  display: flex;
+  justify-content: space-between;
+
+}
+.goodInformation
+{
+  width: calc(100% - 225rpx)
+}
+.goodName
+{
+ font-size: 26rpx;
+ color: #333;
+ height: 90rpx;
+ overflow: hidden;
+ line-height: 45rpx;
+}
+.goodType
+{
+ font-size: 24rpx;
+ color: #999;
+ height: 50rpx;
+ line-height: 50rpx;
+}
+.goodNumber
+{
+  display: flex;
+  justify-content: space-between;
+  font-size: 22rpx;
+  height: 40rpx;
+ line-height: 40rpx;
+}
+.payInformation
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #fff;
+  padding: 0 20rpx;
+  border-bottom: 2rpx solid #ebebeb;
+}
+
+.shopGoodAllPrice
+{
+  font-size: 22rpx;
+
+  text-align: right;
+
+  padding: 0 20rpx;
+}
+
+.copyInforMation
+{
+  font-size: 24rpx;
+  line-height: 50rpx;
+  color: #999;
+  background: #fff;
+  padding: 30rpx 20rpx;
+  position: relative;
+}
+.shopInforMationStatus
+{
+  margin: 20rpx  0;
+}
+/* .myOrderDetailsTopList
+{
+  margin-top: 20rpx;
+} */
+
+.copyText
+{
+  position: absolute;
+  top: 25rpx;
+  right: 20rpx;
+  width: 130rpx;
+  height: 50rpx;
+  text-align: center;
+  line-height: 50rpx;
+  border: 1rpx solid #ddd;
+}
+
+
+
+.shopNav
+{
+ display: flex;
+ justify-content: flex-start;
+ align-items: center;
+}
+.isAllShopTitle
+{
+  margin:0 10rpx 0 15rpx;
+  position: relative;
+}
+.isziying::after
+{
+  content: '自营';
+  background: #ff0000;
+  color: #fff;
+  font-size: 18rpx;
+  padding: 2rpx 10rpx;
+  border-radius: 10rpx;
+  margin-left: 10rpx;
+}
+
+.goodsBtmBox
+{
+  height: 90rpx;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 20rpx;
+
+}
+.caleOrder
+{
+ height: 60rpx;
+  width: 140rpx;
+  border-radius: 60rpx;
+  border: 2rpx solid #ebebeb;
+font-size: 22rpx;  text-align: center;
+line-height: 60rpx;  margin-left: 20rpx;
+}
+.nowPay
+{
+  height: 60rpx;
+  width: 140rpx;
+  border-radius: 60rpx;
+  color: #06881c;font-size: 22rpx;
+  text-align: center;line-height: 60rpx;
+  border: 2rpx solid #ebebeb;
+  margin-left: 20rpx;
+  
+}
+.goodsInforBox
+{
+  background: #fff;
+  padding: 0rpx 0 20rpx;
+}
+.goodsInforBox1
+{
+  padding-bottom: 0;
+}
+.tixing
+{
+  height: 60rpx;
+  width: 140rpx;
+  border-radius: 60rpx;
+  color: #06881c;font-size: 22rpx;
+  text-align: center;line-height: 60rpx;
+  border: 2rpx solid #06881c;
+  margin-left: 20rpx;
+}

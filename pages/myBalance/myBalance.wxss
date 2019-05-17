@@ -1,0 +1,150 @@
+/* pages/myBalance/myBalance.wxss */
+page
+{
+  background: #ebebeb;
+}
+
+.myBalanceMoneyBox
+{
+ 
+}
+.myBalanceTitle
+{
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 22rpx;
+  
+}
+.myBalanceMoney
+{
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 48rpx;
+  color: #06881c;
+}
+.myBalanceGetMoney
+{
+  width: 150rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  border-radius: 60rpx;
+  font-size: 24rpx;
+color: #06881c;
+  border:2rpx solid #06881c;
+}
+
+
+.balanceOperationTiBox
+{
+ 
+  display:flex;
+  justify-content: space-between;
+ background: #fff;
+
+}
+.balanceOperationName
+{
+  position: relative;
+  width: 50%;
+  font-size: 30rpx;
+  line-height: 80rpx;
+  height: 80rpx;
+  text-align: center;
+
+}
+.greenLine
+{
+  height: 5rpx;
+  background: #06881c;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: none
+}
+.activeLineShow .greenLine
+{
+  display: block;
+}
+.balanceOperationPush
+{
+  background: #fff;
+  padding: 0 20rpx;
+  position: relative;
+}
+.balanceOperationPushCell
+{
+  display: flex;
+  justify-content: space-between;
+  padding: 35rpx 0;
+  border-bottom: 2rpx solid #ddd;
+}
+.balanceOperationPush .balanceOperationPushCell:last-child
+{
+  border:none;
+}
+.push01
+{
+font-size: 26rpx;
+color: #333;
+height: 50rpx;
+line-height: 50rpx;
+}
+.push02
+{
+  font-size: 22rpx;color: #666;
+  height: 35rpx;
+line-height: 35rpx;
+}
+.push03
+{
+  font-size: 22rpx;
+  color: #999;
+  height: 35rpx;
+  line-height: 35rpx;
+}
+.balanceOperationPushCellLeft
+{
+  line-height: 120rpx;
+  color: #06881c;
+}
+
+
+/*占位  */
+.myblanceZhawei
+{
+  height: 260rpx;
+  width: 100%;
+}
+.myBalanceMoneyBox
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  background: #ebebeb;  
+  height: 190rpx;
+  padding: 20rpx 0;
+  z-index: 100;
+
+}
+.myBalanceMoneyBoxWhite
+{
+ display: flex;
+  justify-content: space-between;
+  align-items: center; height: 150rpx;
+ padding:  0 20rpx;
+  background: #fff;
+ 
+}
+.balanceOperationTiBox
+{
+  position: fixed;
+  top: 190rpx;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 100
+}

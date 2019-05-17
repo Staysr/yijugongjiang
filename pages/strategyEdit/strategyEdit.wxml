@@ -1,0 +1,22 @@
+<!--pages/strategyEdit/strategyEdit.wxml-->
+<!-- <text>pages/strategyEdit/strategyEdit.wxml</text> -->
+<import src="../../wxParse/wxParse.wxml" />
+<view class="container">
+<view class='title_wx'>
+<text>{{strategy.title}}</text>
+</view>
+<view class='add_time'>
+<text>{{strategy.add_time}}</text>
+<text class='pageview'>游览量:{{strategy.pageview}}</text>
+</view>
+ <view class='content'>
+    <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+ 
+ </view>
+</view>
+
+<view class="bottomview" style='margin:20rpx'>
+  <button class="cu-btn bg-green lg" style='background-color:rgb(18,120,22);margin-top:20px;width:90%;margin-left:17rpx' bindtap='onShareAppMessage' open-type="share">分享</button>
+</view>
+
+

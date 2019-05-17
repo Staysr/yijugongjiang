@@ -1,0 +1,327 @@
+<!--pages/myOrderDetails/myOrderDetails.wxml-->
+<view class='container'>
+
+
+  <view class='myOrderDetailsBox' wx:if="{{order}}">
+
+    <view class='myOrderDetails'>
+
+      <view class='myOrderDetailsTopList'>
+
+        <view class='myOrderDetailsTopCell' wx:if="{{isstate == 0}}">
+          <view class='grtext'>
+            等待买家付款
+          </view>
+          <view class='grimg'>
+            <image src='{{image}}u01.png'></image>
+          </view>
+        </view>
+
+        <view class='myOrderDetailsTopCell' wx:if="{{isstate == 1}}">
+          <view class='grtext'>
+            等待卖家发货
+          </view>
+          <view class='grimg'>
+            <image src='{{image}}u02.png'></image>
+          </view>
+        </view>
+
+        <view class='myOrderDetailsTopCell' wx:if="{{isstate == 2}}">
+          <view class='grtext'>
+            卖家已发货
+          </view>
+          <view class='grimg'>
+            <image src='{{image}}u03.png'></image>
+          </view>
+        </view>
+
+        <view class='myOrderDetailsTopCell' wx:if="{{isstate == 3}}">
+          <view class='grtext'>
+            已确认收货
+          </view>
+          <view class='grimg'>
+            <image src='{{image}}u04.png'></image>
+          </view>
+        </view>
+
+        <view class='myOrderDetailsTopCell' wx:if="{{isstate == 4}}">
+          <view class='grtext'>
+            交易完成
+          </view>
+          <view class='grimg'>
+            <image src='{{image}}u05.png'></image>
+          </view>
+        </view>
+
+      </view>
+
+      <!--地址  -->
+      <view class='myAddress'>
+        <image src='{{image}}adicon.png'></image>
+        <view class='addressInfoMation'>
+          <view class='aduserName'>
+            <view>收货人：{{order.name}}</view>
+            <view>{{order.phone}}</view>
+          </view>
+          <view class='aduserAd'>
+            收货地址：{{order.region}}
+          </view>
+        </view>
+      </view>
+      <!--地址  结束  -->
+
+
+      <!--商品信息  -->
+      <view class='shopInforMationStatus'>
+        <view class='shopInforMationCell'>
+          <view class='shopInforMationCellBox'>
+            <navigator url='../brandShop/brandShop?shopid={{order.sellerid}}&shopname={{order.brand}}' hover-class='none' class='shopNav'>
+              <image src='{{order.storelogo}}'></image>
+              <view class='isAllShopTitle }'>{{order.brand}}</view>
+            </navigator>
+            <view class='shopNameInforTime'>
+              {{order.creattime}}
+            </view>
+          </view>
+
+          <!--商品信息  -->
+          <view class='goodsInforMation'>
+
+            <view class='goodsInforMationCell' wx:if="{{isstate==0}}">
+              <view class='goodsInforBox'>
+                <view class='goodsInforMationCellBox' wx:for="{{order.goods}}" wx:for-item="goodsitem">
+                  <image class='goodImg' src='{{goodsitem.goodspic}}'></image>
+                  <view class='goodInformation'>
+                    <view class='goodName'>
+                      {{goodsitem.goodsname}}
+                    </view>
+                    <view class='goodType'>
+                      {{goodsitem.specname}}
+                    </view>
+                    <view class='goodNumber'>
+                      <view class='goodPrice'>￥{{goodsitem.price}}</view>
+                      <view class='goodNum'>x{{goodsitem.count}}</view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <!--商品合计总金额  -->
+              <view class='shopGoodAllPrice'>
+                共{{order.goods.length}}件商品 合计:￥{{order.priceall}}
+              </view>
+              <!--商品合计总金额 结束 -->
+              <view class='goodsBtmBox'>
+                <view class='caleOrder' bindtap='cancelOrder' data-orderindx="{{index}}" data-orderid="{{order.id}}">取消订单</view>
+                <view class='nowPay' data-ordershop='{{order}}' bindtap='lijifu'>立即付款</view>
+              </view>
+            </view>
+
+
+
+
+            <!-- =============================提醒发货 ==============================-->
+            <view class='goodsInforMationCell' wx:if="{{isstate==1}}">
+              <view class='goodsInforBox'>
+                <view class='goodsInforMationCellBox' wx:for="{{order.goods}}" wx:for-item="goodsitem">
+                  <image class='goodImg' src='{{goodsitem.goodspic}}'></image>
+                  <view class='goodInformation'>
+                    <view class='goodName'>
+                      {{goodsitem.goodsname}}
+                    </view>
+                    <view class='goodType'>
+                      {{goodsitem.specname}}
+                    </view>
+                    <view class='goodNumber'>
+                      <view class='goodPrice'>￥{{goodsitem.price}}</view>
+                      <view class='goodNum'>x{{goodsitem.count}}</view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <!--商品合计总金额  -->
+              <view class='shopGoodAllPrice'>
+                共{{order.goods.length}}件商品 合计:￥{{order.priceall}}
+              </view>
+              <!--商品合计总金额 结束 -->
+              <view class='goodsBtmBox'>
+                <view class='tixing' bindtap='tixing'>提醒发货</view>
+              </view>
+            </view>
+            <!-- =============================提醒发货 ==============================-->
+
+
+
+            <!-- =============================待收货 ==============================-->
+            <view class='goodsInforMationCell' wx:if="{{isstate==2}}">
+              <view class='goodsInforBox'>
+                <view class='goodsInforMationCellBox' wx:for="{{order.goods}}" wx:for-item="goodsitem">
+                  <image class='goodImg' src='{{goodsitem.goodspic}}'></image>
+                  <view class='goodInformation'>
+                    <view class='goodName'>
+                      {{goodsitem.goodsname}}
+                    </view>
+                    <view class='goodType'>
+                      {{goodsitem.specname}}
+                    </view>
+                    <view class='goodNumber'>
+                      <view class='goodPrice'>￥{{goodsitem.price}}</view>
+                      <view class='goodNum'>x{{goodsitem.count}}</view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <!--商品合计总金额  -->
+              <view class='shopGoodAllPrice'>
+                共{{order.goods.length}}件商品 合计:￥{{order.priceall}}
+              </view>
+              <!--商品合计总金额 结束 -->
+              <view class='goodsBtmBox'>
+                <view class='tixing' bindtap='confirmgoods' data-orderid="{{order.id}}">确认收货</view>
+              </view>
+            </view>
+            <!-- =============================待收货 ==============================-->
+
+            <!-- =============================已完成 ==============================-->
+            <view class='goodsInforMationCell' wx:if="{{isstate==4}}">
+              <view class='goodsInforBox'>
+                <view class='goodsInforMationCellBox' wx:for="{{order.goods}}" wx:for-item="goodsitem">
+                  <image class='goodImg' src='{{goodsitem.goodspic}}'></image>
+                  <view class='goodInformation'>
+                    <view class='goodName'>
+                      {{goodsitem.goodsname}}
+                    </view>
+                    <view class='goodType'>
+                      {{goodsitem.specname}}
+                    </view>
+                    <view class='goodNumber'>
+                      <view class='goodPrice'>￥{{goodsitem.price}}</view>
+                      <view class='goodNum'>x{{goodsitem.count}}</view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <!--商品合计总金额  -->
+              <view class='shopGoodAllPrice'>
+                共{{order.goods.length}}件商品 合计:￥{{order.priceall}}
+              </view>
+              <!--商品合计总金额 结束 -->
+            </view>
+            <!-- =============================已完成 ==============================-->
+
+            <!-- =============================已取消 ==============================-->
+            <view class='goodsInforMationCell' wx:if="{{isstate==5}}">
+              <view class='goodsInforBox'>
+                <view class='goodsInforMationCellBox' wx:for="{{order.goods}}" wx:for-item="goodsitem">
+                  <image class='goodImg' src='{{goodsitem.goodspic}}'></image>
+                  <view class='goodInformation'>
+                    <view class='goodName'>
+                      {{goodsitem.goodsname}}
+                    </view>
+                    <view class='goodType'>
+                      {{goodsitem.specname}}
+                    </view>
+                    <view class='goodNumber'>
+                      <view class='goodPrice'>￥{{goodsitem.price}}</view>
+                      <view class='goodNum'>x{{goodsitem.count}}</view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <!--商品合计总金额  -->
+              <view class='goodsBtmBox'>
+
+
+                <view class='tixing' bindtap='deletOrder' data-orderid="{{order.id}}"> 删除订单</view>
+              </view>
+              <!--商品合计总金额 结束 -->
+            </view>
+            <!-- =============================已取消 ==============================-->
+
+
+
+            <!--================================= 待评价================================= -->
+            <view class='goodsInforMationCell' wx:if="{{isstate==3}}">
+             <view class='goodsInforBox goodsInforBox1'>
+              <view class='goodsInforMationCellBox' wx:for="{{order.goods}}" wx:for-item="goodsitem">
+                <image class='goodImg' src='{{goodsitem.goodspic}}'></image>
+                <view class='goodInformation'>
+                  <view class='goodName'>
+                    {{goodsitem.goodsname}}
+                  </view>
+                  <view class='goodType'>
+                    {{goodsitem.specname}}
+                  </view>
+                  <view class='goodNumber'>
+                    <view class='goodPrice'>￥{{goodsitem.price}}</view>
+                    <view class='goodNum'>x{{goodsitem.count}}</view>
+                  </view>
+                </view>
+              
+              <view class='shopbtnBox' >
+                <view class='pingjia'  wx:if="{{goodsitem.evaluate==0}}"  bindtap='pingjiaClick'
+                data-specname='{{goodsitem.specname}}'
+                data-orderid='{{goodsitem.orderid}}' data-goodsid='{{goodsitem.goodsid}}'>
+                评价
+              </view>
+
+         
+                <view class='pingjia'  style='width:120rpx' wx:if="{{goodsitem.evaluate==1}}"
+                data-specname='{{goodsitem.specname}}'
+                data-orderid='{{goodsitem.orderid}}' data-goodsid='{{goodsitem.goodsid}}'>
+                已评价
+              </view>
+
+              </view>
+              </view>
+              </view>
+              <!--商品合计总金额  -->
+              <view class='shopGoodAllPrice'>
+                共{{order.goods.length}}件商品 合计:￥{{order.priceall}}
+              </view>
+
+              <!--商品合计总金额 结束 -->
+            </view>
+            <!--================================= 待评价================================= -->
+          </view>
+          <!--商品信息 结束  -->
+
+        </view>
+      </view>
+
+      <!--商品信息  -->
+
+
+      <!--复制信息  -->
+
+      <view class='copyInforMation' wx:if="{{isstate ==1 ||isstate ==2 || isstate ==3 || isstate ==4}}">
+        <view>
+          订单编号:{{order.ordernum}}
+        </view>
+        <view>
+          创建时间:{{order.creattime}}
+        </view>
+        <view>
+          付款时间:{{order.paytime}}
+        </view>
+        <view>
+          发货时间:{{order.issuetime}}
+        </view>
+        <view class='copyText' bindtap='copyText'>
+          复制
+        </view>
+      </view>
+
+      <!--复制信息 结束  -->
+
+
+
+    </view>
+
+  </view>
+
+
+
+
+
+
+</view>

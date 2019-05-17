@@ -1,0 +1,213 @@
+/* pages/perInformation/perInformation.wxss */
+page
+{
+  background: #ebebeb;
+}
+.perInformationBox
+{
+  padding-top: 20rpx;
+}
+.perInformationItem
+{
+  /* min-height: 85rpx; */
+  background: #fff;
+  padding: 0 20rpx;
+  border-bottom: 2rpx solid #ddd;
+  display: flex;
+
+  width: 100%;
+  padding-right: 35rpx;
+  box-sizing: border-box;
+  justify-content:space-between;
+  align-items: center;
+  position: relative;
+
+}
+.perInformationItem navigator
+{ 
+  /* min-height: 85rpx; */
+  display: flex;
+  height: 100%;
+  width: 100%;
+   padding: 24rpx 0;
+  padding-right: 35rpx;
+  box-sizing: border-box;
+  justify-content:space-between;
+  align-items: center;
+  position: relative;
+
+}
+.nexTbtn
+{
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  top: 31rpx;
+  right: 0;
+
+}
+.userInFoContent
+{
+  font-size: 30rpx;
+  color: #999;
+  letter-spacing: 2rpx
+}
+.userHeard
+{
+  width: 50rpx;
+  height: 50rpx;
+}
+.userInFoName
+{
+  font-size: 30rpx;
+}
+.nopadding
+{
+  padding:0 35rpx   0  20rpx;
+}
+.headerPadding
+{
+  padding-right: 70rpx;
+}
+.headerPadding .nexTbtn
+{
+  right: 35rpx;
+}
+.heightauto
+{
+  height: auto!important;
+}
+.userInFoContent
+{
+  width: 400rpx;
+  text-align: right;
+  min-height: 50rpx;
+}
+.userLineheight
+{
+  line-height: 40rpx;
+  /* min-height: 55rpx; */
+  word-break: break-all;
+
+}
+.paddingheight
+{
+  /* padding: 20rpx 35rpx 20rpx 20rpx; */
+   display: block
+}
+.displaynone
+{
+  align-items: flex-start!important;
+}
+.paddinBT
+{
+  padding-top: 24rpx;
+  padding-bottom: 24rpx
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*城市联动  */
+
+/*--------------------------------  */
+/**index.wxss**/
+.input {
+  padding-top: 300rpx;
+  width: 100%;
+}
+.citybody
+{
+   background: #06881c; 
+  /* background: #bde7f3; */
+  color: #dcdcdc;
+}
+.input input {
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px #d9d9d9 solid;
+  border-top: 1px #d9d9d9 solid;
+  padding: 20rpx 50rpx;
+}
+.section {
+  padding-top: 20rpx;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.userinfo-nickname {
+  color: #aaa;
+}
+.usermotto {
+  margin-top: 200px;
+}
+.citypicker
+{
+  position: fixed;
+  width: 100%;
+  left: 0;
+  /* height: 300rpx; */
+  bottom: 0rpx;
+  background: #fff;
+  z-index: 300;
+}
+.cityheader
+{
+  height: 100rpx;
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.city-true
+{
+  width: 100%;
+  height: 100rpx;
+  color: #dcdcdc;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  background:#06881c;
+}
+.citySelect
+{
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 30rpx;
+  padding-left: 20rpx;
+  float: left;
+}
+.bindCitys
+{
+  width: 450rpx;
+  height: 50rpx;
+  line-height:50rpxt;
+  font-size: 26rpx; 
+  box-sizing: border-box;
+  text-align: right;
+ 
+}
+.formSubmit
+{
+  position: fixed;
+  top: -300%;
+  left: -300%;
+  z-index: -1;
+}

@@ -1,0 +1,98 @@
+<!--pages/brandShop/brandShop.wxml-->
+<import src="../../utils/template.wxml" />
+<view class='container'>
+
+  <view class='brandShopBox'>
+    <view class='brandShop'>
+      <!--顶部轮播图  -->
+      <view class='topGearMap'>
+        <swiper class='topGearMapSwiper' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}} " indicator-dots="true" indicator-color="rgba(255,255,255,1)" indicator-active-color="#ff9606" circular="true">
+          <block wx:for="{{imgUrls}}">
+            <swiper-item>
+              <navigator url='' hover-class='none'>
+                <image src="{{item.pic}}" mode="aspectFill" class="slide-image" />
+              </navigator>
+            </swiper-item>
+          </block>
+        </swiper> 
+        <!-- VR -->
+        <view class='vrBtn' data-address='{{vr}}' catchtap='goAddress' style='left:30rpx;'>
+          <image src='../images/VR.png'></image>
+        </view>
+        <!-- VR -->
+      </view>
+      <!--顶部轮播图结束  -->
+      <!--标题滚动  -->
+      <view class='classifiedTitleBox' wx:if="{{brandClass.length>0}}">
+
+        <scroll-view scroll-x class="scroll-header">
+
+          <view wx:for="{{brandClass}}" class="scroll-view-item {{currentTab==index? 'activeShopLine': ''}}" 
+                                        data-actindex="{{index}}" 
+                                        data-sellerid="{{index}}" 
+                                        bindtap="headerShop" 
+                                        data-classid="{{item.goodsclass}}">{{item.classname}}
+            <view class='greenLine'></view>
+          </view>
+
+       
+
+
+        </scroll-view>
+
+
+      </view>
+      <!--标题滚动 结束 -->
+
+
+      <!--标题所对应的内容  -->
+
+      <view class='shopItemList'>
+
+        <view class='shopItemCell' wx:for="{{goods}}">
+          <navigator url='../productDetails/productDetails?goodid={{item.id}}' hover-class='none'>
+            <image class='shopImage' src='{{item.pic}}'></image>
+            <view class='shopName'>{{item.name}}</view>
+            <view class='shopInfo'>
+              <view class='shopMoney'>￥{{item.discount}}</view>
+              <view class='shopXiaoshou'>销量：{{item.sum}}</view>
+            </view>
+          </navigator>
+        </view>
+
+
+      </view>
+
+      <!--标题所对应的内容 结束  -->
+
+      
+      <view class='yangshiBox'>
+        <!--加载中样式  -->
+        <template is="loadNow" wx:if="{{isLoadding}}"></template>
+        <!--加载中样式  -->
+        <!--暂无数据  -->
+        <template is="isDataNull" wx:if="{{isHasShop}}"> </template>
+        <!--暂无数据  -->
+        <!--暂无数据  -->
+        <template is="noMoreCell" style="height:211rpx;" wx:if="{{isHasMoredata}}"> </template>
+        <!--暂无数据  -->
+      </view>
+
+    </view>
+    <!-- 二维码 -->
+
+     
+      <!-- 二维码 结束 -->
+  </view>
+
+
+
+</view>
+
+ <view class="bgClass paddingClass commentView">
+        <view class="qrcodeView">
+          <image class="qrcodeImg" bindtouchstart='timestart' bindtouchend='timeend' bindtap='saveImg' data-image="{{codeimg}}" mode='aspectFill' src="{{codeimg}}"></image>
+        </view>
+        <view class="qrcodeText" style="margin-top:20rpx;">长按下载二维码</view>
+
+      </view>

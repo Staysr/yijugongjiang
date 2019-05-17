@@ -1,0 +1,292 @@
+
+page
+{
+  background: #ebebeb;
+  min-height: 100%;
+}
+
+.swiper-tab{  
+    width: 100%;  
+    box-shadow: 0px 2px 2px #dedede;
+    text-align: center;  
+    line-height: 80rpx;
+    position: fixed;
+    z-index: 999;
+    background: #fff;
+    left: 0;
+    top: 0;
+    display: flex;
+			flex-wrap:wrap;
+			justify-content: space-between;
+    }  
+.swiper-tab-list{
+    font-size: 26rpx;  
+    display: inline-block;  
+    color: #777777;
+    width: calc(100%  /  7)
+ 
+
+}  
+swiper-item{
+  overflow: auto;
+}
+.on{ color: #45e9b2;  
+    border-bottom: 5rpx solid #45e9b2;}  
+  
+.swiper-box{ display: block; height: 100%; width: 100%; overflow: hidden; }  
+
+/* pages/we_dd/we_dd.wxss */
+
+.tab{
+  width: 100%;
+  height: 80rpx;
+  box-sizing: border-box;
+  padding: 0 28rpx;
+  background: #fff;
+  box-shadow: 0px 2px 3px #dcdcdc;
+}
+.tab_list{
+  width: 20%;
+  overflow: hidden;
+  height: 100%;
+  box-sizing: border-box;
+  float: left;
+  text-align: center
+}
+
+.tab_list navigator{
+  display: inline-block;
+  
+  height: 100%;
+  font-size: 30rpx;
+  line-height: 80rpx;
+  text-align: center;
+  box-sizing: border-box;
+  
+  padding: 0 10rpx;
+}
+.tab_bot{
+  border-bottom: 2px solid #45e9b2;
+}
+.tab_list_bot{
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+  margin-top: 20rpx;
+  box-sizing: border-box;
+  padding: 0 28rpx;
+  position: relative;
+}
+.tab_list_head{
+  width: 100%;
+ height: 65rpx;
+  border-bottom: 1px solid #eee;
+}
+.tab_list_head view{
+  line-height: 65rpx;
+  font-size: 25rpx;
+  color: #666;
+  float: left;
+}
+.tab_list_head text{
+  display: block;
+  line-height: 65rpx;
+  font-size: 20rpx;
+  color: #666;
+  float: right;
+}
+
+
+/*新的CSS属性  */
+.plaZhanwei
+{
+  height: 80rpx;
+}
+.shopNameInfor
+{
+  height: 85rpx;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20rpx;
+}
+.shopNameInforLeft
+{
+  font-size: 26rpx;
+  color: #333;
+
+}
+.shopNameInforLeft navigator
+{
+  position:  relative;
+  display: flex;
+  align-items: center;
+
+}
+.shopNameInforLeft image
+{
+width: 40rpx;
+height: 40rpx;
+}
+.shopNameInforTime
+{
+  font-size: 22rpx;
+  color: #999;
+}
+
+.goodImg
+{
+  width: 205rpx;
+  height: 205rpx;
+  
+}
+.userGetGoods
+{
+  /* padding: 20rpx 20rpx; */
+  background: #fff;
+}
+.userGetGoodsCell
+{
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx;
+  background: #ebebeb;
+  margin-bottom: 20rpx;
+  flex-wrap: wrap;
+
+}
+.userGetGoodsCell:last-child
+{
+  margin-bottom: 0
+}
+.goodInformation
+{
+  width: calc(100% - 225rpx)
+}
+.goodName
+{
+ font-size: 26rpx;
+ color: #333;
+ height: 90rpx;
+ overflow: hidden;
+ line-height: 45rpx;
+}
+.goodType
+{
+ font-size: 24rpx;
+ color: #999;
+ height: 50rpx;
+ line-height: 50rpx;
+}
+.goodNumber
+{
+  display: flex;
+  justify-content: space-between;
+  font-size: 22rpx;
+  height: 40rpx;
+ line-height: 40rpx;
+}
+.payInformation
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #fff;
+  padding: 0 20rpx;
+  border-bottom: 2rpx solid #ebebeb;
+}
+.payStatus
+{
+  color:#06881c;
+  font-size: 22rpx;
+
+}
+.payUserInfor
+{
+  font-size: 22rpx;
+  color: #333;
+}
+.goodsBtmBox
+{
+  height: 90rpx;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 20rpx;
+
+}
+.caleOrder
+{
+ height: 60rpx;
+  width: 140rpx;
+  border-radius: 60rpx;
+  border: 2rpx solid #ebebeb;
+font-size: 22rpx;  text-align: center;
+line-height: 60rpx;  margin-left: 20rpx;
+}
+.nowPay
+{
+  height: 60rpx;
+  width: 140rpx;
+  border-radius: 60rpx;
+  color: #06881c;font-size: 22rpx;
+  text-align: center;line-height: 60rpx;
+  border: 2rpx solid #ebebeb;
+  margin-left: 20rpx;
+  
+}
+.tixing
+{
+  height: 60rpx;
+  width: 140rpx;
+  border-radius: 60rpx;
+  color: #06881c;font-size: 22rpx;
+  text-align: center;line-height: 60rpx;
+  border: 2rpx solid #06881c;
+  margin-left: 20rpx;
+}
+.pingjia
+{
+  height: 60rpx;
+  width: 100rpx;
+  border-radius: 60rpx;
+  color: #06881c;font-size: 22rpx;
+  text-align: center;line-height: 60rpx;
+  border: 2rpx solid #06881c;
+  margin-left: 20rpx;
+}
+.moreAll
+{
+  font-size: 22rpx;
+}
+.substitutePaymentCell
+{
+  margin-top: 20rpx;
+}
+.myOrderListBox
+{
+  padding-bottom: 30rpx;
+}
+
+.goodsBtmBox1
+{
+  width: 100%;
+  height: 90rpx;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.isziying::after
+{
+  font-size: 24rpx;
+}
+
+.gouImg
+{
+  width: 185rpx;
+  height: 185rpx;
+}

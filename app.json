@@ -1,0 +1,104 @@
+{
+	"pages": [
+		"pages/index/index",
+		"pages/wx_decorationcompany/wx_decorationcompany",
+		"pages/decorationcompany/decorationcompany",
+		"pages/myiszhuangxiou/myiszhuangxiou",
+		"pages/shoppingMall/shoppingMall",
+		"pages/quickOrder/quickOrder",
+		"pages/quickOrderList/quickOrderList",
+		"pages/shoppingCart/shoppingCart",
+		"pages/personalCenter/personalCenter",
+		"pages/searchList/searchList",
+		"pages/refreshService/refreshService",
+		"pages/club/club",
+		"pages/clubList/clubList",
+		"pages/clubdetails/clubdetails",
+		"pages/releaseinformation/releaseinformation",
+		"pages/bulleInformation/bulleInformation",
+		"pages/publiInforContent/publiInforContent",
+		"pages/registrationPage/registrationPage",
+		"pages/loginPage/loginPage",
+		"pages/userLoginPage/userLoginPage",
+		"pages/changePassword/changePassword",
+		"pages/mulbuOccupancy/mulbuOccupancy",
+		"pages/distributionCenter/distributionCenter",
+		"pages/distributionCenList/distributionCenList",
+		"pages/perInformation/perInformation",
+		"pages/changePerInfor/changePerInfor",
+		"pages/platRegulation/platRegulation",
+		"pages/myMessage/myMessage",
+		"pages/decoration/decoration",
+		"pages/histInformation/histInformation",
+		"pages/MyReleaseInformation/MyReleaseInformation",
+		"pages/myBalance/myBalance",
+		"pages/preBalance/preBalance",
+		"pages/preBalanceDetailed/preBalanceDetailed",
+		"pages/homeCurrency/homeCurrency",
+		"pages/exchangeBalance/exchangeBalance",
+		"pages/exchangeDetails/exchangeDetails",
+		"pages/myAddress/myAddress",
+		"pages/addEditAddress/addEditAddress",
+		"pages/brandShop/brandShop",
+		"pages/classifiedGoods/classifiedGoods",
+		"pages/myOrder/myOrder",
+		"pages/infotitle/infotitle",
+		"pages/myOrderDetails/myOrderDetails",
+		"pages/publicationEvaluation/publicationEvaluation",
+		"pages/productDetails/productDetails",
+		"pages/registerWorker/registerWorker",
+		"pages/shoppingCartConfirOrder/shoppingCartConfirOrder",
+		"pages/babyEvaluation/babyEvaluation",
+		"pages/changePasswordNew/changePasswordNew",
+		"pages/strategyEdit/strategyEdit",
+		"pages/personnel/personnel",
+		"pages/VRResource/VRResource",
+		"pages/personnelList/personnelList",
+		"pages/VRAddress/VRAddress",
+    "pages/personnedata/personnedata"
+	],
+	"window": {
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#06881c",
+		"navigationBarTitleText": "首页",
+		"navigationBarTextStyle": "white"
+	},
+	"tabBar": {
+		"color": "#666",
+		"selectedColor": "#06881c",
+		"borderStyle": "black",
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"text": "首页",
+				"iconPath": "pages/images/home-normal.png",
+				"selectedIconPath": "pages/images/home-select.png"
+			},
+			{
+				"pagePath": "pages/shoppingMall/shoppingMall",
+				"text": "商城",
+				"iconPath": "pages/images/shopping mall-normal.png",
+				"selectedIconPath": "pages/images/shopping mall-select.png"
+			},
+			{
+				"pagePath": "pages/quickOrder/quickOrder",
+				"text": "快速下单",
+				"iconPath": "pages/images/order-normal.png",
+				"selectedIconPath": "pages/images/order-select.png"
+			},
+			{
+				"pagePath": "pages/shoppingCart/shoppingCart",
+				"text": "购物车",
+				"iconPath": "pages/images/shopping cart-normal.png",
+				"selectedIconPath": "pages/images/shopping cart-select.png"
+			},
+			{
+				"pagePath": "pages/personalCenter/personalCenter",
+				"text": "个人中心",
+				"iconPath": "pages/images/personal center-normal.png",
+				"selectedIconPath": "pages/images/personal center-select.png"
+			}
+		]
+	},
+	"sitemapLocation": "sitemap.json"
+}

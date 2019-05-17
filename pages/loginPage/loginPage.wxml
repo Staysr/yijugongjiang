@@ -1,0 +1,32 @@
+<!--pages/registrationPage/registrationPage.wxml-->
+<view class="container"><form bindsubmit="formSubmit" >
+ <!--注册信息  -->
+     <view class='registraInformation'>
+           <view class='registraInforItem'>
+              <input class='registraInrItemIphone '  bindinput='bindPhone' type='number' placeholder='请输入手机号'></input>
+            <button   class='getCode'  bindtap="verifyCodeEvent" disabled="{{buttonDisable}}">{{verifyCodeTime}}</button>
+           </view> 
+
+     
+            <view class='registraInforItem'>
+              <input class='registraInrItemOtphone' value='{{captcha}}'  bindinput='bindCaptcha'  type='number' placeholder='请输入验证码'></input>
+             
+           </view> 
+     </view>
+  <!--注册信息结束  -->
+
+<!--点击注册按钮  -->
+  <view class='btnClickSubmit'>
+        <button class='registerInfo' form-type="submit">登录</button>
+  </view>
+
+<!--点击注册按钮 结束 -->
+<view class='isGologin'>
+      <view class='isLoginDuan' bindtap='goLink' hover-class='none'>账号密码登录</view>
+      <navigator class='remberPas'   url='../changePassword/changePassword' hover-class='none'>忘记密码</navigator>
+</view>
+<!--已经注册，点击登陆  -->
+
+   </form>
+<!--已经注册，点击登陆 结束 -->
+</view>

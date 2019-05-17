@@ -1,0 +1,280 @@
+/* pages/searchList/searchList.wxss */
+page
+{
+  background: #ebebeb;
+}
+.searchPla
+{
+  height: 185rpx;
+  width: 100%;
+}
+.searchBox
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #06881c;
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  z-index: 999;
+}
+.searchBtn
+{
+  width: 20%;
+  height: 60rpx;
+  background: #fff;
+  color: #06881c;
+  border-radius: 15rpx;
+    font-size: 26rpx;
+      text-align: center;
+   line-height: 60rpx;
+}
+.inputSerach
+{
+  display: block;
+  width: 75%;
+  background: #fff;
+  height: 60rpx;
+   border-radius: 15rpx;
+   font-size: 26rpx;
+ padding: 0 20rpx;
+ box-sizing: border-box
+}
+.listOfgoodsTitleBox
+{
+  position: fixed;
+  top: 100rpx;
+  width: 100%;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  z-index: 999
+}
+.activeGray
+{
+  background: #fff;
+}
+.listOfgoodsName
+{
+  width: 50%;
+  color: #333;
+  height: 85rpx;
+  font-size: 26rpx;
+  line-height: 80rpx;
+  border-bottom: 2rpx solid #ddd;
+  text-align: center;
+  position: relative;
+
+}
+.greenLine
+{
+  height: 5rpx;
+  width: 100%;
+  background: #06881c;
+  position: absolute;
+  bottom: -3rpx;
+  left: 0;
+  display: none;
+}
+.activeList
+{
+  color: #06881c!important;
+}
+.activeList .greenLine
+{
+  display: block
+}
+
+.listOfgoodsCell
+{
+  padding: 10rpx 20rpx;
+
+
+}
+.listOfgoodsCellImage
+{
+  width: 180rpx;
+  height: 180rpx; 
+}
+.listOfgoodsCellInfor
+{
+  width: calc(100% - 210rpx);
+  height: 160rpx;
+}
+.listOfgoodsCellList
+{
+  padding: 15rpx 0rpx 15rpx 0;
+
+ 
+}
+.listOfgoodsCellList navigator
+{
+  display: flex;
+  justify-content: space-between;
+}
+.goodsText
+{
+  height: 70rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: justify;
+  font-size: 26rpx;
+  position: relative;
+  display: inline-block;
+  padding-right: 55rpx;
+  line-height: 70rpx;
+}
+.goodsMuch
+{
+  height: 60rpx;
+  line-height: 60rpx;
+    font-size: 26rpx;
+    display: flex;
+    justify-content: flex-start;
+  
+
+}
+.goodsLink
+{
+  height: 30rpx;
+  line-height: 30prx;
+    font-size: 22rpx;
+}
+.cachNum
+{
+  margin-left: 40rpx;
+  font-size: 24rpx;
+}
+.goodsMoney
+{
+  color: #06881c;
+  font-size: 26rpx;
+}
+
+
+.shopListCell
+{
+  background: #fff;
+  padding: 0rpx 20rpx 0rpx 20rpx;
+  border-radius: 5rpx;
+  margin: 10rpx 0 20rpx;
+  padding-bottom: 20rpx;
+}
+.shopListCellTitle
+{
+  height: 75rpx;
+  /* background: red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.shopListCellTitleName
+{
+  height: 75rpx;
+  line-height: 75rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 26rpx;
+}
+.shopListCellTitleName image
+{
+  height: 50rpx;
+  width: 50rpx;
+  margin-right: 8rpx;
+}
+
+.comeOnShop
+{
+  border: 1rpx solid #06881c;
+  color: #06881c;
+  font-size: 26rpx;
+  text-align: center;
+  line-height: 50rpx;
+  height: 50rpx;
+  border-radius: 10rpx;
+  padding: 0 20rpx;
+
+}
+.comeOnShop navigator
+{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.shopInfoMation
+{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 20rpx 0;
+
+}
+.shopInfoMation image
+{
+  width: 202rpx;
+  height: 180rpx;
+}
+
+
+.shopInforImg
+{
+  width: 202rpx;
+  height: 180rpx
+}
+.activeWhite
+{
+  background: #fff;
+}
+
+.isziying::before
+{
+  content: "自营";
+  position: absolute;
+  top: 15rpx;
+  right: 0;
+  height: 40rpx;
+  width: 50rpx;
+  background: #ff0000;
+  color: #fff;
+  line-height: 40rpx;
+  font-size: 22rpx;
+  border-radius: 5rpx;
+  text-align: center;
+}
+
+.shopNamea
+{
+  position: relative;
+  height: 40rpx;
+  line-height: 40rpx;
+  display: inline-block;
+  max-width: 400rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-right: 5rpx;
+  box-sizing: border-box;
+}
+.isziyinga::before
+{
+ position: absolute;
+ top: 0;
+ right: 0;
+ width: 50rpx;
+ height: 40rpx;
+ line-height: 40rpx;
+ text-align: center;
+ font-size: 22rpx;
+ color: #fff;
+ background: #ff0000;
+}

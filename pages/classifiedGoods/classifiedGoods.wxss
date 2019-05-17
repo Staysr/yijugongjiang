@@ -1,0 +1,176 @@
+/* pages/classifiedGoods/classifiedGoods.wxss */
+page
+{
+  background: #ebebeb;
+}
+.classifiedGoodsSort
+{
+  width: 100%;
+  height: 80rpx;
+}
+.classifiedGoodsSortList
+{
+  padding: 0 20rpx;
+  background: #fff;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  height: 80rpx;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index:999;
+
+}
+.classifiedGoodsSortCell
+{
+  height: 80rpx;
+  background: #fff;
+  font-size: 26rpx;
+  line-height: 80rpx;
+  width: 33%;
+  display: flex;
+  justify-content: center;
+}
+.sortImagesBox1
+{
+  /* height: 40rpx; */
+  margin-bottom: 3rpx; margin-left: 10rpx
+}
+.sortImagesBox2
+{
+  margin-top: 4rpx;
+  margin-left: 10rpx
+}
+.sortImagesBox1 image ,.sortImagesBox2 image
+{
+  width: 18rpx;
+  height: 10rpx;
+  display: block;
+}
+.sortImagesBoxList
+{
+  height: 80rpx;
+  width: 30rpx;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+}
+.sortImagesBox1 .im02,.sortImagesBox2 .im04
+{
+  display: none;
+}
+.isWhoEleTop .sortImagesBox1 .im02
+{
+display: block!important;
+}
+.isWhoEleTop .sortImagesBox1 .im01
+{
+ display: none!important;
+}
+.isWhoEleBtm .sortImagesBox2 .im04
+{
+display: block!important;
+}
+.isWhoEleBtm .sortImagesBox2 .im03
+{
+display: none!important;
+}
+
+
+/*内容页面  */
+.shopName
+{
+  font-size: 26rpx;
+
+  height: 60rpx;
+  line-height: 60rpx;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
+  white-space: nowrap;
+  position: relative;
+  padding-right: 60rpx;
+  /* word-wrap:break-word;
+white-space:pre-wrap; */
+-webkit-line-clamp:1;
+-webkit-box-orient:vertical;
+width:310rpx;
+
+
+}
+.shopItemCell
+{
+  width: 340rpx;
+
+}
+.shopImage
+{
+   width: 300rpx;
+   height: 300rpx;
+}
+.shopMoney
+{
+  font-size: 22rpx;
+  color: #ff0000;
+}
+.shopXiaoshou
+{
+  font-size: 22rpx;
+  color: #999;
+}
+.shopInfo
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.shopItemCell
+{
+  background: #fff;
+  padding:  20rpx;
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+  word-wrap:break-word;
+}
+.shopItemList
+{
+  padding: 20rpx 20rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.shopItemCell navigator
+{
+ display: block;
+ width: 100%;
+ height: 100%;
+}
+
+.isDataNull
+{
+  top: 150rpx
+}
+
+.shopBox
+{
+  border-top: 2rpx solid #ddd;
+}
+
+.isziying::before
+{
+  content: "自营";
+  position: absolute;
+  right: 0;
+  top: 10rpx;
+  height: 40rpx;
+  width: 55rpx;
+  text-align: center;
+  background: #ff0000;
+  color: #fff;
+  line-height: 40rpx;
+  border-radius: 5rpx;
+  font-size: 24rpx
+
+}

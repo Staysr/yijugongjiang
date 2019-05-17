@@ -1,0 +1,132 @@
+<!--pages/mulbuOccupancy/mulbuOccupancy.wxml-->
+<view class='container'><form bindsubmit="formSubmit">
+
+   <!--多商家品牌入驻申请 信息   wx:if="{{isApplyStatus==1}}" -->
+   <input class='userid' type='text' name="userid" value='{{userid}}'></input>
+   <view class='mulbuOccupancyBox ' wx:if="{{isApplyStatus==1}}" >
+      <view class='mulbuOccupancy'>
+        
+        <view class='mulbuOccupancyItem'>
+              <view class='brandName'>姓名</view>
+              <input class='brandInfor' bindinput='bindName' maxlength='6' name="name" type='text' placeholder='请填写您的姓名'></input>
+        </view>
+        <!----------------------------  -->
+         <view class='mulbuOccupancyItem'>
+              <view class='brandName'>电话</view>
+              <input class='brandInfor1'name="phone" disabled='false' value='{{opione}}' maxlength='11' bindinput='bindPhone' type='number' placeholder=''></input>
+        </view>
+            <!-- <button    class='getCodebutton' bindtap="verifyCodeEvent" disabled="{{buttonDisable}}">{{verifyCodeTime}}</button> -->
+
+        <!----------------------------  -->
+         <!-- <view class='mulbuOccupancyItem'>
+              <view class='brandName'>验证码</view>
+              <input class='brandInfor' type='number' maxlength='16' name="captcha" bindinput='bindPassword'  placeholder='请填写您的验证码'></input>
+        </view> -->
+        <!----------------------------  -->
+         <view class='mulbuOccupancyItem'>
+              <view class='brandName'>品牌名称</view>
+              <input class='brandInfor' name="brand" maxlength='20' type='text' bindinput='bindBrand'  placeholder='请填写您的品牌名称'></input>
+        </view>
+        <!----------------------------  -->
+         <view class='mulbuOccupancyItem'>
+              <view class='brandName'>产品属性</view>
+              <input class='brandInfor'name="product"   bindinput='bindProduct' type='text' placeholder='请填写您的产品属性'></input>
+        </view>
+
+         <!----------------------------  -->
+         <view class='mulbuOccupancyOtherItem'>
+              <view class='brandOthName'>竞争优势</view>
+              <textarea class='brandOtInfor' name="goodness" bindinput='bindGoodness' placeholder='请描述您的竞争优势'></textarea>
+        </view>
+         <!----------------------------  -->
+         <view class='mulbuOccupancyOtherItem'>
+              <view class='brandOthName'>品牌介绍</view>
+              <textarea class='brandOtInfor' name="introduce" bindinput='bindIntroduce' placeholder='请介绍一下您的品牌'></textarea>
+        </view>
+      </view>
+   </view>
+
+   <!--多商家品牌入驻申请 信息结束  -->
+
+
+   <!--多家商品入住申请 信息提交  -->
+   <view class='mulbuOccupancyBtn'>
+     <button class='mulbuOccupancyButton {{issatisfy?"colorActive":"colorNormal"}}'  form-type="submit">提交</button>
+   </view>
+
+   <!--多家商品入住申请 信息提交 结束 -->
+   </form>
+
+  
+
+
+  <!--审核中  -->
+ <view class='statusShenhe' wx:if="{{isApplyStatus!=1}}">
+   <view class='status02'  wx:if="{{isApplyStatus==2}}">
+        <view class='successBox'>
+             <image class='success01' src="{{image}}syccess01.png"></image>
+        </view>
+        <view class='successText'>
+         您的入驻申请已提交，正在等待 后台审核
+        </view>
+        <view class='backCenter' bindtap='backcenter'>
+       返回个人中心
+        </view>
+   </view>
+
+<view class='status02'  wx:if="{{isApplyStatus==9}}">
+      <view class='successBox'>
+             <image class='success01' src="{{image}}failed.png"></image>
+        </view>
+        <view class='successTextTitle'>
+          <view class='faileTitle'>
+            您已被管理员移除,请及时联系管理员确认信息 
+          </view>
+   </view>
+   </view>
+
+   <view class='status02'  wx:if="{{isApplyStatus==3}}">
+      <view class='successBox'>
+             <image class='success01' src="{{image}}failed.png"></image>
+        </view>
+        <view class='successTextTitle'>
+          <view class='faileTitle'>
+            您的入驻申请被拒绝，拒绝原因： 
+          </view>
+          <view class='faileShu'>
+             {{handlereason}}
+          </view>
+        </view>
+        <view class='backCenter' bindtap='zaici'>
+         再次申请入驻
+        </view>
+      
+   </view>
+
+   <view class='status02'  wx:if="{{isApplyStatus==4}}">
+       <view class='successBox'>
+             <image class='success01' src="{{image}}success.png"></image>
+        </view>
+        <view class='successTextsuccess'>
+          <view class='faileTitle'>
+         恭喜！你的品牌入住申请已通过!
+          </view>
+          <view class='faileShu'>
+             请登录网址：{{url}}
+          </view>
+          <view class='faileShu'>
+             管理您的商品
+          </view>
+        </view>
+        <view class='backCenter' bindtap='fuzhiwangzhi' data-urls="{{url}}">
+         复制后台网址
+        </view>
+   </view>
+ </view>
+  <!--审核中  -->
+   
+
+
+
+
+</view>

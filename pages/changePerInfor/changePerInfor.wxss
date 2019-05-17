@@ -1,0 +1,45 @@
+/* pages/changePerInfor/changePerInfor.wxss */
+page
+{
+  background: #ebebeb;
+}
+.successBtn
+{
+  width: 100%;
+  height: 80rpx;
+  background: #06881c;
+  text-align: center;
+  line-height: 80rpx;
+  color: #fff;
+  font-size: 30rpx;
+}
+.changeUserNameinputBox
+{
+  background: #fff;
+
+
+  margin: 40rpx 0;
+}
+.changeUserNameInput
+{
+  width: 100%;
+    height: 80rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  font-size: 30rpx;
+
+}
+.changeUserBtn
+{
+  padding: 0 20rpx;
+}
+.changeTextarea
+{
+  height: 280rpx;
+  padding: 20rpx;
+  line-height: 40rpx;
+  color: #333;
+  font-size: 30rpx;
+  width: 100%;
+  box-sizing: border-box
+}

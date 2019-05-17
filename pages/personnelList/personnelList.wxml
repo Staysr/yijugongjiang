@@ -1,0 +1,32 @@
+<!--pages/personnelList/personnelList.wxml-->
+<import src="../../utils/template.wxml" />
+<view class="container">
+  <view class='listHead bgClass'>
+    <view class='menuViiew {{menuid == "0"?"selectMenu":""}}' data-currentid="0" bindtap='menuTap'>默认</view>
+    <view class='menuViiew {{menuid == "1"?"selectMenu":""}}' data-currentid="1" bindtap='menuTap'>{{titledata}}</view>
+  </view>
+
+  <view class='itemList marginClass'>
+    <view class="cu-list menu menu-avatar" wx:for="{{workerlist}}" style='margin-top:0;border-bottom:1px solid #dddddd;' >
+  
+      <view class="cu-item" bindtap='personnerTap' data-id='{{item.id}}' data-name="{{item.name}}">
+        <view class="cu-avatar round lg" style="background-image:url({{item.head}}); margin-top:12rpx;"></view>
+        <view class='content'>
+          <view class='text-grey' style="float:left;margin-left: 20rpx;color:black">{{item.name}}</view>
+          <view class='cu-tag bg-green' style="margin-left: 25rpx;width:107rpx;height:40rpx; ">已认证</view>
+          <view class='cu-tag bg-red' style="margin-left: 25rpx;width:107rpx;height:40rpx; " wx:if="{{item.strict==1}}">严选</view>
+          <view class='text-gray text-sm' style="margin-left: 20rpx">
+            <text>口碑评分:{{item.praise}}</text>
+            <text>口碑评分:{{item.turnover}}</text>
+             </view>
+
+        </view>
+      </view>
+
+      
+    </view>
+
+  </view>
+ <template is="noMoreCell" wx:if="{{isHasData}}"> </template>
+  
+</view>

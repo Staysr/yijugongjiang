@@ -1,0 +1,46 @@
+<!--pages/bulleInformation/bulleInformation.wxml-->
+<import src="../../utils/template.wxml" />
+
+<view class='container'>
+
+  <view class='bulleInformationBox'>
+    <view class='bulleInformation'>
+      <view class='bulleInformationItem' wx:for="{{message}}" wx:for-item="messageitem" wx:key="{{messageitem.id}}">
+        <view class='bulleInfoTitle1'>{{messageitem.title}}</view>
+        <view class='bulleInfoTitle2'>{{messageitem.content}}</view>
+        <view class='bulleInfoTitle3'>
+          <view> 联系方式：{{messageitem.name}} {{messageitem.phone}} </view>
+          <view>{{messageitem.add_time}}</view>
+        </view>
+      </view>
+      <!----------------------------  -->
+
+
+    </view>
+  </view>
+
+  <!--加载中样式  -->
+      <template is="loadNow"  wx:if="{{isLoadding}}"></template>
+<!--加载中样式  --> 
+ <!--暂无数据  -->
+  <!-- <template is="loadFail" wx:if="{{isHasData}}"> </template> -->
+ <!--暂无数据  -->
+
+  <!--占位符  -->
+  <view class='pladiv'></view>
+  <!--占位符 结束 -->
+
+  <!--发布信息  -->
+  <view class='releaseInformation'>
+    <navigator url='{{isloginStatus?"../publiInforContent/publiInforContent":"../registrationPage/registrationPage"}}' hover-class='none'>
+      +发布信息
+    </navigator>
+  </view>
+  <!--发布信息结束  -->
+
+
+
+
+
+  
+</view>

@@ -1,0 +1,114 @@
+/* pages/registrationPage/registrationPage.wxss */
+
+.registraInformation {
+  padding: 0 20rpx;
+}
+
+.xueyi {
+  font-size: 29rpx;
+}
+
+.registraInforItem {
+  display: flex;
+  justify-content: space-between;
+  height: 130rpx;
+  align-items: flex-end;
+  position: relative;
+}
+
+.registraInrItemIphone {
+  width: 520rpx;
+  border-bottom: 2rpx solid #ddd;
+  font-size: 30rpx;
+  color: #333;
+}
+
+/* 选中后的样式 （可根据设计稿需求自己修改） */
+
+radio .wx-radio-input {
+  border-radius: 50%;
+  width: 44rpx;
+  height: 44rpx;
+  line-height: 44rpx;
+  text-align: center;
+  font-size: 26rpx; /* 对勾大小 26rpx  */
+  color: #fff; /* 对勾颜色 *//* background:red;
+    /* border-color: red;  * */
+}
+
+.getCode {
+  width: 160rpx;
+  height: 75rpx;
+  background: #06881c;
+  color: #fff;
+  font-size: 26rpx;
+  text-align: center;
+  line-height: 75rpx;
+  border-radius: 8rpx;
+  padding: 0;
+}
+
+.registraInrItemOtphone {
+  width: 100%;
+  border-bottom: 2rpx solid #ddd;
+  font-size: 30rpx;
+  color: #333;
+}
+
+.canSee {
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.canSee image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 333;
+}
+
+.btnClickSubmit {
+  padding: 0 20rpx;
+}
+
+.registerInfo {
+  width: 50%;
+  height: 85rpx;
+  background: #06881c;
+  color: #fff;
+  font-size: 34rpx;
+  text-align: center;
+  line-height: 85rpx;
+  margin-top: 45rpx;
+  float: left;
+  margin-left: -9rpx;
+}
+
+.registerInfo1 {
+  width: 50%;
+  height: 85rpx;
+  background: #06881c;
+  color: #fff;
+  font-size: 34rpx;
+  text-align: center;
+  line-height: 85rpx;
+  margin-top: 45rpx;
+  float: left;
+  margin-left: 4px;
+}
+
+.isGologin navigator {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  margin-top: 30rpx;
+  text-align: center;
+  font-size: 26rpx;
+  color: #333;
+  letter-spacing: 3rpx;
+}

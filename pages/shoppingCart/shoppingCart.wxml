@@ -1,0 +1,150 @@
+<!--pages/shoppingCart/shoppingCart.wxml-->
+<import src="../../utils/template.wxml" />
+<view class='container' wx:if="{{card.length > 0}}">
+
+
+  <view class='shoppingCart'>
+    <view class='shoppingCartBox'>
+
+      <!--删除操作按钮  -->
+      <view class='shoppingCartDelect'>
+      <view class='shoppingCartDelectBox'>
+        <view class='shopCarDele' bindtap='deleteShopCar'>
+          <image class='deleteIcon' src='{{image}}delete.png'></image> 删除
+        </view>
+      </view>
+      
+      </view>
+      <!--删除操作按钮  -->
+
+      <!-- 购物车盒子  -->
+      <view class='shopCarGoodsBox'>
+
+        <view class='shopCarGoodsList'>
+
+
+          <view class='shopCarGoodsCell' wx:for="{{card}}" wx:for-item="carditem" wx:for-index="cardindex">
+
+            <view class='shopCarGoodsCellTitle'>
+              <view class='isCellShopGoods'>
+                <image wx:if="{{carditem.isSelect==0}}" 
+                bindtap='fristCardW' 
+                data-cardindex='{{cardindex}}'
+                src='{{image}}noAddre.png'></image>
+                <image wx:else="{{carditem.isSelect==1}}" 
+                bindtap='fristCardX' 
+                data-cardindex='{{cardindex}}'
+                src='{{image}}seAddre.png'></image>
+              </view>
+              <navigator url='../brandShop/brandShop?shopid={{carditem.sellerid}}&shopname={{carditem.name}}' class='shopLogoNav' hover-class='none'>
+                <image class='shopIconLogo' src='{{carditem.logo}}'></image>
+                <view class='shopName1'>{{carditem.name}}</view>
+              </navigator>
+            </view>
+            <!-- 商品信息列表 -->
+
+            <view class='shopGoodsInforList'>
+
+              <view class='shopGoodsInforCell' wx:for="{{carditem.goods}}" wx:for-item="goodsitem" wx:for-index="goodsindex">
+                <view class='isShopGoodsItem'>
+                  <image wx:if="{{goodsitem.state == 0 }}" 
+
+                         bindtap='selectShopW' 
+                         data-fristindex="{{cardindex}}"
+                         data-secondindex='{{goodsindex}}' 
+                         data-shopstate="{{goodsitem.state}}"
+                         data-shopid="{{goodsitem.cardid}}"
+
+                         src='{{image}}noAddre.png'></image>
+                <image  wx:else="{{goodsitem.state == 1}}"
+                        bindtap='selectShopX'
+                        data-fristindex="{{cardindex}}"
+                        data-secondindex='{{goodsindex}}' 
+                        data-shopstate="{{goodsitem.state}}"
+                        data-shopid="{{goodsitem.cardid}}"
+                        src='{{image}}seAddre.png'></image>
+                </view>
+                <view class='shopGoodsInforMation'>
+                  <image class='goodImg' src='{{goodsitem.pic}}'></image>
+                  <view class=' goodView'>
+                    <view class='goodsName'>{{goodsitem.name}}</view>
+                    <view class='goodsType'>{{goodsitem.specname}}</view>
+                    <view class='goodsPrice'>
+                      <view>￥{{goodsitem.price}}</view>
+                      <view class='stepper'> 
+                        <text class='{{goodsitem.count<=1?"disable":"normal"}}' 
+                              data-fristindex="{{cardindex}}"
+                              data-secondindex='{{goodsindex}}' 
+                              data-shopstate="{{goodsitem.state}}"
+                              data-shopid="{{goodsitem.cardid}}"
+                              data-count='{{goodsitem.count}}' 
+                              type='number'
+                              bindtap='bindMinus'>-</text>      
+                        <view class='inputDiv' >{{goodsitem.count}}</view>
+                        <text bindtap='bindPlus'
+                              data-fristindex="{{cardindex}}"
+                              data-secondindex='{{goodsindex}}' 
+                              data-shopstate="{{goodsitem.state}}"
+                              data-shopid="{{goodsitem.cardid}}"
+                              data-count='{{goodsitem.count}}' >+</text>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </view>
+            <!-- 商品信息列表 结束-->
+          </view>
+        </view>
+      </view>
+      <!-- 购物车盒子  -->
+      <!--购物车底部  -->
+      <view class='shopCarBottom'>
+        <view class='shopCarBottomBox'>
+          <view class='isCellShopGoods iswidth'>
+            <image wx:if="{{allCard==0}}" bindtap='allCardShopW' src='{{image}}noAddre.png'></image>
+            <image wx:else="{{allCard==1}}"  bindtap='allCardShopX' src='{{image}}seAddre.png'></image>
+            <view class='allSelect'>全选</view>
+          </view>
+          <view class='shopCarBot022'>
+            <view class='shopCarBot0301'>￥{{allMoney}}</view>
+            <view class='shopCarBot0302' bindtap='settleaccounts'>结算</view>
+          </view>
+        </view>
+      </view>
+      <!--购物车底部  -->
+
+
+    </view>
+  </view>
+
+
+  <!--删除此商品  -->
+
+  <view class='btnClickAlert' wx:if="{{isAlert}}">
+    <view class='btnClickAlertBox'>
+      <view class='btnClickAlertTil'>
+        确定要删除此商品吗？
+      </view>
+      <view class='btnClickAlertBtnBox'>
+        <view class='calceBtn'>
+          取消
+        </view>
+        <view class='okBtn'>确定</view>
+      </view>
+    </view>
+  </view>
+
+  <!--删除此商品 结束  -->
+
+
+
+</view>
+
+
+<view class='isDenglu' wx:if="{{isDenglu}}">
+ ———— 你还未登录! ————
+</view>
+
+
+ <template  is="gowuche"  wx:if="{{isNolist}}"></template>

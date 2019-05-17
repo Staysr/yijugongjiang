@@ -1,0 +1,86 @@
+/* pages/preBalance/preBalance.wxss */
+page
+{
+  background: #ebebeb;
+}
+.preBalanceBox
+{
+  padding:  20rpx 20rpx;
+}
+.preBalance
+{
+ background: #fff;
+ border-radius: 8rpx;
+ overflow: hidden
+}
+.preBalanceTopBox
+{
+  background: #fff;
+  padding:25rpx 20rpx 10rpx;
+}
+.preBalanceGetBalance
+{
+  border-bottom: 2rpx solid #ddd;
+}
+.preBalanceTitle
+{
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 26rpx;
+  letter-spacing: 2rpx;
+}
+.preBalanceGetBalance
+{
+  height: 80rpx;
+line-height: 80rpx;
+font-size: 34rpx;
+display: flex;
+justify-content: flex-start;
+align-items: center;
+}
+.nowMuchBalance
+{
+  height: 55rpx;
+  line-height: 55rpx;
+  font-size: 22rpx;
+  color: #999;
+  letter-spacing: 2rpx;
+}
+.btnClickBox
+{
+  padding:20rpx 20rpx 20rpx;
+  background: #fff;
+}
+.preBalanceDesInfo
+{
+  height: 80rpx;
+  font-size: 26rpx;
+  color: #fff;
+  line-height: 80rpx;
+}
+.preBalanceNav
+{
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 26rpx;
+  color: #333;
+  margin-top: 20rpx;
+}
+.balanceInput
+{
+  width: 100%;
+}
+
+.hintInformation
+{
+  color: #fb7777;
+  font-size: 22rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  letter-spacing: 2rpx;
+}
+.fontsBlod
+{
+  font-weight: bold
+}

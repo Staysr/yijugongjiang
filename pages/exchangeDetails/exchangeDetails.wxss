@@ -1,0 +1,88 @@
+/* pages/preBalanceDetailed/preBalanceDetailed.wxss */
+page
+{
+  background: #ebebeb;
+}
+.preBalanceDetailedCell {
+  
+  width: 100%;
+  margin-top: 20rpx;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2rpx solid #ddd;
+
+}
+.preBalanceDetailed
+{
+  background: #fff;
+
+}
+.preBalanceDetailedItem
+{
+
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2rpx solid #ddd;
+  
+}
+.preBalanceDetailedItem:last-child
+{
+  border: none;
+}
+
+.preBalanceDetailedItemList
+{
+  padding:  0 20rpx;
+}
+
+.preBalanceDetailedCell .preBalTime {
+  width: 50%;
+  text-align: center;
+  height: 100rpx;
+  line-height: 100rpx;
+   font-size: 26rpx;
+}
+
+.preBalanceDetailedCell .preBalMuch {
+  width: 50%;
+   text-align: center;
+  line-height: 100rpx;
+  font-size: 26rpx;
+}
+
+.preBalanceDetailedItem .preBalTime {
+  width: 50%;
+  text-align: center;
+  height: 100rpx;
+  line-height: 100rpx;
+   font-size: 26rpx;  font-weight: bold;
+}
+
+.preBalanceDetailedItem .preBalMuch {
+  width: 50%;
+   text-align: center;
+  line-height: 100rpx;
+  font-size: 26rpx;
+
+}
+
+.preBalTiBox
+{
+  background: #ebebeb;
+  height: 120rpx;
+  width: 100%;
+}
+.preBalTiBoxF
+{
+  background: #ebebeb;
+  height: 120rpx;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 333;
+}

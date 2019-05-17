@@ -1,0 +1,29 @@
+
+
+<view class="container">
+<form bindsubmit="formSubmit" >
+<!--30高度的占位符  -->
+<view class='viewChildPl'></view>
+<!--30高度的占位符  -->
+
+
+<!--填写信息  -->
+<view class='fillInformation'>
+    <input type='text' class='inputCell' bindinput='bindName' maxlength='6' value='{{name}}' name="name" placeholder='姓名：'></input>
+     <input type='number' class='inputCell' bindinput='bindContact' maxlength='11' value='{{contact}}' name="contact" placeholder='电话：'></input>
+      <input type='text' class='inputCell' bindinput='bindTitlet' maxlength='20'  value='{{title}}' name="title" placeholder='标题：'></input>
+       <textarea placeholder='内容：' bindinput='bindContent'  value='{{content}}' name="content"  class='texttareaCell'></textarea>
+</view>
+
+<!--填写信息结束  -->
+
+<!--提交按钮  -->
+
+<view class='submitInforMation'>
+   <button class='submitInforMationBtn  {{issatisfy?"colorActive":"colorNormal"}}' form-type="submit">发布</button>
+   <view class='palView'></view>
+</view>
+
+<!--提交按钮结束  -->
+ </form>
+</view>

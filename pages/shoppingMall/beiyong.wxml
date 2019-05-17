@@ -1,0 +1,177 @@
+<!--pages/shoppingMall/shoppingMall.wxml-->
+
+<view class='container'>
+
+  <!--商城首页  -->
+  <view class='shoppingMallBox'>
+    <view class='shoppingMall'>
+      <!--商城搜索  -->
+
+      <view class='searchBoxView' id='mjltest'>
+
+        <navigator class='searchBoxViewNav' url="../searchList/searchList" hover-class='none'>
+          <image class='searchImg' src='../images/search.png'></image>
+          <view class='textSearch'>搜索</view>
+        </navigator>
+
+      </view>
+      <!--搜索结束  -->
+
+
+
+      <!--分类商品内容  -->
+
+      <view class='classifiedGoods'>
+        <!--左边分类商品名称  -->
+        <view class='classifiedGoodsName'>
+          <scroll-view scroll-y class='classifiedGoodScroll' style='height:{{searchHeight}};top:{{searchTop}}' bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+
+            <view class="scroll-view-item {{activeViewItem == 1 ?'activeViewItem':''}}" data-activindex="1" bindtap='selectClassfiedGood' >分类一额呃</view>
+            <view class="scroll-view-item  {{activeViewItem == 2 ?'activeViewItem':''}}" data-activindex="2" bindtap='selectClassfiedGood' >分类一</view>
+            <view class="scroll-view-item  {{activeViewItem == 3 ?'activeViewItem':''}}" data-activindex="3" bindtap='selectClassfiedGood'  >分类一</view>
+         
+
+          </scroll-view>
+        </view>
+        <!--左边分类商品名称  -->
+
+
+        <!--右边的商品  -->
+        <view class='classifiedGoodsContent'>
+  
+                <view class='classifiedGoodShopList'>
+                       <view class='classifiedGoodShopCell'>
+                         <view class='classifiedGoodShopTitleBox'>
+                            <view class='classifiedGoodShopTitle'>分类一下面的标题</view>
+                            <navigator url='../classifiedGoods/classifiedGoods'       
+                          hover-class='none'  class='classifiedGoodShopShowMore'>查看更多></navigator>
+                         </view>
+                          
+                          <!--商品内容  -->
+
+                          <view class='classShopNameList'>
+
+
+                              <view class='classShopNameCell'>  
+                                   <!-- 290 * 250 -->
+                                   <image class='classShopImg' src='../images/pro-1.jpg'></image>
+                                   <view class='shopName'>批乐宝底层耐水腻子</view>
+                                   <view class='shopMuchInfo'>
+                                      <view class='redColor'>￥356.60</view>
+                                      <view class='xiaoshou'>销量：500</view>
+                                   </view>
+                              </view>
+                              <view class='classShopNameCell'>  
+                                   <!-- 290 * 250 -->
+                                   <image class='classShopImg' src='../images/pro-1.jpg'></image>
+                                   <view class='shopName'>批乐宝底层耐水腻子</view>
+                                   <view class='shopMuchInfo'>
+                                      <view class='redColor'>￥356.60</view>
+                                      <view class='xiaoshou'>销量：500</view>
+                                   </view>
+
+                              </view>
+                              <view class='classShopNameCell'>  
+                                   <!-- 290 * 250 -->
+                                   <image class='classShopImg' src='../images/pro-1.jpg'></image>
+                                   <view class='shopName'>批乐宝底层耐水腻子</view>
+                                   <view class='shopMuchInfo'>
+                                      <view class='redColor'>￥356.60</view>
+                                      <view class='xiaoshou'>销量：500</view>
+                                   </view>
+                                   
+                              </view>
+                              <view class='classShopNameCell'>  
+                                   <!-- 290 * 250 -->
+                                   <image class='classShopImg' src='../images/pro-1.jpg'></image>
+                                   <view class='shopName'>批乐宝底层耐水腻子</view>
+                                   <view class='shopMuchInfo'>
+                                      <view class='redColor'>￥356.60</view>
+                                      <view class='xiaoshou'>销量：500</view>
+                                   </view>
+                                   
+                              </view>
+
+
+                          </view>
+
+                            <!---------------------------  -->
+
+                            
+                            <!--商品内容  结束-->
+                       </view>
+
+                       <!----------------  -->
+                          <view class='classifiedGoodShopCell'>
+                         <view class='classifiedGoodShopTitleBox'>
+                            <view class='classifiedGoodShopTitle'>分类一下面的标题</view>
+                            <navigator  url='../classifiedGoods/classifiedGoods'       
+                          hover-class='none' class='classifiedGoodShopShowMore'>查看更多></navigator>
+                         </view>
+                          
+                          <!--商品内容  -->
+
+                          <view class='classShopNameList'>
+
+
+                              <view class='classShopNameCell'>  
+                                   <!-- 290 * 250 -->
+                                   <image class='classShopImg' src='../images/pro-1.jpg'></image>
+                                   <view class='shopName'>批乐宝底层耐水腻子</view>
+                                   <view class='shopMuchInfo'>
+                                      <view class='redColor'>￥356.60</view>
+                                      <view class='xiaoshou'>销量：500</view>
+                                   </view>
+                              </view>
+                              <view class='classShopNameCell'>  
+                                   <!-- 290 * 250 -->
+                                   <image class='classShopImg' src='../images/pro-1.jpg'></image>
+                                   <view class='shopName'>批乐宝底层耐水腻子</view>
+                                   <view class='shopMuchInfo'>
+                                      <view class='redColor'>￥356.60</view>
+                                      <view class='xiaoshou'>销量：500</view>
+                                   </view>
+
+                              </view>
+                              <view class='classShopNameCell'>  
+                                   <!-- 290 * 250 -->
+                                   <image class='classShopImg' src='../images/pro-1.jpg'></image>
+                                   <view class='shopName'>批乐宝底层耐水腻子</view>
+                                   <view class='shopMuchInfo'>
+                                      <view class='redColor'>￥356.60</view>
+                                      <view class='xiaoshou'>销量：500</view>
+                                   </view>
+                                   
+                              </view>
+                              <view class='classShopNameCell'>  
+                                   <!-- 290 * 250 -->
+                                   <image class='classShopImg' src='../images/pro-1.jpg'></image>
+                                   <view class='shopName'>批乐宝底层耐水腻子</view>
+                                   <view class='shopMuchInfo'>
+                                      <view class='redColor'>￥356.60</view>
+                                      <view class='xiaoshou'>销量：500</view>
+                                   </view>
+                                   
+                              </view>
+
+
+                          </view>
+
+                            <!---------------------------  -->
+
+                            
+                            <!--商品内容  结束-->
+                       </view>
+                </view>
+             
+        </view>
+        <!--右边的商品  -->
+      </view>
+
+      <!--分类商品内容 结束  -->
+    </view>
+  </view>
+  <!--商城首页 结束 -->
+
+
+</view>

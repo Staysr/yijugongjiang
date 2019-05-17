@@ -1,0 +1,187 @@
+/* pages/brandShop/brandShop.wxss */
+@import "../productDetails/productDetails.wxss";
+page
+{
+  background: #ebebeb;
+}
+.brandShopBox
+{
+  width: 100%
+}
+.brandShop
+{
+  width: 100%
+}
+.topGearMap
+{
+  width: 100%;
+  height: 100vw;
+}
+.topGearMap 
+{
+width: 100%
+}
+.topGearMapSwiper
+{
+  width: 100%
+}
+.topGearMap swiper
+{
+  height: 300rpx!important;
+}
+.topGearMapSwiper image
+{
+  width: 100%;
+  height: 100vw;
+}
+.topGearMap navigator
+{
+ display: block;
+ width: 100%;
+ height: 100%;
+}
+/*分类标题  */
+.topGearMap
+{
+  width: 100%;
+}
+.scroll-view_H
+{
+  width: 100%;
+  height: 50rpx;
+  display: flex;
+white-space: nowrap; 
+}
+.classifiedTitleBox
+{
+  width: 100%;
+  background: #fff;
+  height: 80rpx;
+}
+.scroll-header
+{
+  white-space: nowrap;
+  width: 100%;
+    height: 80rpx;
+    
+}
+.scroll-view-item
+{
+  display: inline-block;
+  padding: 0 30rpx;
+  height: 80rpx;
+  font-size: 26rpx;
+  color: #999;
+  background: #fff;
+  text-align: center;
+  line-height: 80rpx;
+  position: relative;
+}
+
+.greenLine
+{
+  height: 2rpx;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: none;
+  background: #06881c;
+}
+.activeShopLine .greenLine
+{
+  display: block
+}
+
+.shopName
+{
+  font-size:26rpx;
+border-top:2rpx solid #ebebeb;
+height:60rpx;
+line-height:60rpx;
+
+-webkit-line-clamp:1;
+-webkit-box-orient:vertical;
+width:300rpx;
+
+
+}
+.shopItemCell
+{
+  width: 340rpx;
+
+}
+.shopImage
+{
+   width: 300rpx;
+   height: 300rpx;
+}
+.shopMoney
+{
+  font-size: 22rpx;
+  color: #ff0000;
+}
+.shopXiaoshou
+{
+  font-size: 22rpx;
+  color: #999;
+}
+.shopInfo
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.shopItemCell
+{
+  background: #fff;
+  padding:  20rpx;
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+}
+.shopItemList
+{
+  padding: 20rpx 20rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.shopItemCell navigator
+{
+ display: block;
+ width: 100%;
+ height: 100%;
+}
+.activeShopLine
+{
+  color: #06881c!important;
+}
+.yangshiBox
+{
+  position: relative
+}
+    .bgClass{
+	background-color: #FFFFFF;
+}
+.paddingClass{
+	padding-bottom: 20rpx;
+}
+.commentView{
+	margin-top:20rpx;
+  margin-bottom:40rpx;
+  z-index: 999;
+}
+.qrcodeView{
+	display:flex;
+	justify-content:center;
+	padding-top: 20rpx;
+}
+.qrcodeText{
+	text-align: center;
+}
+.qrcodeImg{
+	width: 250rpx;
+	height: 250rpx;
+  border:1px solid #ebebeb;
+
+}

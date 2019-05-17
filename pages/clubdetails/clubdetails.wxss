@@ -1,0 +1,2 @@
+/* pages/clubdetails/clubdetails.wxss */
+@import "../clubList/clubList.wxss";

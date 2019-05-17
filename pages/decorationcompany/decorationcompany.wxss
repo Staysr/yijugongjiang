@@ -1,0 +1,19 @@
+/* pages/decorationcompany/decorationcompany.wxss */
+@import "../classifiedGoods/classifiedGoods.wxss";
+.searchBox
+{
+  margin-top: -57rpx;
+  width: 100%;
+  /* background: #fff; */
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  z-index: 999;
+
+}
+.pladiv {
+  height: 50rpx;
+}

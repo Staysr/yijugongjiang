@@ -1,0 +1,146 @@
+<!--pages/brandShop/brandShop.wxml-->
+<import src="../../utils/template.wxml" />
+<view class='container' wx:if="{{nowGoods}}">
+
+  <view class='brandShopBox'>
+    <view class='brandShop'>
+
+      <!--标题滚动  -->
+      <cover-view class='classifiedTitleBox'>
+
+        <scroll-view scroll-x class="scroll-header">
+
+          <view class="scroll-view-item {{currentTab==goodsclassindex?'activeShopLine':''}}" 
+
+                wx:for="{{goodsClass}}" 
+                wx:for-item="goodsclassitem" 
+                wx:for-index="goodsclassindex" 
+                data-actindex="{{goodsclassindex}}" 
+                bindtap="headerShop" 
+                data-classid="{{goodsclassitem.id}}">{{goodsclassitem.classname}}
+                <view class='greenLine'></view>
+          </view>
+
+
+
+
+          <!-- <view class="scroll-view-item {{currentTab==2 ? 'activeShopLine': ''}}" data-actindex="{{2}}" bindtap="headerShop" data-classid="{{item.classId}}">你好啊
+            <view class='greenLine'></view>
+          </view> -->
+
+
+
+        </scroll-view>
+
+
+      </cover-view>
+      <!--标题滚动 结束 -->
+
+
+      <!--标题所对应的内容  -->
+
+      <view class='shopItemList'>
+
+
+        <view class='shopItemCell' wx:for="{{nowGoods}}" wx:for-item="goodsitem" wx:for-index="goodsindex">
+          <navigator url='../productDetails/productDetails?goodid={{goodsitem.id}}' hover-class='none'>
+            <image class='shopImage' src='{{goodsitem.pic}}'></image>
+            <view class='shopName'>{{goodsitem.name}}</view>
+            <view class='shopInfo'>
+              <view class='shopMoney'>￥{{goodsitem.discount}}</view>
+              <view class='shopXiaoshou' catchtap='jionShopClick' data-shopid='{{goodsitem.id}}' data-goodsindex='{{goodsindex}}'>
+                <image class='jionshop' src='{{image}}jionshop.png'></image>
+              </view>
+            </view>
+          </navigator>
+        </view>
+        <!------------------------------------------  -->
+
+
+      </view>
+
+      <!--标题所对应的内容 结束  -->
+
+
+<view class='yangshiBox'>
+   <!--加载中样式  -->
+  <template is="loadNow" wx:if="{{isLoadding}}"></template>
+  <!--加载中样式  -->
+  <!--暂无数据  -->
+  <template is="isDataNull" wx:if="{{isHasShop}}"> </template>
+  <!--暂无数据  -->
+  <!--暂无数据  -->
+  <template is="noMoreCell" wx:if="{{isHasMoredata}}"> </template>
+  <!--暂无数据  -->
+</view>
+
+
+
+      <!-- 商品信息 -->
+      <view class='shopInMationNow' animation="{{animationData}}">
+
+
+        <view class='shopInMationNowBox01' animation="{{animationData1}}">
+          <view class='shopInMationNowBox'>
+            <view class='shopInMationName'>
+
+              <image class='shopImgSize' src='{{goddsinfor.pic}}'></image>
+
+              <view class='shopInMationTitle'>
+                <view class='shopInMationName01'>
+                  {{goddsinfor.name}}
+                </view>
+                <view class='shopInMationPrice'>
+                  ￥{{selectMoney}}/桶
+                </view>
+              </view>
+              <image class='closeBtn' bindtap='closeClick' src='{{image}}close.png'></image>
+            </view>
+            <!--规格  -->
+            <view class='Specifi'>
+              <view class='SpecifiName'>规格</view>
+              <view class='SpecifiContent'>
+                <view class='SpecifiItem {{isSpecNum == goodsinforindex ?"isSelect":""}}' 
+                  wx:for="{{goddsinfor.specs}}"  wx:for-index="goodsinforindex" bindtap="selectSpecs"
+                  wx:for-item="goodsinforitem" 
+                  data-specindex="{{goodsinforindex}}"
+                  data-price="{{goodsinforitem.price}}">{{goodsinforitem.name}}</view>
+              </view>
+            </view>
+            <!--规格结束  -->
+            <!--购买数量  -->
+            <view class='shoppurchaseName'>
+              <view class='shoppurchaseTitle'>购买数量</view>
+              <view class='stepper'>
+                <text class='{{minusStatus}}' type='number' bindtap='bindMinus'>-</text>
+                <input bindinput='bindManual' value='{{num}}'></input>
+                <text bindtap='bindPlus'>+</text>
+              </view>
+            </view>
+          </view>
+          <!--购买数量 结束  -->
+
+          <!--加入购物车  -->
+          <view class='jionShopCar' bindtap='jionShopCar'>
+            加入购物车
+          </view>
+          <!--加入购物车  结束-->
+        </view>
+
+      </view>
+      <!-- 商品信息 end-->
+
+
+
+    </view>
+  </view>
+
+
+
+</view>
+
+
+<!-- 遮罩层 -->
+<view class='zhezhao' wx:if="{{zhezhao}}" catchtap='bindclcik'>
+
+</view>

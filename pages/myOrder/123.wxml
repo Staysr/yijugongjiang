@@ -1,0 +1,1022 @@
+<view class='container'>
+
+  <view class="swiper-tab">
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">全部</view>
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">代付款</view>
+    <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">代发货</view>
+    <view class="swiper-tab-list {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">待收货</view>
+    <view class="swiper-tab-list {{currentTab==4 ? 'on' : ''}}" data-current="4" bindtap="swichNav">待评价</view>
+    <view class="swiper-tab-list {{currentTab==5 ? 'on' : ''}}" data-current="5" bindtap="swichNav">已完成</view>
+    <view class="swiper-tab-list {{currentTab==6 ? 'on' : ''}}" data-current="6" bindtap="swichNav">已取消</view>
+  </view>
+
+
+
+  <view class='plaZhanwei'>
+  </view>
+
+  <!--订单内容列表  -->
+
+
+  <view class='myOrderListBox'>
+    <view class='myOrderList'>
+
+
+      <!--全部订单  -->
+      <view class='myOrderAllList'>
+        <view class='substitutePaymentCell'>
+          <!--==============代付款===============  -->
+          <view class='substitutePaymentCell'>
+            <view class='shopNameInfor'>
+              <view class='shopNameInforLeft'>
+                <navigator>
+                  <image src='{{image}}sico.png'></image> 公牛专卖店 >
+                </navigator>
+              </view>
+
+              <view class='shopNameInforTime'>2018-06-22 10:00</view>
+            </view>
+
+            <view class='userGetGoods'>
+              <navigator url='' hover-class='none'>
+                <view class='userGetGoodsCell'>
+                  <image class='goodImg' src='{{image}}brand-1.jpg'>
+
+                  </image>
+
+                  <view class='goodInformation'>
+                    <view class='goodName'>
+                      公牛开关插座86型家用墙面墙壁暗装墙插二 三插5五孔面板多孔 开关
+                    </view>
+
+                    <view class='goodType'>
+                      白色正5孔
+                    </view>
+                    <view class='goodNumber'>
+                      <view class='goodPrice'>￥16.00</view>
+                      <view class='goodNum'>x2</view>
+                    </view>
+                  </view>
+                </view>
+              </navigator>
+            </view>
+
+            <view class='payInformation'>
+              <view class='payStatus'>
+                等待买家付款
+              </view>
+              <view class='payUserInfor'>共2件商品 合计:￥32.00(含运费￥0.00)</view>
+            </view>
+
+            <view class='goodsBtmBox'>
+              <view class='moreAll'>更多</view>
+
+              <view class='caleOrder'>取消订单</view>
+              <view class='nowPay'>立即付款</view>
+            </view>
+
+
+          </view>
+          <!--==============代付款  结束===============  -->
+          <!--==============代发货==============  -->
+          <view class='substitutePaymentCell'>
+            <view class='shopNameInfor'>
+              <view class='shopNameInforLeft'>
+                <navigator>
+                  <image src='{{image}}sico.png'></image> 公牛专卖店 >
+                </navigator>
+              </view>
+
+              <view class='shopNameInforTime'>2018-06-22 10:00</view>
+            </view>
+            <view class='userGetGoods'>
+              <navigator url='' hover-class='none'>
+                <view class='userGetGoodsCell'>
+                  <image class='goodImg' src='{{image}}brand-1.jpg'>
+
+                  </image>
+
+                  <view class='goodInformation'>
+                    <view class='goodName'>
+                      公牛开关插座86型家用墙面墙壁暗装墙插二 三插5五孔面板多孔 开关
+                    </view>
+
+                    <view class='goodType'>
+                      白色正5孔
+                    </view>
+                    <view class='goodNumber'>
+                      <view class='goodPrice'>￥16.00</view>
+                      <view class='goodNum'>x2</view>
+                    </view>
+                  </view>
+                </view>
+              </navigator>
+            </view>
+            <view class='payInformation'>
+              <view class='payStatus'>
+                等待买家付款
+              </view>
+              <view class='payUserInfor'>共2件商品 合计:￥32.00(含运费￥0.00)</view>
+            </view>
+            <view class='goodsBtmBox'>
+              <view class='moreAll'>更多</view>
+
+              <view class='tixing'>提醒发货</view>
+            </view>
+          </view>
+          <!--==============代发货 结束==============  -->
+          <!--==============待收货 ==============  -->
+          <view class='substitutePaymentCell'>
+            <view class='shopNameInfor'>
+              <view class='shopNameInforLeft'>
+                <navigator>
+                  <image src='{{image}}sico.png'></image> 公牛专卖店 >
+                </navigator>
+              </view>
+
+              <view class='shopNameInforTime'>2018-06-22 10:00</view>
+            </view>
+            <view class='userGetGoods'>
+              <navigator url='' hover-class='none'>
+                <view class='userGetGoodsCell'>
+                  <image class='goodImg' src='{{image}}brand-1.jpg'>
+
+                  </image>
+
+                  <view class='goodInformation'>
+                    <view class='goodName'>
+                      公牛开关插座86型家用墙面墙壁暗装墙插二 三插5五孔面板多孔 开关
+                    </view>
+
+                    <view class='goodType'>
+                      白色正5孔
+                    </view>
+                    <view class='goodNumber'>
+                      <view class='goodPrice'>￥16.00</view>
+                      <view class='goodNum'>x2</view>
+                    </view>
+                  </view>
+                </view>
+              </navigator>
+            </view>
+
+            <view class='payInformation'>
+              <view class='payStatus'>
+                等待买家付款
+              </view>
+              <view class='payUserInfor'>共2件商品 合计:￥32.00(含运费￥0.00)</view>
+            </view>
+
+            <view class='goodsBtmBox'>
+              <view class='moreAll'>更多</view>
+
+              <view class='tixing'>确认收货</view>
+            </view>
+
+
+          </view>
+          <!--==============待收货 结束==============  -->
+          <!--==============待评价 ==============  -->
+          <view class='substitutePaymentCell'>
+            <view class='shopNameInfor'>
+              <view class='shopNameInforLeft'>
+                <navigator>
+                  <image src='{{image}}sico.png'></image> 公牛专卖店 >
+                </navigator>
+              </view>
+
+              <view class='shopNameInforTime'>2018-06-22 10:00</view>
+            </view>
+
+            <view class='userGetGoods'>
+              <navigator url='' hover-class='none'>
+                <view class='userGetGoodsCell'>
+                  <image class='goodImg' src='{{image}}brand-1.jpg'>
+
+                  </image>
+
+                  <view class='goodInformation'>
+                    <view class='goodName'>
+                      公牛开关插座86型家用墙面墙壁暗装墙插二 三插5五孔面板多孔 开关
+                    </view>
+
+                    <view class='goodType'>
+                      白色正5孔
+                    </view>
+                    <view class='goodNumber'>
+                      <view class='goodPrice'>￥16.00</view>
+                      <view class='goodNum'>x2</view>
+                    </view>
+                  </view>
+                </view>
+              </navigator>
+            </view>
+
+            <view class='payInformation'>
+              <view class='payStatus'>
+                等待买家付款
+              </view>
+              <view class='payUserInfor'>共2件商品 合计:￥32.00(含运费￥0.00)</view>
+            </view>
+
+            <view class='goodsBtmBox'>
+              <view class='moreAll'>更多</view>
+
+              <view class='pingjia'>评价</view>
+            </view>
+
+
+          </view>
+          <!--==============待评价 结束==============  -->
+          <!--==============已完成 ==============  -->
+          <view class='substitutePaymentCell'>
+            <view class='shopNameInfor'>
+              <view class='shopNameInforLeft'>
+                <navigator>
+                  <image src='{{image}}sico.png'></image> 公牛专卖店 >
+                </navigator>
+              </view>
+
+              <view class='shopNameInforTime'>2018-06-22 10:00</view>
+            </view>
+
+            <view class='userGetGoods'>
+              <navigator url='' hover-class='none'>
+                <view class='userGetGoodsCell'>
+                  <image class='goodImg' src='{{image}}brand-1.jpg'>
+
+                  </image>
+
+                  <view class='goodInformation'>
+                    <view class='goodName'>
+                      公牛开关插座86型家用墙面墙壁暗装墙插二 三插5五孔面板多孔 开关
+                    </view>
+
+                    <view class='goodType'>
+                      白色正5孔
+                    </view>
+                    <view class='goodNumber'>
+                      <view class='goodPrice'>￥16.00</view>
+                      <view class='goodNum'>x2</view>
+                    </view>
+                  </view>
+                </view>
+              </navigator>
+            </view>
+
+            <view class='payInformation'>
+              <view class='payStatus'>
+                等待买家付款
+              </view>
+              <view class='payUserInfor'>共2件商品 合计:￥32.00(含运费￥0.00)</view>
+            </view>
+
+            <view class='goodsBtmBox'>
+              <view class='moreAll'>更多</view>
+
+              <view class='tixing'>查看订单</view>
+            </view>
+
+
+          </view>
+          <!--==============已完成 结束==============  -->
+          <!--==============已取消 ==============  -->
+          <view class='substitutePaymentCell'>
+            <view class='shopNameInfor'>
+              <view class='shopNameInforLeft'>
+                <navigator>
+                  <image src='{{image}}sico.png'></image> 公牛专卖店 >
+                </navigator>
+              </view>
+
+              <view class='shopNameInforTime'>2018-06-22 10:00</view>
+            </view>
+
+            <view class='userGetGoods'>
+              <navigator url='' hover-class='none'>
+                <view class='userGetGoodsCell'>
+                  <image class='goodImg' src='{{image}}brand-1.jpg'>
+
+                  </image>
+
+                  <view class='goodInformation'>
+                    <view class='goodName'>
+                      公牛开关插座86型家用墙面墙壁暗装墙插二 三插5五孔面板多孔 开关
+                    </view>
+
+                    <view class='goodType'>
+                      白色正5孔
+                    </view>
+                    <view class='goodNumber'>
+                      <view class='goodPrice'>￥16.00</view>
+                      <view class='goodNum'>x2</view>
+                    </view>
+                  </view>
+                </view>
+              </navigator>
+            </view>
+
+            <view class='payInformation'>
+              <view class='payStatus'>
+                等待买家付款
+              </view>
+              <view class='payUserInfor'>共2件商品 合计:￥32.00(含运费￥0.00)</view>
+            </view>
+
+            <view class='goodsBtmBox'>
+              <view class='moreAll'>更多</view>
+
+              <view class='tixing'>删除订单</view>
+            </view>
+          </view>
+          <!--==============已取消 结束==============  -->
+        </view>
+      </view>
+      <!--全部订单结束  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!--====================================没用循环上面就行==========================================  -->
+
+
+
+      <!--==========================================================================================  -->
+      <!--代付款  -->
+      <view class='substitutePaymentList' wx:if="{{currentTab == 1}}">
+
+        <view class='substitutePaymentCell'>
+          <view class='shopNameInfor'>
+            <view class='shopNameInforLeft'>
+              <navigator>
+                <image src='{{image}}sico.png'></image> 公牛专卖店 >
+              </navigator>
+            </view>
+
+            <view class='shopNameInforTime'>2018-06-22 10:00</view>
+          </view>
+
+          <view class='userGetGoods'>
+            <navigator url='' hover-class='none'>
+              <view class='userGetGoodsCell'>
+                <image class='goodImg' src='{{image}}brand-1.jpg'>
+
+                </image>
+
+                <view class='goodInformation'>
+                  <view class='goodName'>
+                    公牛开关插座86型家用墙面墙壁暗装墙插二 三插5五孔面板多孔 开关
+                  </view>
+
+                  <view class='goodType'>
+                    白色正5孔
+                  </view>
+                  <view class='goodNumber'>
+                    <view class='goodPrice'>￥16.00</view>
+                    <view class='goodNum'>x2</view>
+                  </view>
+                </view>
+              </view>
+            </navigator>
+          </view>
+
+          <view class='payInformation'>
+            <view class='payStatus'>
+              等待买家付款
+            </view>
+            <view class='payUserInfor'>共2件商品 合计:￥32.00(含运费￥0.00)</view>
+          </view>
+
+          <view class='goodsBtmBox'>
+            <view class='moreAll'>更多</view>
+
+            <view class='caleOrder'>取消订单</view>
+            <view class='nowPay'>立即付款</view>
+          </view>
+
+
+        </view>
+        <!--------------------------------------  -->
+        <view class='substitutePaymentCell'>
+          <view class='shopNameInfor'>
+            <view class='shopNameInforLeft'>
+              <navigator>
+                <image src='{{image}}sico.png'></image> 公牛专卖店 >
+              </navigator>
+            </view>
+
+            <view class='shopNameInforTime'>2018-06-22 10:00</view>
+          </view>
+
+          <view class='userGetGoods'>
+            <navigator url='' hover-class='none'>
+              <view class='userGetGoodsCell'>
+                <image class='goodImg' src='{{image}}brand-1.jpg'>
+
+                </image>
+
+                <view class='goodInformation'>
+                  <view class='goodName'>
+                    公牛开关插座86型家用墙面墙壁暗装墙插二 三插5五孔面板多孔 开关
+                  </view>
+
+                  <view class='goodType'>
+                    白色正5孔
+                  </view>
+                  <view class='goodNumber'>
+                    <view class='goodPrice'>￥16.00</view>
+                    <view class='goodNum'>x2</view>
+                  </view>
+                </view>
+              </view>
+            </navigator>
+          </view>
+
+          <view class='payInformation'>
+            <view class='payStatus'>
+              等待买家付款
+            </view>
+            <view class='payUserInfor'>共2件商品 合计:￥32.00(含运费￥0.00)</view>
+          </view>
+
+          <view class='goodsBtmBox'>
+            <view class='moreAll'>更多</view>
+
+            <view class='caleOrder'>取消订单</view>
+            <view class='nowPay'>立即付款</view>
+          </view>
+
+
+        </view>
+        <!---------------------------------------------------  -->
+
+      </view>
+      <!--代付款  -->
+      <!--==========================================================================================  -->
+      <!--待发货  -->
+      <view class='substitutePaymentList' wx:if="{{currentTab ==2}}">
+
+        <view class='substitutePaymentCell'>
+          <view class='shopNameInfor'>
+            <view class='shopNameInforLeft'>
+              <navigator>
+                <image src='{{image}}sico.png'></image> 公牛专卖店 >
+              </navigator>
+            </view>
+
+            <view class='shopNameInforTime'>2018-06-22 10:00</view>
+          </view>
+
+          <view class='userGetGoods'>
+            <navigator url='' hover-class='none'>
+              <view class='userGetGoodsCell'>
+                <image class='goodImg' src='{{image}}brand-1.jpg'>
+
+                </image>
+
+                <view class='goodInformation'>
+                  <view class='goodName'>
+                    公牛开关插座86型家用墙面墙壁暗装墙插二 三插5五孔面板多孔 开关
+                  </view>
+
+                  <view class='goodType'>
+                    白色正5孔
+                  </view>
+                  <view class='goodNumber'>
+                    <view class='goodPrice'>￥16.00</view>
+                    <view class='goodNum'>x2</view>
+                  </view>
+                </view>
+              </view>
+            </navigator>
+          </view>
+
+          <view class='payInformation'>
+            <view class='payStatus'>
+              等待买家付款
+            </view>
+            <view class='payUserInfor'>共2件商品 合计:￥32.00(含运费￥0.00)</view>
+          </view>
+
+          <view class='goodsBtmBox'>
+            <view class='moreAll'>更多</view>
+
+            <view class='tixing'>提醒发货</view>
+          </view>
+
+
+        </view>
+        <!--------------------------------------  -->
+        <view class='substitutePaymentCell'>
+          <view class='shopNameInfor'>
+            <view class='shopNameInforLeft'>
+              <navigator>
+                <image src='{{image}}sico.png'></image> 公牛专卖店 >
+              </navigator>
+            </view>
+
+            <view class='shopNameInforTime'>2018-06-22 10:00</view>
+          </view>
+
+          <view class='userGetGoods'>
+            <navigator url='' hover-class='none'>
+              <view class='userGetGoodsCell'>
+                <image class='goodImg' src='{{image}}brand-1.jpg'>
+
+                </image>
+
+                <view class='goodInformation'>
+                  <view class='goodName'>
+                    公牛开关插座86型家用墙面墙壁暗装墙插二 三插5五孔面板多孔 开关
+                  </view>
+
+                  <view class='goodType'>
+                    白色正5孔
+                  </view>
+                  <view class='goodNumber'>
+                    <view class='goodPrice'>￥16.00</view>
+                    <view class='goodNum'>x2</view>
+                  </view>
+                </view>
+              </view>
+            </navigator>
+          </view>
+
+          <view class='payInformation'>
+            <view class='payStatus'>
+              等待买家付款
+            </view>
+            <view class='payUserInfor'>共2件商品 合计:￥32.00(含运费￥0.00)</view>
+          </view>
+
+          <view class='goodsBtmBox'>
+            <view class='moreAll'>更多</view>
+            <view class='tixing'>提醒发货</view>
+          </view>
+
+
+        </view>
+        <!---------------------------------------------------  -->
+
+      </view>
+      <!--待发货 结束 -->
+      <!--==========================================================================================  -->
+      <!--待收货  -->
+      <view class='substitutePaymentList' wx:if="{{currentTab ==3}}">
+        <view class='substitutePaymentCell'>
+          <view class='shopNameInfor'>
+            <view class='shopNameInforLeft'>
+              <navigator>
+                <image src='{{image}}sico.png'></image> 公牛专卖店 >
+              </navigator>
+            </view>
+
+            <view class='shopNameInforTime'>2018-06-22 10:00</view>
+          </view>
+          <view class='userGetGoods'>
+            <navigator url='' hover-class='none'>
+              <view class='userGetGoodsCell'>
+                <image class='goodImg' src='{{image}}brand-1.jpg'>
+
+                </image>
+
+                <view class='goodInformation'>
+                  <view class='goodName'>
+                    公牛开关插座86型家用墙面墙壁暗装墙插二 三插5五孔面板多孔 开关
+                  </view>
+
+                  <view class='goodType'>
+                    白色正5孔
+                  </view>
+                  <view class='goodNumber'>
+                    <view class='goodPrice'>￥16.00</view>
+                    <view class='goodNum'>x2</view>
+                  </view>
+                </view>
+              </view>
+            </navigator>
+          </view>
+
+          <view class='payInformation'>
+            <view class='payStatus'>
+              等待买家付款
+            </view>
+            <view class='payUserInfor'>共2件商品 合计:￥32.00(含运费￥0.00)</view>
+          </view>
+
+          <view class='goodsBtmBox'>
+            <view class='moreAll'>更多</view>
+
+            <view class='tixing'>确认收货</view>
+          </view>
+
+
+        </view>
+        <!--------------------------------------  -->
+        <view class='substitutePaymentCell'>
+          <view class='shopNameInfor'>
+            <view class='shopNameInforLeft'>
+              <navigator>
+                <image src='{{image}}sico.png'></image> 公牛专卖店 >
+              </navigator>
+            </view>
+
+            <view class='shopNameInforTime'>2018-06-22 10:00</view>
+          </view>
+
+          <view class='userGetGoods'>
+            <navigator url='' hover-class='none'>
+              <view class='userGetGoodsCell'>
+                <image class='goodImg' src='{{image}}brand-1.jpg'>
+
+                </image>
+
+                <view class='goodInformation'>
+                  <view class='goodName'>
+                    公牛开关插座86型家用墙面墙壁暗装墙插二 三插5五孔面板多孔 开关
+                  </view>
+
+                  <view class='goodType'>
+                    白色正5孔
+                  </view>
+                  <view class='goodNumber'>
+                    <view class='goodPrice'>￥16.00</view>
+                    <view class='goodNum'>x2</view>
+                  </view>
+                </view>
+              </view>
+            </navigator>
+          </view>
+
+          <view class='payInformation'>
+            <view class='payStatus'>
+              等待买家付款
+            </view>
+            <view class='payUserInfor'>共2件商品 合计:￥32.00(含运费￥0.00)</view>
+          </view>
+
+          <view class='goodsBtmBox'>
+            <view class='moreAll'>更多</view>
+            <view class='tixing'>确认收货</view>
+          </view>
+
+
+        </view>
+        <!---------------------------------------------------  -->
+
+      </view>
+      <!--待收货 结束  -->
+      <!--==========================================================================================  -->
+      <!--待评价  -->
+      <view class='substitutePaymentList' wx:if="{{currentTab ==4}}">
+
+        <view class='substitutePaymentCell'>
+          <view class='shopNameInfor'>
+            <view class='shopNameInforLeft'>
+              <navigator>
+                <image src='{{image}}sico.png'></image> 公牛专卖店 >
+              </navigator>
+            </view>
+
+            <view class='shopNameInforTime'>2018-06-22 10:00</view>
+          </view>
+
+          <view class='userGetGoods'>
+            <navigator url='' hover-class='none'>
+              <view class='userGetGoodsCell'>
+                <image class='goodImg' src='{{image}}brand-1.jpg'>
+
+                </image>
+
+                <view class='goodInformation'>
+                  <view class='goodName'>
+                    公牛开关插座86型家用墙面墙壁暗装墙插二 三插5五孔面板多孔 开关
+                  </view>
+
+                  <view class='goodType'>
+                    白色正5孔
+                  </view>
+                  <view class='goodNumber'>
+                    <view class='goodPrice'>￥16.00</view>
+                    <view class='goodNum'>x2</view>
+                  </view>
+                </view>
+              </view>
+            </navigator>
+          </view>
+
+          <view class='payInformation'>
+            <view class='payStatus'>
+              等待买家付款
+            </view>
+            <view class='payUserInfor'>共2件商品 合计:￥32.00(含运费￥0.00)</view>
+          </view>
+
+          <view class='goodsBtmBox'>
+            <view class='moreAll'>更多</view>
+
+            <view class='pingjia'>评价</view>
+          </view>
+
+
+        </view>
+        <!--------------------------------------  -->
+        <view class='substitutePaymentCell'>
+          <view class='shopNameInfor'>
+            <view class='shopNameInforLeft'>
+              <navigator>
+                <image src='{{image}}sico.png'></image> 公牛专卖店 >
+              </navigator>
+            </view>
+
+            <view class='shopNameInforTime'>2018-06-22 10:00</view>
+          </view>
+
+          <view class='userGetGoods'>
+            <navigator url='' hover-class='none'>
+              <view class='userGetGoodsCell'>
+                <image class='goodImg' src='{{image}}brand-1.jpg'>
+
+                </image>
+
+                <view class='goodInformation'>
+                  <view class='goodName'>
+                    公牛开关插座86型家用墙面墙壁暗装墙插二 三插5五孔面板多孔 开关
+                  </view>
+
+                  <view class='goodType'>
+                    白色正5孔
+                  </view>
+                  <view class='goodNumber'>
+                    <view class='goodPrice'>￥16.00</view>
+                    <view class='goodNum'>x2</view>
+                  </view>
+                </view>
+              </view>
+            </navigator>
+          </view>
+
+          <view class='payInformation'>
+            <view class='payStatus'>
+              等待买家付款
+            </view>
+            <view class='payUserInfor'>共2件商品 合计:￥32.00(含运费￥0.00)</view>
+          </view>
+
+          <view class='goodsBtmBox'>
+            <view class='moreAll'>更多</view>
+            <view class='pingjia'>评价</view>
+          </view>
+
+
+        </view>
+        <!---------------------------------------------------  -->
+
+      </view>
+      <!--待评价 结束  -->
+      <!--==========================================================================================  -->
+      <!--已完成  -->
+      <view class='substitutePaymentList' wx:if="{{currentTab ==5}}">
+
+        <view class='substitutePaymentCell'>
+          <view class='shopNameInfor'>
+            <view class='shopNameInforLeft'>
+              <navigator>
+                <image src='{{image}}sico.png'></image> 公牛专卖店 >
+              </navigator>
+            </view>
+
+            <view class='shopNameInforTime'>2018-06-22 10:00</view>
+          </view>
+
+          <view class='userGetGoods'>
+            <navigator url='' hover-class='none'>
+              <view class='userGetGoodsCell'>
+                <image class='goodImg' src='{{image}}brand-1.jpg'>
+
+                </image>
+
+                <view class='goodInformation'>
+                  <view class='goodName'>
+                    公牛开关插座86型家用墙面墙壁暗装墙插二 三插5五孔面板多孔 开关
+                  </view>
+
+                  <view class='goodType'>
+                    白色正5孔
+                  </view>
+                  <view class='goodNumber'>
+                    <view class='goodPrice'>￥16.00</view>
+                    <view class='goodNum'>x2</view>
+                  </view>
+                </view>
+              </view>
+            </navigator>
+          </view>
+
+          <view class='payInformation'>
+            <view class='payStatus'>
+              等待买家付款
+            </view>
+            <view class='payUserInfor'>共2件商品 合计:￥32.00(含运费￥0.00)</view>
+          </view>
+
+          <view class='goodsBtmBox'>
+            <view class='moreAll'>更多</view>
+
+            <view class='tixing'>查看订单</view>
+          </view>
+
+
+        </view>
+        <!--------------------------------------  -->
+        <view class='substitutePaymentCell'>
+          <view class='shopNameInfor'>
+            <view class='shopNameInforLeft'>
+              <navigator>
+                <image src='{{image}}sico.png'></image> 公牛专卖店 >
+              </navigator>
+            </view>
+
+            <view class='shopNameInforTime'>2018-06-22 10:00</view>
+          </view>
+
+          <view class='userGetGoods'>
+            <navigator url='' hover-class='none'>
+              <view class='userGetGoodsCell'>
+                <image class='goodImg' src='{{image}}brand-1.jpg'>
+
+                </image>
+
+                <view class='goodInformation'>
+                  <view class='goodName'>
+                    公牛开关插座86型家用墙面墙壁暗装墙插二 三插5五孔面板多孔 开关
+                  </view>
+
+                  <view class='goodType'>
+                    白色正5孔
+                  </view>
+                  <view class='goodNumber'>
+                    <view class='goodPrice'>￥16.00</view>
+                    <view class='goodNum'>x2</view>
+                  </view>
+                </view>
+              </view>
+            </navigator>
+          </view>
+
+          <view class='payInformation'>
+            <view class='payStatus'>
+              等待买家付款
+            </view>
+            <view class='payUserInfor'>共2件商品 合计:￥32.00(含运费￥0.00)</view>
+          </view>
+
+          <view class='goodsBtmBox'>
+            <view class='moreAll'>更多</view>
+            <view class='tixing'>查看订单</view>
+          </view>
+        </view>
+        <!---------------------------------------------------  -->
+
+      </view>
+      <!--已完成 结束  -->
+      <!--==========================================================================================  -->
+      <!--已取消  -->
+      <view class='substitutePaymentList' wx:if="{{currentTab ==6}}">
+        <view class='substitutePaymentCell'>
+          <view class='shopNameInfor'>
+            <view class='shopNameInforLeft'>
+              <navigator>
+                <image src='{{image}}sico.png'></image> 公牛专卖店 >
+              </navigator>
+            </view>
+
+            <view class='shopNameInforTime'>2018-06-22 10:00</view>
+          </view>
+
+          <view class='userGetGoods'>
+            <navigator url='' hover-class='none'>
+              <view class='userGetGoodsCell'>
+                <image class='goodImg' src='{{image}}brand-1.jpg'>
+
+                </image>
+
+                <view class='goodInformation'>
+                  <view class='goodName'>
+                    公牛开关插座86型家用墙面墙壁暗装墙插二 三插5五孔面板多孔 开关
+                  </view>
+
+                  <view class='goodType'>
+                    白色正5孔
+                  </view>
+                  <view class='goodNumber'>
+                    <view class='goodPrice'>￥16.00</view>
+                    <view class='goodNum'>x2</view>
+                  </view>
+                </view>
+              </view>
+            </navigator>
+          </view>
+
+          <view class='payInformation'>
+            <view class='payStatus'>
+              等待买家付款
+            </view>
+            <view class='payUserInfor'>共2件商品 合计:￥32.00(含运费￥0.00)</view>
+          </view>
+
+          <view class='goodsBtmBox'>
+            <view class='moreAll'>更多</view>
+
+            <view class='tixing'>删除订单</view>
+          </view>
+
+
+        </view>
+        <!--------------------------------------  -->
+        <view class='substitutePaymentCell'>
+          <view class='shopNameInfor'>
+            <view class='shopNameInforLeft'>
+              <navigator>
+                <image src='{{image}}sico.png'></image> 公牛专卖店 >
+              </navigator>
+            </view>
+
+            <view class='shopNameInforTime'>2018-06-22 10:00</view>
+          </view>
+
+          <view class='userGetGoods'>
+            <navigator url='' hover-class='none'>
+              <view class='userGetGoodsCell'>
+                <image class='goodImg' src='{{image}}brand-1.jpg'>
+
+                </image>
+
+                <view class='goodInformation'>
+                  <view class='goodName'>
+                    公牛开关插座86型家用墙面墙壁暗装墙插二 三插5五孔面板多孔 开关
+                  </view>
+
+                  <view class='goodType'>
+                    白色正5孔
+                  </view>
+                  <view class='goodNumber'>
+                    <view class='goodPrice'>￥16.00</view>
+                    <view class='goodNum'>x2</view>
+                  </view>
+                </view>
+              </view>
+            </navigator>
+          </view>
+
+          <view class='payInformation'>
+            <view class='payStatus'>
+              等待买家付款
+            </view>
+            <view class='payUserInfor'>共2件商品 合计:￥32.00(含运费￥0.00)</view>
+          </view>
+
+          <view class='goodsBtmBox'>
+            <view class='moreAll'>更多</view>
+            <view class='tixing'>删除订单</view>
+          </view>
+        </view>
+        <!---------------------------------------------------  -->
+      </view>
+      <!--已取消 结束  -->
+    </view>
+  </view>
+
+  <!--订单内容列表  -->
+
+
+
+</view>

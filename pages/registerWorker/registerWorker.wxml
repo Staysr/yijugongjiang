@@ -1,0 +1,170 @@
+<!--pages/mulbuOccupancy/mulbuOccupancy.wxml-->
+<view class='container' wx:if="{{isApplyStatus == 1}}">
+  <form bindsubmit="formSubmit">
+
+    <!--多商家品牌入驻申请 信息  -->
+    <input type='text' class='userid' name="userid" value='{{userid}}'></input>
+    <input type='text' class='userid' name="type" value='{{type}}'></input>
+    <view class='mulbuOccupancyBox'>
+      <view class='mulbuOccupancy'>
+
+        <!-- <view class='mulbuOccupancyItem'>
+          <view class='brandName'>工种</view>
+          <input class='brandInfor' class='userid' type='text' name="sqworkclass" value='{{arrInfot[index].id}}' placeholder='请选择工种'></input>
+          <picker class='pickBox' bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+            <view class="picker">
+              {{array[index]?array[index]:"请选择工种"}}
+            </view>
+          </picker>
+        </view> -->
+        <!----------------------------  -->
+        <view class='mulbuOccupancyItem'>
+          <view class='brandName'>姓名:</view>
+          <input class='brandInfor' type='text' maxlength='16' name="name" placeholder='姓名'></input>
+        </view>
+        <!----------------------------  -->
+        <view class='mulbuOccupancyItem'>
+          <view class='brandName'>身份证号:</view>
+          <input class='brandInfor' type='text' maxlength='18' name="identity" placeholder='身份账号'></input>
+        </view>
+        <!----------------------------  -->
+        <view class='mulbuOccupancyItem'>
+          <view class='brandName'>籍贯:</view>
+          <input class='brandInfor' type='text' maxlength='16' name="native" placeholder='籍贯'></input>
+        </view>
+        <!----------------------------  -->
+        <view class='mulbuOccupancyItem'>
+          <view class='brandName'>服务范围:</view>
+          <input class='brandInfor' type='text' maxlength='16' name="scope" placeholder='服务范围'></input>
+        </view>
+
+        <!----------------------------  -->
+        <view class='mulbuOccupancyItem'>
+          <view class='brandName'>从业年限</view>
+          <input class='brandInfor' type='text' maxlength='16' name="workyear" placeholder='请填写从业年限'></input>
+        </view>
+        <!----------------------------  -->
+        <view class='mulbuOccupancyItem'>
+          <view class='brandName'>手机号码</view>
+          <input class='brandInfor' type='text' disabled='false' value='{{opione}}' bindinput="userphone" maxlength='16' name="phone" placeholder='手机号码'></input>
+        </view>
+        <!----------------------------  -->
+        <!-- <view class='mulbuOccupancyItem'>
+          <view class='brandName'>验证码:</view>
+          <input class='brandInfor' type='text' maxlength='20' name="cases" placeholder='输入验证码'></input>  
+            <button  data-wx_phone="{{wx_phone}}"  class='getCodebutton' bindtap="commes" disabled="{{buttonDisable}}">{{verifyCodeTime}}</button>
+        </view> -->
+        <!----------------------------  -->
+        <view class='mulbuOccupancyOtherItem border-none'>
+          <!-- <view class='brandOthName'>添加图片</view> -->
+          <view class='addUserEvImgList'>
+            <view class='brandOthName'>{{texttype}}</view>
+            <!-- 工人 -->
+            <view class='addUserEvImgCell' bindtap='uploadAddImg' data-activeindex='0'>
+              <image class='defalutImg' mode='aspectFill' src='{{image}}bggary.jpg'></image>
+              <image class='defalutImg' mode='aspectFill' src='{{tempFilePaths[0]}}'></image>
+            </view>
+            <view class='brandOthName' wx:if="{{codetextimg == 1}}">{{texfenf}}</view>
+            <view class='addUserEvImgCell' wx:if="{{codetextimg == 1}}"  bindtap='uploadAddImg' data-activeindex='1'>
+              <image class='defalutImg' mode='aspectFill' src='{{image}}bggary.jpg'></image>
+              <image class='defalutImg' mode='aspectFill' src='{{tempFilePaths[1]}}'></image>
+            </view>
+
+            <!-- <view class='brandOthName' wx:if="{{codetextimg == 1}}">{{textfeit}}</view>
+            <view wx:if="{{codetextimg == 1}}" class='addUserEvImgCell' bindtap='uploadAddImg' data-activeindex='2'>
+              <image class='defalutImg' mode='aspectFill' src='{{image}}bggary.jpg'></image>
+              <image class='defalutImg' mode='aspectFill' src='{{tempFilePaths[2]}}'></image>
+            </view> -->
+
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!--多商家品牌入驻申请 信息结束  -->
+
+
+
+
+    <!--多家商品入住申请 信息提交  -->
+    <view class='mulbuOccupancyBtn'>
+      <button class='mulbuOccupancyButton' form-type="submit">提交申请</button>
+    </view>
+    <!--多家商品入住申请 信息提交 结束 -->
+  </form>
+</view>
+
+
+
+
+
+
+
+<!--审核中  -->
+<view class='statusShenhe' wx:if="{{isApplyStatus!=1}}">
+  <view class='status02' wx:if="{{isApplyStatus==2}}">
+    <view class='successBox'>
+      <image class='success01' src="{{image}}syccess01.png"></image>
+    </view>
+    <view class='successText'>
+      您的入驻申请已提交，正在等待 后台审核
+    </view>
+    <view class='backCenter' bindtap='backcenter'>
+      返回个人中心
+    </view>
+  </view>
+
+  <view class='status02' wx:if="{{isApplyStatus==3}}">
+    <view class='successBox'>
+      <image class='success01' src="{{image}}failed.png"></image>
+    </view>
+    <view class='successTextTitle'>
+      <view class='faileTitle'>
+        您的入驻申请被拒绝，拒绝原因：
+      </view>
+      <view class='faileShu'>
+        {{reject}}
+      </view>
+    </view>
+    <view class='backCenter' bindtap='zaici'>
+      再次申请入住
+    </view>
+
+  </view>
+
+
+  <view class='status02' wx:if="{{isApplyStatus==9}}">
+    <view class='successBox'>
+      <image class='success01' src="{{image}}failed.png"></image>
+    </view>
+    <view class='successTextTitle'>
+      <view class='faileTitle'>
+       您已被管理员移除,请及时联系管理员确认信息
+      </view>
+    </view>
+  </view>
+
+  <view class='status02' wx:if="{{isApplyStatus==4}}">
+    <view class='successBox'>
+      <image class='success01' src="{{image}}syccess01.png"></image>
+    </view>
+    <view class='successText' wx:if="{{type == 3}}">
+      请牢记申请的账号密码和登入网址 网址:http://www.yijugongjiang.com 账号:默认您申请的手机号 密码:默认您申请的手机号后6位 你已经是工长了
+
+    </view>
+    <view class='successText' wx:if="{{type == 2}}">
+
+      请牢记申请的账号密码和登入网址 网址:http://www.yijugongjiang.com 账号:默认您申请的手机号 密码:默认您申请的手机号后6位 你已经是设计师
+
+    </view>
+    <view class='successText' wx:if="{{type == 1}}">
+      请牢记申请的账号密码和登入网址 网址:http://www.yijugongjiang.com 账号:默认您申请的手机号 密码:默认您申请的手机号后6位 你已经是装修公司
+
+    </view>
+
+    <view class='backCenter' bindtap='otherClick'>
+      确定
+    </view>
+  </view>
+</view>
+<!--审核中  -->

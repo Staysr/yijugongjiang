@@ -1,0 +1,41 @@
+<!--pages/preBalance/preBalance.wxml-->
+<view class="container">
+
+  <form bindsubmit="formSubmit">
+<input type="text" name="userid" value="{{userid}}"class='userid'></input>
+<input type="text" name="zhaibidata" value="{{zhaibi}}"class='userid'></input>
+  <view class='preBalanceBox'>
+    <view class='preBalance'>
+               <!--提现金额  -->
+               
+                <view class='preBalanceTopBox'>
+                   <view class='preBalanceTitle'>
+                    兑换个数
+                  </view>
+                   <view class='preBalanceGetBalance'>
+                    <input class='balanceInput' 
+                    name="zhaibi" 
+                    maxlength='7'
+                    bindinput='bindzhaibi' 
+                    value='{{zhaibiNew}}'
+                    type='text'></input><view class='fontsBlod'>个</view>
+                  </view>
+                  <view class='nowMuchBalance'>当前宅币：{{zhaibi}} 个 可抵换宅币：{{zhaibi - 1000 >0? zhaibi - 1000 : 0}}</view>
+                  <view class='hintInformation'>
+                   {{msgWaring?"提示信息：" + msgWaring:""}}
+                  </view>
+                </view>
+
+               <view class='btnClickBox'>
+                <button class='preBalanceDesInfo {{issatisfy?"colorActive":"colorNormal"}}' form-type="submit">兑换</button>
+                <navigator url='../exchangeDetails/exchangeDetails'  hover-class='none' class='preBalanceNav'>兑换明细</navigator>
+               </view>
+
+
+               <!--提现金额结束  -->
+    </view>
+  </view>
+
+
+</form>
+</view>

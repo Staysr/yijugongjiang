@@ -1,0 +1,117 @@
+<!--pages/releaseinformation/releaseinformation.wxml-->
+<!-- <text>pages/releaseinformation/releaseinformation.wxml</text> -->
+<form bindsubmit='fabiao'>
+  <view class="cu-form-group margin-top">
+    <view class='title'>姓名</view>
+    <input placeholder="请输入您的名字" class='radius' name='name'></input>
+  </view>
+
+  <view class="cu-form-group">
+    <view class='title'>手机号</view>
+    <input placeholder="" disabled='false' value='{{phone}}' maxlength='11' bindinput='userphone' type='number' class='radius' name='phone'></input>
+    <button bindtap='commes' data-wx_phone='{{wx_phone}}' disabled="{{buttonDisable}}" class='cu-btn bg-green shadow'>{{verifyCodeTime}}</button>
+  </view>
+  <view class="cu-form-group">
+    <view class='title'>验证码</view>
+    <input placeholder="输入验证码" type='number' class='radius' name='captcha'></input>
+  </view>
+
+  <view class="cu-form-group margin-top" style='margin-top:0'>
+    <view class='title'>选择工种</view>
+    <picker bindchange="PickerChange" style='width:500rpx;height:100rpx;' value="{{pindex}}" range="{{picker}}" range-key="name">
+      <view class="picker">
+        {{picker[pindex].name}}
+      </view>
+    </picker>
+    <!-- 选择工种的id -->
+    <input name="clubid" hidden='true' value='{{picker[pindex].id}}'></input>
+
+  </view>
+  <view class="cu-form-group">
+    <view class='title'>从业年限</view>
+    <input placeholder="输入从业年限" type='number' class='radius' name='workyear'></input>
+  </view>
+
+  <view class="cu-form-group">
+    <view class='title'>价格区间</view>
+    <input placeholder="输入价格区间" type='number' class='radius' name='price_range'></input>
+  </view>
+
+  <block wx:for="{{list}}" wx:key>
+    <view class="cu-form-group margin-top" style='margin-top:0;'>
+      <view style='width: 253rpx;height: 85px;line-height: 27px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;margin-right: 180rpx;'>
+        <text style='' data-index='{{index}}' bindtap='showTap' data-target="DialogModal1" maxlength='-1'>
+     {{item.text||'编辑服务详情'}}
+   </text>
+      </view>
+      <view class="grid col-3 grid-square flex-sub" style='margin-top:0;;'>
+
+        <view class="padding-xs solids" data-index='{{index}}' bindtap='chooseImg' style='display:inline;margin-top:12rpx;width: 250rpx;height: 200rpx;'>
+
+
+          <view wx:if="{{item.imglist}}" class="padding-xs bg-img" style="background-image:url({{item.imglist}});height:100%; position: absolute;top: 0; left: 0;width:100%;">
+          <image src="{{item.imglist}}"></image>
+          </view>
+       
+          <view wx:else class='imgtext' style=''>
+
+            <text class='icon-cameraadd'></text>
+          </view>
+
+        </view>
+      </view>
+    </view>
+  </block>
+
+  <view class="cu-form-group margin-top" style='margin-top:0'>
+    <view class="grid col-3 grid-square flex-sub" style='margin-top:0'>
+
+      <image src='{{image}}bggary.jpg' data-arr_mac="{{arr_mac}}" bindtap='arr_mac_list' style='width:113px;height:67px;margin:11px;'></image>
+
+    </view>
+  </view>
+  <!-- 弹出消息 -->
+  <view class="mask" hidden="{{showMask}}" catchtouchmove="true">
+  </view>
+
+  <view class="msgContent" hidden="{{showMask}}">
+    <view class="cu-bar bg-white justify-end">
+      <view class='content'>编辑服务详情</view>
+      <view class='action' bindtap='hideModal'>
+        <text class='icon-close text-red' bindtap='xxxx'></text>
+      </view>
+    </view>
+    <view class='padding-xl'>
+      <textarea style='width: 100%;' placeholder="编辑服务详情" name="editdetails" bindinput='bindTextAreaBlur' data-index='{{arr_mac}}' focus="{{focus}}" value='{{editdetails}}'></textarea>
+    </view>
+    <view class="cu-bar bg-white justify-end">
+      <view class='action'>
+        <!-- <button class='cu-btn line-green text-green' data-index='{{arr_mac}}' bindtap='hideModalon'>取消</button> -->
+        <button class='cu-btn bg-green margin-left' data-index='{{arr_mac}}' data-content='{{concent}}' bindtap='hideModal'>确定</button>
+
+      </view>
+    </view>
+  </view>
+
+  <!-- <view class="cu-modal {{modalName=='DialogModal1'?'show':''}}">
+    <view class="cu-dialog">
+      <view class="cu-bar bg-white justify-end">
+        <view class='content' >编辑服务详情</view>
+        <view class='action' bindtap='hideModal'>
+          <text class='icon-close text-red'></text>
+        </view>
+      </view>
+      <view class='padding-xl'>
+        <textarea style='z-index:1113;' placeholder="编辑服务详情" name="editdetails" bindinput='bindTextAreaBlur' data-index='{{arr_mac}}' focus="{{focus}}" value='{{editdetails}}'></textarea>
+      </view>
+      <view class="cu-bar bg-white justify-end">
+        <view class='action'>
+          <button class='cu-btn line-green text-green' bindtap='hideModalon'>取消</button>
+          <button class='cu-btn bg-green margin-left' data-index='{{arr_mac}}' data-content='{{concent}}' bindtap='hideModal'>确定</button>
+
+        </view>
+      </view>
+    </view>
+  </view> -->
+  <button class='cu-btn bg-grey lg' form-type="submit" style='background-color:rgb(18,120,22);margin-top:20px;width:90%;margin-left:35rpx'>发布</button>
+</form>

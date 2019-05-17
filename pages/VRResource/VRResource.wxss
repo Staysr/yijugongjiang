@@ -1,0 +1,103 @@
+/* pages/VRResource/VRResource.wxss */
+/* pages/VRResource/VRResource.wxss */
+@import "../decoration/decoration.wxss";
+page {
+  background: #ebebeb;
+}
+.pageTitle{
+  background-color: #fff;
+  padding-top: 20rpx;
+	position:fixed;
+	z-index: 999;
+	height:210rpx;
+	top:0;
+	right:0;
+	left:0;
+
+}
+.tab-content{
+	
+	margin-top: 40rpx;
+}
+.tab-h{
+  height: 80rpx;
+  width: 100%; 
+  box-sizing: border-box;
+  overflow: hidden;
+  line-height: 80rpx;  
+  white-space: nowrap;
+  }
+.tab-item{
+  margin:0 30rpx;
+  display: inline-block;
+  }
+.tab-item.active{
+  color: #06881c;
+  position: relative;
+  }
+.tab-item.active:after{ 
+  content: "";
+  display: block;
+  height: 5rpx;
+  width: 100%;
+  background: #06881c;
+  position: absolute; 
+  bottom: 0;
+  left: 0;
+  border-radius: 16rpx;
+  }
+.scoll-h{height: 100%;}
+.items{
+	width: 100%;
+	height: 213rpx;
+  padding: 0 20rpx;
+	background-color: #FFFFFF;
+  border-bottom: 1px solid #cccccc;
+	overflow:hidden;
+	display: flex;
+	align-items: center;
+}
+.itemsImg{
+	width: 200rpx;
+	height: 150rpx;
+	float: left;
+	margin-right: 25rpx;
+	border:1px solid #dddddd;
+}
+.itemsImg1{
+	width: 230rpx;
+}
+.itemsImg image{
+	width: 100%;
+	height: 100%;
+}
+.itemsText{
+	float: left;
+	width:350rpx;
+	font-weight: 600;
+
+}
+.itemsText1{
+	width: 270rpx;
+}
+.itemsShare{
+float:right;
+background-color:#06881c;
+color:#fff;
+padding:0rpx 25rpx;
+width:127rpx;
+height:70rpx;
+line-height:70rpx;
+font-size:30rpx;
+}
+button{
+  border: none;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+}
+button::after{
+ 
+border:none;
+ 
+}

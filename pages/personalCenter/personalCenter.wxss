@@ -1,0 +1,246 @@
+/* pages/personalCenter/personalCenter.wxss */
+page
+{
+  background: #ebebeb;
+}
+.loginOrRegist
+{
+  height: 150rpx;
+  padding: 0 20rpx;
+  background: #fff;
+}
+.noLogin
+{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 150rpx;
+}
+.noUserHearder
+{
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 20rpx;
+  overflow: hidden;
+  border-radius: 50%;
+
+}
+
+.noLoginOrRegist
+{
+  width: 180rpx;
+  height: 60rpx;
+  background:#06881c;
+  color: #fff;
+  font-size: 26rpx;
+  text-align: center;
+  line-height: 60rpx;
+  border-radius: 30rpx;
+
+}
+
+.yesLoginHearder
+{
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 20rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  
+}
+.yesLogin
+{
+  height: 150rpx;
+}
+.yesLogin navigator
+{
+display: flex;
+height: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+.yesLoginInfot
+{
+  height: 100rpx;
+  width: 575rpx;
+
+
+}
+.yesLoginInfotText
+{
+  height: 50rpx;
+  line-height: 50rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+.userName
+{
+font-size: 26rpx;
+margin-right: 20rpx;
+color: #666;
+max-width: 130rpx;
+
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+}
+.userregion
+{
+  width: 400rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+font-size: 20rpx;color: #666;
+}
+.userIphone
+{
+font-size: 26rpx;
+margin-right: 20rpx;color: #666;
+}
+.userOccupation
+{
+font-size: 26rpx;color: #666;
+width: 285rpx;
+
+overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+
+}
+.nextBtn
+{
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  top: 75rpx;
+  right: 0;
+}
+
+.myOrderBox
+{
+  background: #fff;
+  margin: 20rpx 0;
+    padding: 0 20rpx;
+}
+.myOrderTitle
+{
+  height: 75rpx;
+  line-height: 75rpx;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2rpx solid #ddd;
+
+}
+.myOrderText
+{
+  font-weight: bold;
+  font-size: 30rpx;
+
+}
+.seeAll
+{
+  font-size: 24rpx;
+}
+.myOrderNav
+{
+  display: flex;
+  justify-content: space-between;
+}
+.myOrderNavCell
+{
+  width: calc(100% / 6);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20rpx 0 0;
+  
+}
+.myOrderNavCell image
+{
+  width: 54rpx;
+  height: 54rpx;
+}
+.myorderText
+{
+  width: 100%;
+  font-size: 24rpx;
+  text-align: center;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.personalCenterCell
+{
+ height: 100rpx;
+ border-bottom: 2rpx solid #ddd;
+}
+.personalCenterCell:last-child
+{
+  border: none
+}
+.personalCenterCell navigator
+{
+  height: 100rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+.listImg
+{
+  width: 54rpx;
+  height: 54rpx;
+  margin-right: 20rpx;
+}
+.nexTbtn
+{
+  position: absolute;
+  top: 35rpx;
+  right: 0;
+  width: 30rpx;
+  height: 30rpx;
+}
+.listText
+{
+  font-size: 30rpx;
+}
+.personalCenterList
+{
+  padding: 0 20rpx;
+  
+}
+.personalCenterListBox
+{
+  background: #fff;
+
+}
+
+.exitLogonBtn
+{
+  width: 100%;
+  height: 85rpx;
+  line-height: 85rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #666;
+  background: #fff;
+ 
+}
+.exitLogon
+{
+  margin-top: 20rpx;
+}
+.zhanweiview
+{
+  background: #ebebeb;
+  height: 20rpx;
+}
+
+.myOrderNavCell navigator
+{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+}

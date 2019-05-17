@@ -1,0 +1,31 @@
+
+<view class="container"><form bindsubmit="formSubmit" >
+ <!--注册信息  -->
+     <view class='registraInformation'>
+           <view class='registraInforItem'>
+              <input class='registraInrItemIphone' type='number'  maxlength='12' name="phone" placeholder='请输入手机号'></input>
+           
+           </view> 
+            <view class='registraInforItem'>
+              <input class='registraInrItemOtphone' password="{{!isCanSee}}" name="password" type='text' placeholder='请输入密码'></input>
+              <view class='canSee'  bindtap='setCanSee' >
+                   <image  wx:if="{{!isCanSee}}" src='{{image}}eye-normal_09.png'></image>
+                   <image  wx:if="{{isCanSee}}"  src='{{image}}eye-select_09.png'></image>
+              </view>
+           </view> 
+     </view>
+  <!--注册信息结束  -->
+
+<!--点击注册按钮  -->
+  <view class='btnClickSubmit'>
+        <button class='registerInfo'  form-type="submit">  登录 </button>
+  </view>
+  <!--点击注册按钮 结束 -->
+<view class='isGologin'>
+    <navigator class='isLoginDuan' url='../loginPage/loginPage' hover-class='none'>手机验证登录</navigator>
+      <navigator class='remberPas'   url='../changePassword/changePassword' hover-class='none'>忘记密码</navigator>
+</view>
+  <!--已经注册，点击登陆  -->
+   <!--已经注册，点击登陆 结束 -->
+   </form>
+</view>

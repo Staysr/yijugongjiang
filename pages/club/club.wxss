@@ -1,0 +1,186 @@
+/* pages/club/club.wxss */
+@import "../index/index.wxss";
+
+page {
+  background: #ebebeb;
+}
+
+.topGearMap {
+  width: 100%;
+  height: 300rpx;
+}
+
+.topGearMap {
+  width: 100%;
+}
+
+.topGearMapSwiper {
+  width: 100%;
+}
+
+.topGearMapSwiper image {
+  width: 100%;
+  height: 300rpx;
+}
+
+.topGearMap navigator {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.topGearMap swiper {
+  height: 300rpx !important;
+}
+
+.classificationWorkBox {
+  padding: 0 20rpx;
+  background: #fff;
+}
+
+.classificationWork {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  /* background: pink; */
+  padding: 30rpx 0 0;
+}
+
+.classificationWorkCell {
+  width: 25%;
+  height: 180rpx;
+  background: #fff;
+  margin-bottom: 40rpx;
+}
+
+.classifiImage {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.classifiText {
+  width: 100%;
+  text-align: center;
+  font-size: 26rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+.classificationWorkCell navigator {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.workinForSection {
+  padding: 0 20rpx;
+  height: 75rpx;
+  line-height: 75rpx;
+}
+
+.workinForSection {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+}
+
+.workinForItem {
+  font-size: 26rpx;
+  width: 50%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.workinForText {
+  font-size: 26rpx;
+  color: #666;
+  padding: 20rpx;
+  line-height: 45rpx;
+  word-break: break-all;
+}
+
+.workInformationCell {
+  background: #fff;
+  margin-top: 20rpx;
+}
+
+.workInformationCell navigator {
+  display: block;
+  padding: 10rpx 0;
+}
+
+.workInformationCell navigator {
+  display: block;
+  padding: 10rpx 0;
+}
+
+.pladiv {
+  height: 50rpx;
+}
+.workinForText
+{
+  border-bottom: 2rpx solid #ddd;
+}
+.widhtAuto
+{
+  width: 100%!important;
+}
+.bordernone
+{
+  border-bottom: none!important;
+}
+
+
+
+
+/* 搜索框 */
+.searchBox
+{
+  margin-top: -99rpx;
+  width: 100%;
+  /* background: #fff; */
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  z-index: 999;
+
+}
+.searchBtn
+{
+  width: 20%;
+  height: 68rpx;
+  background: #fff;
+  color: #06881c;
+  border-radius: 15rpx;
+    font-size: 26rpx;
+      text-align: center;
+   line-height: 66rpx;
+   border: 2rpx solid #ddd; 
+     margin: 0
+}
+.inputSerach
+{
+  display: block;
+  width: 77%;
+  background: #fff;
+  height: 68rpx;
+   border-radius: 15rpx;
+   font-size: 26rpx;
+ padding: 0 20rpx;
+ box-sizing: border-box;
+ border: 2rpx solid #ddd
+}
+.boipk{
+margin-left:10px;
+width:99rpx;
+height:40rpx;
+
+}

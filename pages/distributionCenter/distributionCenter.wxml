@@ -1,0 +1,33 @@
+<!--pages/distributionCenter/distributionCenter.wxml-->
+<view class="container" wx:if="{{zhaibi}}">
+
+
+<!--分销中心  -->
+    <view class='distributionCenterBox'>
+          <view class='distributionCenter'>
+                  <!--我的宅币  -->
+                  <view class='myCurrency'>
+                      <view class='myCurrencyName'>我的宅币：</view>
+                      <view class='myCurrencyNum'>{{zhaibi}}个</view>
+                  </view>
+                  <!--我的宅币  结束-->
+
+
+                  <!-- 分销列表 -->
+                    
+                    <view class='distributionList'>
+                           <view class='distributionItem'>
+                            <navigator url='../distributionCenList/distributionCenList'  hover-class='none'>分销列表 
+                                  <image class='nexTbtn' src='{{image}}nextb.png'></image>
+                            </navigator>
+                           </view>
+                    </view>
+
+                  <!--分销列表结束  -->
+                 
+          </view>
+    </view>
+<!--分销中心 结束 -->
+
+
+</view>

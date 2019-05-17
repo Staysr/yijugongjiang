@@ -1,0 +1,218 @@
+/* pages/mulbuOccupancy/mulbuOccupancy.wxss */
+
+/* @import "../refreshService/refreshService.wxss"; */
+
+page {
+  background: #ebebeb;
+}
+button{
+  border: none;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+}
+button::after{
+ 
+border:none;
+ 
+}
+.mulbuOccupancyBox {
+  margin-top: 50rpx;
+  background: #fff;
+  padding: 0 0 50rpx 0;
+}
+
+.mulbuOccupancyItem {
+  padding: 0 20rpx;
+  border-bottom: 2rpx solid #ddd;
+}
+
+.mulbuOccupancyItem {
+  height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brandName {
+  line-height: 80rpx;
+  font-size: 30rpx;
+}
+
+.brandInfor {
+  width: 400rpx;
+  line-height: 80rpx;
+  font-size: 22rpx;
+  text-align: right;
+}
+
+.mulbuOccupancyOtherItem {
+  padding: 15rpx 20rpx;
+  border-bottom: 2rpx solid #ddd;
+}
+
+.brandOthName {
+  height: 55rpx;
+  line-height: 125rpx;
+  font-size: 30rpx;
+}
+
+.brandOtInfor {
+  width: 100%;
+  display: block;
+  height: 120rpx;
+  line-height: 50rpx;
+  font-size: 22rpx;
+}
+
+.mulbuOccupancyBtn {
+  padding: 0 20rpx;
+}
+
+.mulbuOccupancyButton {
+  width: 100%;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  color: #fff;
+  background: #06881c;
+  margin: 50rpx 0 20rpx;
+  font-size: 30rpx;
+}
+
+.addUserEvImgList {
+  /* display: flex; */
+  justify-content: space-between;
+  margin-top: 40rpx;
+}
+
+.addUserEvImgCell {
+  width: 203rpx;
+  height: 210rpx;
+  position: relative;
+  margin-top: 54rpx;
+  margin-left: 22rpx;
+}
+
+.border-none {
+  border: none;
+}
+
+.addUserEvImgCell image {
+  width: 100%;
+  height: 100%;
+}
+
+.defalutImg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.pickBox {
+  width: 50%;
+  height: 100%;
+}
+
+.picker {
+  height: 100%;
+  width: 100%;
+  text-align: right;
+  font-size: 22rpx;
+  color: #999;
+  line-height: 80rpx;
+}
+
+/*  */
+
+.statusShenhe {
+  background: #ebebeb;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.success01 {
+  width: 180rpx;
+  height: 180rpx;
+}
+
+.successText {
+  width: 450rpx;
+  margin: 80rpx auto;
+  line-height: 55rpx;
+  font-size: 30rpx;
+  text-align: center;
+  letter-spacing: 2rpx;
+}
+
+.status02 {
+  padding: 0 20rpx;
+}
+
+.backCenter {
+  width: 100%;
+  height: 90rpx;
+  background: #06881c;
+  color: #fff;
+  font-size: 30rpx;
+  line-height: 90rpx;
+  text-align: center;
+  border-radius: 8rpx;
+}
+
+.successBox {
+  display: flex;
+  justify-content: center;
+  margin-top: 150rpx;
+}
+
+.faileTitle {
+  font-size: 30rpx;
+  line-height: 60rpx;
+}
+
+.successTextTitle {
+  width: 600rpx;
+  text-align: center;
+  margin: 80rpx auto;
+  letter-spacing: 2rpx;
+}
+
+.faileShu {
+  font-size: 30rpx;
+  line-height: 60rpx;
+}
+
+.successTextsuccess {
+  width: 100%;
+  text-align: center;
+  margin: 80rpx 0 40rpx;
+}
+
+.statusShenhe {
+  background: #fff;
+}
+
+.getCodebutton {
+  /* width: 207rpx;
+  height: 80rpx; */
+  background:#fff;
+  color:block;
+  font-size:28rpx;
+  text-align:center;
+  padding:0 0 0 8px;
+  border-left:1px solid #ebebeb;
+
+  /* line-height: 80rpx;
+  border-radius: 8rpx;
+  padding: 0;
+  top: 0;
+  right: 0;
+  z-index: 333;
+  margin: -17rpx; */
+}

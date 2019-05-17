@@ -1,0 +1,53 @@
+<!-- <import src="../../utils/template.wxml" />
+<wxs module="filter" src="../../utils/filter.wxs"></wxs> -->
+
+ <!--信息  -->
+<view class='container'>
+<view  class='load-progress {{loadProgress!=0?"show":"hide"}}'>
+  <view class='load-progress-bar bg-green' style="transform: translate3d(-{{100-loadProgress}}%, 0px, 0px);"></view>
+  <view class='load-progress-spinner text-green'></view>
+</view>
+  <view class='workInformation'>
+        <view class='workInformationCell'>
+            <view class='workinForSection' style='height: 100%;padding: 15rpx;font-weight: 600;'>
+              <view class="cu-avatar round margin-left" style="background-image:url({{user.head}});margin-left:1rpx;margin-top:8rpx;width:12%;"></view>
+              <view class='workinForItem'>
+               姓名:{{user.cname}}
+              </view>
+              <view style='width:230rpx;'><text>{{user.phone}}</text> </view>
+            </view>
+            <view class='workinForText1' style='width: 100%;padding: 20rpx;background-color: #fff;'>
+              <!-- <view class='workinForItem' style='width:25%;padding:0px;float:left;'>
+                工种：{{user.clubname}}
+              </view> -->
+              <view class='workinForItem1' style='width:45%;padding:0px;float:left;'>
+                价格区间:{{user.price_range}}
+              </view>
+
+              <view class='workinForItem1'>
+                从业年龄：{{user.workyear}}
+              </view>
+            </view>
+            <view  wx:for="{{club}}">
+            <view class='workinForText1'>
+              <image src='{{item.pic}}' data-img="{{item.pic}}" bindtap='images' style='height:144px;width:100%;margin-top:8px;'></image>
+            </view>
+            <view class='workinForText'>
+              {{item.content}}
+            </view>
+            </view>
+            
+
+             <!-- <view class='workinForText1'>
+              <image src='{{image}}装修报价banner.jpg'data-img="https://image.weilanwl.com/img/square-2.jpg"  bindtap='images' style='height:144px;width:100%;margin-top:8px;'></image>
+            </view>
+            <view class='workinForText'>
+              344124124901241241241241294912-40910-2490-1294-0194-01294-0129-041920-49120-491-0491-094-02194-01294-01294-0129
+            </view> -->
+        </view>
+    <view class='workInformationBox'>
+
+
+    </view>
+  </view>
+</view>

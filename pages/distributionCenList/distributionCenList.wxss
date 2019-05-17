@@ -1,0 +1,46 @@
+/* pages/distributionCenList/distributionCenList.wxss */
+page
+{
+  background: #ebebeb;
+}
+.distributionItem
+{
+  height: 155rpx;
+  padding: 0 20rpx;
+  width: 100%;
+  box-sizing: border-box;
+  background: #fff;
+  margin-top: 20rpx;
+  
+}
+.distributionItem
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.disUserName
+{
+  font-size: 26rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.disUserNes
+{
+  font-size: 24rpx;
+    height: 50rpx;
+  line-height: 50rpx;
+}
+.disUserCurreny
+{
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 26rpx;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.myCurrentcolor
+{
+  color: #06881c
+}

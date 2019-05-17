@@ -1,0 +1,135 @@
+<!--pages/perInformation/perInformation.wxml-->
+<view class='container'>
+      <!--个人信息  -->
+       <view class='perInformationBox'>
+              <view class='perInformation'>
+
+                  <view class='perInformationItem headerPadding paddinBT' bindtap='changeHeader'>
+                       
+                       
+                        <view class='userInFoName'>头像</view>
+
+                        <image class='userHeard' mode="aspectFill" src='{{mymessage.pic}}'></image>
+                         
+                         <image  class='nexTbtn' src='{{image}}nextb.png'></image>
+                       
+                   
+                  </view>
+                  <!------------------------------------------------------------------  -->
+                   <view class='perInformationItem'>
+ <navigator  url='../changePerInfor/changePerInfor?status=1&userid={{userid}}&infor={{mymessage.name}}' hover-class='none'>
+                       
+                        <view class='userInFoName'>姓名</view>
+
+                          <view class='userInFoContent'>{{mymessage.name}}</view>
+                         
+                         <image  class='nexTbtn' src='{{image}}nextb.png'></image>
+                       
+                       </navigator>
+                  </view>
+                  <!------------------------------------------------------------------  -->
+                    <view class='perInformationItem nopadding paddinBT'>
+                     
+                       
+                        <view class='userInFoName'>电话</view>
+
+                          <view class='userInFoContent'>{{mymessage.phone}}</view>
+                         
+                 
+                  </view>
+                  <!------------------------------------------------------------------  -->
+                    <view class='perInformationItem'>
+                       <navigator  url='../changePerInfor/changePerInfor?status=3&userid={{userid}}&infor={{mymessage.identity}}' hover-class='none'>
+                       
+                        <view class='userInFoName'>身份证号</view>
+
+                          <view class='userInFoContent'>{{mymessage.identity}}</view>
+                         
+                         <image  class='nexTbtn' src='{{image}}nextb.png'></image>
+                       
+                       </navigator>
+                  </view>
+                  <!------------------------------------------------------------------  -->
+                    <view class='perInformationItem headerPadding paddinBT' bindtap="open">
+                       <!-- <navigator  url='' hover-class='none'> -->
+                       
+                        <view class='userInFoName'>所在区域</view>
+
+                          <view class='userInFoContent' >{{mymessage.address}}</view>
+                         
+                         <image  class='nexTbtn' src='{{image}}nextb.png'></image>
+                       
+                       <!-- </navigator> -->
+                  </view>
+                  <!------------------------------------------------------------------  -->
+                    <view class='perInformationItem paddingheight'>
+                       <navigator  class='displaynone' url='../changePerInfor/changePerInfor?status=2&userid={{userid}}&infor={{mymessage.need}}' hover-class='none'>
+                       
+                        <view class='userInFoName'>平台需求</view>
+
+                          <!-- <view class='userInFoContent'>{{mymessage.need}}</view> -->
+                          
+                        <view class='userInFoContent userLineheight'>{{mymessage.need}}</view>
+
+                         <image  class='nexTbtn' src='{{image}}nextb.png'></image>
+                       
+                       </navigator>
+                  </view>
+                  <!------------------------------------------------------------------  -->
+                    <view class='perInformationItem paddingheight '>
+                       <navigator class='displaynone' url='../changePerInfor/changePerInfor?status=4&userid={{userid}}&infor={{mymessage.introduce}}' hover-class='none'>
+                       
+                        <view class='userInFoName'>个人介绍</view>
+
+                          <view class='userInFoContent userLineheight'>{{mymessage.introduce}}</view>
+                         
+                         <image  class='nexTbtn' src='{{image}}nextb.png'></image>
+                       
+                       </navigator>
+                  </view>
+                  <!------------------------------------------------------------------  -->
+                    <view class='perInformationItem' wx:if="{{isPhone}}">
+
+                       <navigator  url='../changePasswordNew/changePasswordNew?userid={{userid}}' hover-class='none'>
+                       
+                          <view class='userInFoName'>修改密码</view>
+
+                          <view class='userInFoContent'></view>
+                          
+                          <image  class='nexTbtn' src='{{image}}nextb.png'></image>
+                       
+                       </navigator>
+
+                  </view>
+                  <!------------------------------------------------------------------  -->
+               
+
+                 
+              </view>
+       </view>
+
+       <!--个人信息结束  -->
+
+</view>
+
+
+
+
+ <!--城市联动.wxml-->
+  <view wx:if="{{condition}}" class="citypicker" catchtap="catchBind">
+    <picker-view indicator-style="height: 50px;" style="width: 100%; height: 250px;" value="{{value}}" bindchange="bindChange" class="citybody">
+      <picker-view-column>
+        <view wx:for="{{provinces}}" wx:key="item" style="line-height: 50px;padding-left:10px;text-align: center">{{item}}</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{citys}}" wx:key="item" style="line-height: 50px;padding-left:10px;text-align: center">{{item}}</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{countys}}" wx:key="item" style="line-height: 50px;padding-left:10px;text-align: center">{{item}}</view>
+      </picker-view-column>
+    </picker-view>
+    <view class="cityheader">
+      <view bindtap="openTrue" class="city-true">确定</view>
+    </view>
+  </view>
+  <!--城市联动.wxml-->

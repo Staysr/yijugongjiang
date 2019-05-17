@@ -1,0 +1,54 @@
+<!--pages/registrationPage/registrationPage.wxml-->
+<view class="container">
+  <form bindsubmit="formSubmit">
+    <!--注册信息  -->
+    <view class='registraInformation'>
+      <view class='registraInforItem'>
+        <input class='registraInrItemIphone' type='number' maxlength='12' bindinput='bindPhone' name="phone" placeholder='请输入手机号'></input>
+        <button class='getCode' bindtap="verifyCodeEvent" disabled="{{buttonDisable}}">{{verifyCodeTime}}</button>
+      </view>
+
+      <view class='registraInforItem'>
+        <input class='registraInrItemOtphone' type='number' maxlength='15' bindinput='bindCaptcha' placeholder='请输入验证码'></input>
+      </view>
+      <view class='registraInforItem'>
+        <input class='registraInrItemOtphone' bindinput='bindPass' maxlength='15' name="password" password="{{!isCanSee}}" type='text' placeholder='设置密码'></input>
+        <view class='canSee' bindtap='setCanSee'>
+          <image wx:if="{{!isCanSee}}" src='{{image}}eye-normal_09.png'></image>
+          <image wx:if="{{isCanSee}}" src='{{image}}eye-select_09.png'></image>
+        </view>
+      </view>
+    </view>
+    <!--注册信息结束  -->
+    <view>
+
+
+    </view>
+    <view style='margin-top:39rpx;margin-left:25rpx;display:inline-block'>
+      <!-- <label class="flex justify-between align-center flex-sub"> -->
+          <radio-group class="radio-group" bindchange="radioChange"  wx:for-items="{{items}}" wx:key="name">
+                <radio bindtap = "bindtap1" value="{{item.name}}" checked = "{{item.checked}}">
+                   
+                </radio>
+                <span class='xueyi' bindtap="lrub">我已阅读并同意</span><span class='hedao' bindtap="lrub">{{item.value}}</span>
+            </radio-group>
+      <!-- </label> -->
+    </view>
+    <!--点击注册按钮  -->
+    <view class='btnClickSubmit'>
+      <button class='registerInfo' open-type="getUserInfo" bindgetuserinfo="formSubmit"> 注册 </button>
+    </view>
+   
+    <!--点击注册按钮 结束 -->
+    <view class='btnClickSubmit'>
+      <!-- <navigator url='../userLoginPage/userLoginPage' hover-class='none'>已经注册,点击登录</navigator> -->
+      <button class='registerInfo1' open-type="getUserInfo" bindtap='loginoogg'>登录</button>
+    </view>
+      <!-- <view class='isGologin'>
+      <navigator url='../userLoginPage/userLoginPage' hover-class='none'>已经注册,点击登录</navigator>
+    </view> -->
+    <!--已经注册，点击登陆  -->
+    <!--已经注册，点击登陆 结束 -->
+
+   </form>
+</view>

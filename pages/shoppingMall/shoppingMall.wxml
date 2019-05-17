@@ -1,0 +1,117 @@
+<!--pages/shoppingMall/shoppingMall.wxml-->
+<view class='container'>
+  <!--商城首页  -->
+  <view class='shoppingMallBox'>
+    <view class='shoppingMall'>
+      <!--商城搜索  -->
+      <view class='classPlac'>
+      </view>
+      <view class='searchBoxView' id='mjltest'>
+        <navigator class='searchBoxViewNav' url="../searchList/searchList" hover-class='none'>
+          <image class='searchImg' src='{{image}}search.png'></image>
+          <view class='textSearch'>搜索</view>
+        </navigator>
+      </view>
+      <!--搜索结束  -->
+      <!--分类商品内容  -->
+      <view class='classifiedGoods' wx:if="{{goodsclass1}}">
+        <!--左边分类商品名称  -->
+        <view class='classifiedGoodsName'>
+          <scroll-view scroll-y class='classifiedGoodScroll' style='max-height:{{searchHeight}};top:{{searchTop}}' bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+            <view class="scroll-view-item {{activeViewItem == index ?'activeViewItem':''}}" data-activindex="{{index}}" wx:for-key="{{activindex}}" wx:for-item="activeitem" data-activid="{{activeitem.id}}" bindtap='selectClassfiedGood' wx:for="{{goodsclass1}}">{{activeitem.classname}}</view>
+            <view class="scroll-view-item {{activeViewItem == 10000 ?'activeViewItem':''}}"  data-activindex="10000" data-activid="品牌" bindtap='selectClassfiedGood' style="border-bottom: 8px solid #ebebeb;">品牌馆</view>
+    <view class="scroll-view-item" style='text-overflow:ellipsis;white-space:nowrap;'wx:for="{{storelist}}">
+              <navigator class='brandRecommendCell'  hover-class='none' url='../brandShop/brandShop?shopid={{item.id}}&shopname={{item.brand}}'>
+                {{item.brand}}
+              </navigator>
+            </view>
+          </scroll-view>
+        </view>
+        <!--左边分类商品名称  -->
+        <!--右边的商品  -->
+        <view class='classifiedGoodsContent '>
+          <view class='classifiedGoodShopList '>
+            <!-- <view class='classifiedGoodShopCell' wx:for="{{goodsclass2}}" wx:for-item="fristshop"> -->
+            <view class='classifiedGoodShopTitleBox '>
+              <!-- <view class='classifiedGoodShopTitle'>{{fristshop.classname}}</view>
+                <navigator url='../classifiedGoods/classifiedGoods?goodsclass2={{fristshop.id}}' hover-class='none' class='classifiedGoodShopShowMore'>查看更多></navigator> -->
+              <scroll-view scroll-x class="bg-white nav" style='background-color:transparent;' scroll-with-animation scroll-left="{{scrollLeft}}">
+                <view class="cu-item {{index==TabCur?'text-green cur':''}}"   wx:for="{{goodsclass2}}" wx:for-item="fristshop"  wx:key bindtap='tabSelect' data-indexid='{{fristshop.id}}' data-id="{{index}}">
+                  {{fristshop.classname}}
+                </view>
+              </scroll-view>
+
+            </view>
+            <!--商品内容  -->
+            <view>
+            <view style="overflow: hidden;">
+            <view class='classShopNameList' wx:for='{{goodsclass3}}'>
+              <view class='classShopNameCell'>
+                <!-- <navigator url="../productDetails/productDetails?goodid={{item.id}}" hover-class='none'> -->
+                  <!-- 290 * 250 -->
+                  <image class='classShopImg' bindtap='goods' data-goodid="{{item.id}}" src='{{item.pic}}'></image>
+                  <view class='shopBox'>
+                    <view class='shopName '>{{item.name}}</view>
+                    <view class='shopMuchInfo'>
+                      <view class='redColor'>￥{{item.discount}}</view>
+                      <view class='xiaoshou'>销量：{{item.sum}}</view>
+                    </view>
+                  </view>
+
+                  <!-- 290 * 250 -->
+                <!-- </navigator> -->
+              </view>
+              
+            </view>
+            </view>
+            
+            <view wx:if="{{goodsclass3.length != 0 && goodsclass3 != 0}}" style="width: 100%;text-align: center;">
+                <navigator style='color: #06881c;' url='../classifiedGoods/classifiedGoods?goodsclass2={{goodsid}}' hover-class='none' >+查看更多</navigator>
+              </view>
+            </view>
+            
+
+
+
+            <!---------------------------  -->
+            <!--商品内容  结束-->
+            <!-- </view> -->
+
+            <!--品牌馆  -->
+            <view class='classifiedGoodShopCell' wx:if="{{seller}}">
+              <view class='classifiedGoodShopTitleBox'>
+                <view class='classifiedGoodShopTitle'>品牌馆</view>
+
+              </view>
+              <!--品牌馆商品内容  -->
+              <view class='brandShopContent'>
+
+                <view class='brandShopItem' wx:for="{{seller}}" wx:for-item="seller">
+                  <navigator url='../brandShop/brandShop?shopid={{seller.id}}&shopname={{seller.brand}}'  hover-class='none'>
+
+                    <image class='brandImg' src='{{seller.logo}}'>
+
+                    </image>
+                    <view class='brandText'>{{seller.brand}}</view>
+                  </navigator>
+                </view>
+              </view>
+              <!----品牌馆商品内容  结束-->
+            </view>
+            <!--  -->
+          </view>
+        </view>
+        <!--右边的商品  -->
+      </view>
+      <!--分类商品内容 结束  -->
+    </view>
+
+    <view class='zanwu' wx:if="{{isHasShopData}}">
+      ———— 暂无商品 ————
+    </view>
+    <!-- <view class='zanwu' wx:if="{{ispingShopData == 1}}">
+      ———— 暂无品牌 ————
+    </view> -->
+  </view>
+  <!--商城首页 结束 -->
+</view>

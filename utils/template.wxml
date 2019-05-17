@@ -1,0 +1,63 @@
+
+
+<!--购物车没有东西  -->
+<template name="gwcisNone">
+<view class='noShopInfo'>
+  <text  decode="true">
+    ————&emsp;购物车没有东西&emsp;————
+  </text></view>
+</template>
+  <!--购物车没有动洗  -->
+
+
+<!--暂无数据样式  -->
+<template name="loadFail">
+        <view class='noShopInfo'>
+          <text  decode="true">
+            ————&emsp;暂无数据&emsp;————
+          </text></view>
+</template>
+<!--暂无数据样式结束  -->
+
+<!--没有更多了  -->
+<template name="noMoreCell">
+   <view class='loadNow' > 
+     <text decode="{{true}}">没有更多了...</text>
+   </view>
+</template>
+<!--没有更多了  -->
+
+<!--加载中的样式  -->
+<template name="loadNow">
+   <view class='loadNow' > 
+   <image class='loadIcon' src='../../pages/images/loading.gif' mode='aspectFit'></image>
+       <text decode="{{true}}">&ensp;加载中</text>
+   </view>
+</template>
+<!--加载中的样式结束  -->
+
+<!--数据为空的时候显示的东西  -->
+<template name="isDataNull">
+   <view class='isDataNull' > 
+         <view class='isDataNullBox' style='height:211rpx;'>
+          <text  decode="true">
+            ————&emsp;暂无记录&emsp;————
+          </text></view>
+   </view>
+</template>
+<!--数据为空的时候显示的东西  -->
+
+
+
+<!--暂无数据样式  -->
+<template name="gowuche">
+        <view class='gouwuceh'>
+          <view class='gowuchebox'>
+              <image class='gouImg' src='../../pages/images/go1.png'></image>
+              <view class='gouwutext'>购物车还是空的哦~</view>
+              <navigator url='../../pages/shoppingMall/shoppingMall' open-type="switchTab" class='goshop'> 去逛逛</navigator>
+          
+          </view>
+        </view>
+</template>
+<!--暂无数据样式结束  -->

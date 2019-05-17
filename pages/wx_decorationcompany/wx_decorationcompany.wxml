@@ -1,0 +1,196 @@
+<!--pages/wx_decorationcompany/wx_decorationcompany.wxml-->
+<!-- <text>pages/wx_decorationcompany/wx_decorationcompany.wxml</text> -->
+<import src="../../utils/template.wxml" />
+<import src="../../wxParse/wxParse.wxml" />
+<swiper class="screen-swiper {{DotStyle?'square-dot':'square-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+
+  <swiper-item wx:for="{{banner}}" wx:key>
+    <image src="{{item.pic}}" mode='aspectFill'></image>
+  </swiper-item>
+</swiper>
+<scroll-view scroll-x scroll-y class="bg-white nav" scroll-top="{{VerticalNavTop}}">
+  <view class='flex text-center'>
+    <view class="cu-item flex-sub {{index==TabCur?'text-green cur':''}}" wx:for="{{wx_type}}" wx:key bindtap='tabSelect' data-id='{{item.id}}' data-tabcurid="1">
+      {{item.name}}
+    </view>
+  </view>
+</scroll-view>
+
+<scroll-view class='he_wx' bindscrolltolower="onReach" style='margin-bottom:50rpx;' scroll-y scroll-with-animation scroll-into-view="md-{{TabCur}}">
+  <view id="md-0">
+    <view class="titleClass paddingClass">
+      <text> 装修案例</text>
+    </view>
+    <!-- <view class='case'>
+  <text> 装修案例</text>
+</view> -->
+
+    <view class='bger' style="height: 400rpx;">
+      <view class='list_data'>
+        <scroll-view scroll-x class="bg-white nav mabottom15" scroll-with-animation scroll-left="{{scrollLeft}}">
+          <view class="cu-item {{index==TabCur1?'text-green cur':''}}" wx:for="{{case}}" wx:key bindtap='tabSelect1' data-id="{{index}}" data-classid="{{item.id}}">
+            {{item.name}}
+          </view>
+        </scroll-view>
+        <scroll-view scroll-x class="bg-white nav" scroll-with-animation scroll-left="{{scrollLeft}}">
+          <view wx:for="{{caseab}}" wx:for-item="items" class='conter'>
+            <view  class='conter' bindtap='infotitle' data-name="{{items.title}}" data-id='{{items.id}}'>
+              <image  data-image="{{items.pic}}"  class='imag' src="{{items.pic}}" mode='aspectFill'></image>
+            </view>
+            <view class='textai' >{{items.title}}</view>
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+  </view>
+  <!-- ------------------------------------------------------------------------------------------ -->
+  <view id="md-1">
+    <view class="titleClass paddingClass">
+      <text> 设计师</text>
+    </view>
+    <!-- <view class='case'>
+  <text> 设计师</text>
+</view> -->
+    <view class="designer">
+      <scroll-view scroll-x class="bg-white nav" scroll-y scroll-into-view="main-id-{{tabcurid}}" bindscroll="VerticalMain" scroll-with-animation scroll-left="{{scrollLeft}}">
+        <view wx:for="{{stylist}}" wx:key style="display:inline-block;" id="main-id-{{tabcurid}}">
+          <view class="cu-avatar xl round margin-left" data-codeid="2" data-id="{{item.id}}"data-name="{{item.name}}"  bindtap='personnel' style="background-image:url({{item.head}});margin-top:36rpx;">
+          </view>
+          <view class='textleft_wx'>{{item.name}}</view>
+        </view>
+      </scroll-view>
+    </view>
+    <!-- ------------------------------------------------------------------------------------------ -->
+    <view id='md-2'>
+      <view class="titleClass paddingClass">
+        <text>工长</text>
+      </view>
+      <!-- <view class='case'>
+  <text>工长</text>
+</view> -->
+
+      <view class="designer">
+        <scroll-view scroll-x class="bg-white nav" scroll-top="{{VerticalNavTop == 2}}" scroll-with-animation scroll-left="{{scrollLeft}}">
+          <view wx:for="{{worker}}" wx:key style="display:inline-block;">
+            <view class="cu-avatar xl round margin-left" bindtap='personnel'data-name="{{item.name}}" data-id="{{item.id}}" data-codeid="3" style="background-image:url({{item.head}});margin-top:36rpx;">
+            </view>
+            <view class='textleft_wx'>{{item.name}}</view>
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+  </view>
+
+  <view class="titleClass paddingClass">
+    <text>服务流程</text>
+  </view>
+  <!-- <view class='case'>
+  <text>服务流程</text>
+</view> -->
+
+
+  <view class='liecehng'>
+    <image bindtap='seeimages'  data-image="{{company.serveprocess}}" class='luichen' src="{{company.serveprocess}}" mode='widthFix'></image>
+  </view>
+  <!-- ------------------------------------------------------------------------------------------ -->
+  <view class="titleClass paddingClass">
+    <text>公司介绍</text>
+  </view>
+  <!-- <view class='case'>
+  <text>公司介绍</text>
+</view> -->
+  <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+  <!-- ------------------------------------------------------------------------------------------ -->
+  <view class="titleClass paddingClass">
+    <text>二维码</text>
+  </view>
+  <!-- <view class='case'>
+  <text>二维码</text>
+</view> -->
+
+  <view class='erweim'>
+    <image bindtouchstart='timestart' bindtouchend='timeend' bindtap='saveImg' data-image="{{company.code}}" class='weerm' src="{{company.code}}" mode='widthFix'></image>
+    <view class='weweim_wx'>长按下载二维码</view>
+  </view>
+  <!-- ------------------------------------------------------------------------------------------ -->
+  <view class="titleClass paddingClass">
+    <text>发表评论</text>
+  </view>
+  <!-- <view class='case'>
+  <text>发表评论</text>
+</view> -->
+
+  <view class="pingl">
+    <view class='widff'>
+
+      <textarea class='textareall' value="{{searchinput}}" bindinput="getInput" minlength="{{min}}" maxlength="{{max}}" placeholder='请输入您的评'>
+
+
+      </textarea>
+      <text class="wx_ooloer">{{wx_ooloer|0}}/{{max}}</text>
+    </view>
+    <view class='bindtp'>
+      <buttion class='cu-btn round bg-olive' data-pingjia="{{pingjia}}" bindtap="pingjia">提交评价</buttion>
+    </view>
+    <view class="cu-list menu menu-avatar comment solids-top">
+      <view class="cu-item" wx:for="{{comment}}" wx:key>
+        <view class="cu-avatar round" style="background-image:url({{item.head}});"></view>
+        <view class='content'>
+          <view class='text-grey' style='display:inline-block'>{{item.name}}</view>
+          <view class='time'>{{item.add_time}}</view>
+          <view class='text-gray text-content text-df'>
+            {{item.content}}
+          </view>
+        </view>
+      </view>
+
+      <!--加载中样式  -->
+      <template is="loadNow" wx:if="{{isLoadding}}"></template>
+      <!--加载中样式  -->
+      <!--暂无数据  -->
+      <template is="noMoreCell" wx:if="{{isHasData}}"> </template>
+      <!--暂无数据  -->
+    </view>
+  </view>
+
+
+
+
+  <!-- ------------------------------------------------------------------------------------------ -->
+
+</scroll-view>
+<!-- ------------------------------------------------------------------------------------------ -->
+<!-- <view class="cu-bar bg-white tabbar border shop" style='background-color:rgb(122,206,133);width:100%;bottom:0;position:fixed;'>
+  <button class="action" bindtap='onShareAppMessage' open-type="share">
+    <view class='icon-share'>
+
+    </view>
+    分享
+  </button>
+  <view class="action" bindtap='phone' data-phone="{{phone}}">
+    <view class='icon-service'>
+
+    </view>
+    客服
+  </view>
+  <view bindtap='myiszhuangxiou' class='bg-red submit' style='background-color:rgb(18,120,22);'>我要装修</view>
+</view> -->
+
+<view class="bottomView" style='font-size:30rpx;'>
+  <button bindtap='onShareAppMessage' open-type="share" class="customView  textClass" style='background-color:#8ad497;display:inline-block;font-size:30rpx;height:100%;line-height:100rpx;'>
+    <icon class='icon-share'>
+
+    </icon>分享
+  </button>
+
+  <view class="customView textClass" bindtap='phone' data-phone="{{phone}}" style='background-color:#55b665;display:inline-block;'>
+    <icon class='icon-service'>
+
+    </icon>客服
+  </view>
+  <view class="carView" style='background-color:#06881c;color:#ffffff;' bindtap='myiszhuangxiou'>我要装修</view>
+</view>
+
+<view class='btnbackHome' catchtap='backHome'>
+  <image src='{{image}}home.png'></image>
+</view>

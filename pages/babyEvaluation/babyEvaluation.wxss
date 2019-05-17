@@ -1,0 +1,493 @@
+/* pages/babyEvaluation/babyEvaluation.wxss */
+/* pages/productDetails/productDetails.wxss */
+
+page {
+  background: #ebebeb;
+}
+
+.topGearMap {
+  width: 100%;
+  height: 300rpx;
+}
+
+.topGearMap {
+  width: 100%;
+}
+
+.topGearMapSwiper {
+  width: 100%;
+}
+
+.topGearMap swiper {
+  height: 300rpx !important;
+}
+
+.topGearMapSwiper image {
+  width: 100%;
+  height: 300rpx;
+}
+
+.topGearMap navigator {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.shopSaveInfomation {
+  width: 100%;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+
+.shopSaveInfomBox {
+  border-bottom: 2rpx solid #ddd;
+  padding: 20rpx 0;
+}
+
+.shopSaveInfo {
+  height: 50rpx;
+  line-height: 50rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shopSaveInfoPrice {
+  font-size: 30rpx;
+  color: #f00;
+}
+
+.shopSaveInfoNum {
+  font-size: 22rpx;
+  color: #999;
+}
+
+.shopSaveInfoName {
+  line-height: 50rpx;
+  font-size: 26rpx;
+}
+
+/*主容器*/
+
+.stepper {
+  /* width:80px; */
+  height: 50rpx;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+/*加号和减号*/
+
+.stepper text {
+  float: left;
+  width: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+}
+
+/*数值*/
+
+.stepper input {
+  width: 80rpx;
+  height: 50rpx;
+  float: left;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 22rpx;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  min-height: 50rpx !important;
+  line-height: 50rpx;
+}
+
+/*普通样式*/
+
+.stepper .normal {
+  color: black;
+}
+
+/*禁用样式*/
+
+.stepper .disable {
+  color: #ccc;
+}
+
+.Specifi {
+  border-bottom: 2rpx solid #ddd;
+}
+
+.SpecifiName {
+  font-size: 26rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.SpecifiItem {
+  height: 45rpx;
+  color: #333;
+  line-height: 45rpx;
+  padding: 0 20rpx;
+  font-size: 22rpx;
+  margin-bottom: 20rpx;
+  background: #eee;
+  margin-right: 20rpx;
+}
+
+.SpecifiContent {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.isSelect {
+  background: #06881c;
+  color: #fff;
+}
+
+.shoppurchaseTitle {
+  font-size: 24rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+}
+
+.shoppurchaseName {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.jionShopCar {
+
+  color: #fff;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 30rpx;
+}
+
+.babyEvaluationTitle {
+  height: 70rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.babyEvaluationEva {
+  font-size: 26rpx;
+  color: #333;
+}
+
+.babyEvaluationMore {
+  font-size: 22rpx;
+  color: #06881c;
+}
+
+.babyEvaluation {
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+
+.babyEvaluationBox {
+  padding: 0 20rpx;
+  border-bottom: 2rpx solid #ddd;
+}
+
+.starCom {
+  width: 40rpx;
+  height: 40rpx;
+  position: relative;
+}
+
+.starCom image {
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.userHearder {
+  height: 45rpx;
+  width: 45rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+
+.startComsBox {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.userOtherEvel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 0 20rpx; */
+}
+
+.userHearderBox {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+  font-size: 26rpx;
+}
+
+.userOtherEvel {
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.userEvatime {
+  font-size: 22rpx;
+  color: #666;
+  height: 45rpx;
+  line-height: 45rpx;
+  /* padding: 0 20rpx; */
+}
+
+.userInforText {
+  font-size: 26rpx;
+  color: #333;
+  line-height: 60rpx;
+  /* padding: 0 20rpx; */
+  margin-bottom: 8rpx;
+}
+
+.prevInforMation {
+  padding: 10rpx 20rpx 20rpx;
+  background: #fff;
+  /* border-bottom: 2rpx solid #ddd; */
+}
+
+.starCom {
+  margin-left: 10rpx;
+}
+
+.flagImg {
+  width: 74rpx;
+  height: 74rpx;
+  margin-right: 10rpx;
+}
+
+.flageName {
+  width: 195rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.flagshipStoreBoxScreen {
+  font-size: 30rpx;
+}
+
+.flagshipStoreBoxBtn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.flagshipStoreBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flagshipStoreBoxScreen {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 360rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.flagshipStore {
+  height: 120rpx;
+  background: #fff;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.flagshipStoreBox {
+  width: 100%;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+
+.allGoods {
+  font-size: 22rpx;
+  height: 40rpx;
+  width: 145rpx;
+  border-radius: 40rpx;
+  border: 2rpx solid #06881c;
+  color: #06881c;
+  text-align: center;
+  line-height: 40rpx;
+}
+
+.goodSee {
+  font-size: 22rpx;
+  height: 40rpx;
+  width: 145rpx;
+  border-radius: 40rpx;
+  background: #06881c;
+  color: #fff;
+  text-align: center;
+  line-height: 40rpx;
+  border: 2rpx solid #06881c;
+  margin-left: 20rpx;
+}
+
+.shopDetailContent {
+  padding: 20rpx;
+  font-size: 24rpx;
+  line-height: 50rpx;
+}
+
+.similarRecTitle {
+  color: #06881c;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 55rpx;
+  height: 55rpx;
+}
+
+.similarRecContent {
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx;
+}
+
+.shopItemCell {
+  width: 340rpx;
+}
+
+.shopImage {
+  width: 300rpx;
+  height: 267rpx;
+}
+
+.shopMoney {
+  font-size: 22rpx;
+  color: #f00;
+}
+
+.shopXiaoshou {
+  font-size: 22rpx;
+  color: #999;
+}
+
+.shopInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shopItemCell {
+  background: #fff;
+  padding: 20rpx;
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+}
+
+.shopItemList {
+  padding: 20rpx 20rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.shopItemCell navigator {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.shopName {
+  font-size: 26rpx;
+  border-top: 2rpx solid #ebebeb;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+.jionShopCar {
+  height: 100rpx;
+  font-size: 30rpx;
+}
+
+.jionShopCarBtn {
+  height: 100rpx;
+  font-size: 30rpx;
+  background: #06881c;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/*是否是自营  */
+
+.isZiying::before {
+  content: '自营';
+  color: #fff;
+  background: #f00;
+  /* width: 100rpx; */
+  padding: 0 10rpx;
+  border-radius: 5rpx;
+  height: 25rpx;
+  margin-right: 10rpx;
+  font-size: 22rpx;
+}
+.isZiyingA::after {
+  content: '自营';
+  color: #fff;
+  background: #f00;
+  padding: 2rpx 10rpx;
+  border-radius: 5rpx;
+  margin-left: 10rpx;
+  font-size: 22rpx;
+}
+
+.giveHomeCuren
+{
+  font-size: 24rpx;
+  color: #06881c;
+  line-height: 45rpx;
+}
+.userInforImg
+{
+  /* padding: 0 20rpx; */
+}
+.imgitem
+{
+  width: 213rpx;
+  height: 213rpx;
+  /* background: #ff0000; */
+  margin-right: 30rpx;
+  margin-bottom: 30rpx;
+}
+.imgitem:nth-child(3n)
+{
+  margin: 0
+}
+.userInforImg 
+{
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  border-bottom: 2rpx solid #ddd;
+  
+}
+.imgitem image
+{
+  width: 100%;
+  height: 100%;
+  
+}

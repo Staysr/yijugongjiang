@@ -1,0 +1,191 @@
+<!--index.wxml-->
+<view class="container">
+  <!--顶部轮播图  -->
+  <view class='topGearMap'>
+    <swiper class='topGearMapSwiper' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}} " indicator-dots="true" indicator-color="rgba(255,255,255,1)" indicator-active-color="#ff9606" circular="true">
+      <block wx:for="{{indexbanner}}" wx:key="{{index}}">
+        <swiper-item bindtap="bindTapImg" data-goodsid="{{item.goodsid}}" data-sellerid="{{item.sellerid}}" data-classid="{{item.classid}}">
+          <image src="{{item.pic}}" mode="aspectFill" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!--顶部轮播图结束  -->
+  <!--搜索  -->
+  <view class='searchBoxView' wx:if="{{indexbanner}}">
+    <navigator class='searchBoxViewNav' url="../searchList/searchList" hover-class='none'>
+      <image class='searchImg' src='{{image}}search.png'></image>
+      <view class='textSearch'>搜索</view>
+    </navigator>
+  </view>
+  <!--搜索结束  -->
+  <!--4个分类  -->
+  <view class='classifications' wx:if="{{indexgoods}}">
+    <view class='classificationsBox'>
+      <view class='classificationsCell' wx:if="{{indexgoods[0]}}" bindtap='navtoShopHome' data-classid='{{indexgoods[0].id}}'>
+        <image src='{{image}}s01.png'></image>
+        <view class='classifiCationText'>{{indexgoods[0].classname}}</view>
+      </view>
+      <view class='classificationsCell' wx:if="{{indexgoods[1]}}" bindtap='navtoShopHome' data-classid='{{indexgoods[1].id}}'>
+        <image src='{{image}}s02.png'></image>
+        <view class='classifiCationText'>{{indexgoods[1].classname}}</view>
+      </view>
+
+      <view class='classificationsCell'>
+        <navigator url='{{isloginStatus=="true"?"../club/club":"../club/club"}}' hover-class="none">
+          <image src='{{image}}s04.png'></image>
+          <view class='classifiCationText'>俱乐部</view>
+        </navigator>
+      </view>
+
+
+      <view class='classificationsCell'>
+        <navigator hover-class="none" url='{{isloginStatus=="true"?"../refreshService/refreshService":"../registrationPage/registrationPage"}}'>
+          <image src='{{image}}s03.png'></image>
+          <view class='classifiCationText'>装修报价</view>
+        </navigator>
+      </view>
+
+
+      <view class='classificationsCell' bindtap='brandhall' data-classid='100000'>
+
+        <image src='{{image}}brand.png'></image>
+        <view class='classifiCationText'>品牌馆</view>
+
+      </view>
+
+
+      <view class='classificationsCell'>
+        <navigator url='{{isloginStatus=="true"?"../VRResource/VRResource":"../registrationPage/registrationPage"}}' hover-class="none">
+          <image src='{{image}}vr.png'></image>
+          <view class='classifiCationText'>VR资源</view>
+        </navigator>
+      </view>
+
+      <view class='classificationsCell'>
+        <navigator url='{{isloginStatus=="true"?"../decorationcompany/decorationcompany":"../decorationcompany/decorationcompany"}}' hover-class="none">
+          <image src='{{image}}company.png'></image>
+          <view class='classifiCationText'>装修公司</view>
+        </navigator>
+      </view>
+
+
+      <view class='classificationsCell'>
+        <navigator url='{{isloginStatus=="true"?"../decoration/decoration":"../registrationPage/registrationPage"}}' hover-class="none">
+          <image src='{{image}}news.png'></image>
+          <view class='classifiCationText'>装修攻略</view>
+        </navigator>
+      </view>
+
+    </view>
+  </view>
+  <!--4个分类结束  -->
+
+  <!--灰色分割线  -->
+  <view class='grayLine'>
+  </view>
+  <!--灰色分割线解释  -->
+
+  <!--公告信息  -->
+  <view class="bullInformationBox">
+
+    <view class='bullInformation' wx:if="{{indexmessage}}">
+      <view class='bullInformationTitle'>
+        最新信息
+      </view>
+      <!--滑动的信息那内容  -->
+      <view class='slidInformation'>
+
+        <swiper indicator-dots="{{indicatorDots}}" autoplay="true" interval="2000" duration="1000" vertical="true" circular="true" display-multiple-items="2">
+          <swiper-item class='{{mlength == 1?"aa":""}}' wx:for="{{indexmessage}}"   wx:for-item="indexmessageitem">
+
+            <view class='sliderContent'>
+              {{indexmessageitem.title}}
+            </view>
+
+          </swiper-item>
+        </swiper>
+
+      </view>
+      <!--滑动的信息那内容结束  -->
+
+      <view class='catchBtn'>
+        <navigator url='{{isloginStatus=="true"?"../bulleInformation/bulleInformation":"../registrationPage/registrationPage"}}' hover-class='none'>
+
+        </navigator>
+      </view>
+    </view>
+  </view>
+  <!--公告信息结束  -->
+
+  <!--灰色分割线  -->
+  <view class='grayLine'>
+  </view>
+  <!--灰色分割线解释  -->
+
+  <!--辅材  -->
+  <view wx:if="{{indexgoods}}" class='auxiMaterials' wx:for="{{indexgoods}}" wx:for-item="indexgoodsitem" wx:if="{{index<2}}">
+    <view class='auxiMaterialsTitle'>
+      <image class='fucaiBg' src='{{index == 0 ?"../images/f02.jpg":"../images/f01.jpg"}}'></image>
+      <view class='fucaiBgText'> {{indexgoodsitem.classname}}</view>
+    </view>
+    <view class='auxiMaterialsList'>
+      <view class='auxiMaterialsCell' wx:for="{{indexgoodsitem.goods}}" wx:for-index="goodsitemindex" wx:for-item="goodsitem">
+        <navigator hover-class='none' url="../productDetails/productDetails?goodid={{goodsitem.id}}">
+          <image class='shopImg' mode='aspectFill' src='{{goodsitem.pic}}'></image>
+          <view class='shopImgInforMation'>
+            <view class='shopTitle'>{{goodsitem.name}}</view>
+            <view class='shopMuch'>
+              <view class='shopMuchRed'>
+                ￥{{goodsitem.discount}}
+              </view>
+              <view>
+                销售:{{goodsitem.sum}}
+              </view>
+            </view>
+          </view>
+        </navigator>
+      </view>
+    </view>
+
+
+  </view>
+  <!--辅材结束  -->
+
+
+
+
+  <!--品牌推荐  -->
+
+  <view class='brandRecommend' wx:if="{{indexshow}}">
+    <view class='brandRecommendBox'>
+      <view class='brandRecommendTitle'>
+        <image class='fucaiBg' src='{{image}}f03.jpg'></image>
+        <view class='fucaiBgText'> 品牌推荐</view>
+      </view>
+
+      <view class='brandRecommendConetnt'>
+        <navigator class='brandRecommendCell' wx:for="{{indexshow}}" wx:for-item="indexshowitem" hover-class='none' url='../brandShop/brandShop?shopid={{indexshowitem.id}}&shopname={{indexshowitem.brand}}'>
+          <image src='{{indexshowitem.logo}}'></image>
+
+        </navigator>
+
+      </view>
+    </view>
+  </view>
+
+  <!--品牌推荐结束  -->
+</view>
+<view class="cu-modal {{modalName=='Modal'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end" >
+      <view  class='content'>消息通知</view>
+      <view class='action' bindtap='hideModal'>
+        <text class='icon-close text-red'></text>
+      </view>
+    </view>
+    <view style="background-image: linear-gradient(to top, #84fab0,#c2e9fb);" class='padding-xl'>
+      {{notice}}
+    </view>
+  </view>
+</view>

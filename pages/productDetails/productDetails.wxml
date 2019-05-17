@@ -1,0 +1,248 @@
+<!--pages/productDetails/productDetails.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+<scroll-view scroll-y scroll-with-animation class="container" style='height: calc(100vh - 120rpx);{{btuBottom?"margin-bottom:50rpx":""}}'  wx:if="{{shopmoney}}">
+
+  <view class='productDetailsBox'>
+
+    <view class='productDetails'>
+
+      <!--顶部轮播图  -->
+      <view class='topGearMap'>
+        <swiper class='topGearMapSwiper' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}} " indicator-dots="true" indicator-color="rgba(255,255,255,1)" indicator-active-color="#ff9606" circular="true">
+          <block wx:for="{{goodspic}}">
+            <swiper-item>
+              <navigator url='' hover-class='none'>
+                <image src="{{item.pic}}" mode="aspectFill" class="slide-image" />
+              </navigator>
+            </swiper-item>
+          </block>
+        </swiper>
+        <!-- VR -->
+        <view class='vrBtn' data-address='{{vr}}' catchtap='goAddress'>
+          <image src='../images/VR.png'></image>
+        </view>
+        <!-- 分享 -->
+        <button class='sharBtn' open-type="{{userid?'share':''}}" catchtap='shareSdk'>
+          <image src='{{image}}share.png'></image>
+        </button>
+      </view>
+      <!--顶部轮播图结束  -->
+
+      <!--商品销售信息  -->
+
+      <view class='shopSaveInfomation'>
+        <view class='shopSaveInfomBox'>
+
+
+          <view class='shopSaveInfo'>
+            <view class='shopSaveInfoPrice'>￥{{shopmoney}}</view>
+            <view class='shopSaveInfoNum'>已售：{{goods.sum}}</view>
+          </view>
+          <view class='shopSaveInfoName {{goods.sellerid==0?"isZiying":""}} '>{{goods.name}}</view>
+          <view class='giveHomeCuren' wx:if="{{isShowZhaiBi&&giveCurrent>0&&goods.sellerid==0 && workclass!=0}}">
+            赠送宅币：{{giveCurrent}}个
+          </view>
+
+
+        </view>
+
+
+        <!--规格  -->
+        <view class='Specifi'>
+          <view class='SpecifiName'>规格</view>
+          <view class='SpecifiContent'>
+            <!--isSelect  -->
+            <view class='SpecifiItem {{isSelect==index?"isSelect":""}}' bindtap='selectActive' wx:for="{{goodsspecs}}" data-shopname="{{item.id}}" data-shopindex="{{index}}" data-shopprice="{{item.price}}" data-bi="{{item.bi}}" data-shopid="{{item.id}}">{{item.name}}</view>
+
+          </view>
+        </view>
+        <!--规格结束  -->
+        <!--购买数量  -->
+        <view class='shoppurchaseName'>
+          <view class='shoppurchaseTitle'>购买数量</view>
+          <view class='stepper'>
+            <text class='{{minusStatus}}' type='number' bindtap='bindMinus'>-</text>
+            <input bindinput='bindManual' type="number" value='{{num}}'></input>
+            <text bindtap='bindPlus'>+</text>
+          </view>
+        </view>
+
+
+      </view>
+
+      <!--商品销售信息 结束  -->
+
+
+
+      <!--宝贝评价  -->
+
+      <view class='babyEvaluation'>
+        <view class='babyEvaluationBox'>
+          <view class='babyEvaluationTitle'>
+
+            <view class='babyEvaluationEva'>宝贝评价({{count}})</view>
+            <navigator url='../babyEvaluation/babyEvaluation?goodsid={{evaluate.goodsid}}' hover-class='none' class='babyEvaluationMore'>查看更多></navigator>
+          </view>
+        </view>
+        <!--评价信息  -->
+        <view class='prevInforMation' wx:if="{{count>0}}">
+          <view class='userOtherEvel'>
+            <view class='userHearderBox'>
+              <image class='userHearder' src='{{evaluate.upic}}'></image> {{evaluate.name}}
+            </view>
+            <view class='startComsBox'>
+              <view class='starCom' bindtap='userComStart' data-starindex="1">
+                <image src='{{image}}com02.png' wx:if="{{evaluate.state<1}}"></image>
+                <image src='{{image}}com01.png' wx:if="{{evaluate.state>=1}}"></image>
+              </view>
+              <view class='starCom' bindtap='userComStart' data-starindex="2">
+                <image src='{{image}}com02.png' wx:if="{{evaluate.state<2}}"></image>
+                <image src='{{image}}com01.png' wx:if="{{evaluate.state>=2}}"></image>
+              </view>
+              <view class='starCom' bindtap='userComStart' data-starindex="3">
+                <image src='{{image}}com02.png' wx:if="{{evaluate.state<3}}"></image>
+                <image src='{{image}}com01.png' wx:if="{{evaluate.state>=3}}"></image>
+              </view>
+              <view class='starCom' bindtap='userComStart' data-starindex="4">
+                <image src='{{image}}com02.png' wx:if="{{evaluate.state<4}}"></image>
+                <image src='{{image}}com01.png' wx:if="{{evaluate.state>=4}}"></image>
+              </view>
+              <view class='starCom' bindtap='userComStart' data-starindex="5">
+                <image src='{{image}}com02.png' wx:if="{{evaluate.state<5}}"></image>
+                <image src='{{image}}com01.png' wx:if="{{evaluate.state>=5}}"></image>
+              </view>
+            </view>
+          </view>
+          <view class='userEvatime'>{{evaluate.time}} 规格：{{evaluate.specsname}} </view>
+          <view class='userInforText'>
+            {{evaluate.content}}
+          </view>
+        </view>
+        <!--评价信息 结束  -->
+
+      </view>
+
+      <!--宝贝评价 结束  -->
+
+
+
+      <!--旗舰店  -->
+      <view class='flagshipStore'>
+        <view class='flagshipStoreBox'>
+          <view class='flagshipStoreBoxScreen '>
+            <image class='flagImg' src='{{storelogo}}'></image>
+            <view class='flageName'>{{storename?storename:""}}</view>
+          </view>
+          <view class='flagshipStoreBoxBtn'>
+            <!-- <navigator class='allGoods'>全部产品</navigator> -->
+            <navigator url="../brandShop/brandShop?shopid={{goods.sellerid}}&shopname={{storename}}" class='goodSee'>进店逛逛</navigator>
+          </view>
+        </view>
+      </view>
+
+      <!--旗舰店 结束  -->
+
+
+
+      <!--商品详情  -->
+      <view class='babyEvaluation'>
+        <view class='babyEvaluationBox'>
+          <view class='babyEvaluationTitle'>
+            <view class='babyEvaluationEva'>商品详情</view>
+
+          </view>
+        </view>
+
+        <view class='shopDetailContent'>
+          <view class="wxParse">
+            <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+          </view>
+        </view>
+      </view>
+
+      <!--商品详情 结束  -->
+
+      <!-- 二维码 -->
+
+      <view class="bgClass paddingClass commentView">
+        <view class="qrcodeView">
+          <image class="qrcodeImg" bindtouchstart='timestart' bindtouchend='timeend' bindtap='saveImg' data-image="{{code}}" mode='aspectFill' src="{{code}}"></image>
+        </view>
+        <view class="qrcodeText" style="margin-top:20rpx;">长按下载二维码</view>
+
+      </view>
+      <!-- 二维码 结束 -->
+
+
+
+      <!--相似推荐  -->
+
+      <view class='similarRec' wx:if="{{recommendgoods.length!=0}}">
+
+        <view class='similarRecTitle'>
+          —— 相似推荐 ——
+        </view>
+
+        <view class='similarRecContent'>
+
+          <view class='shopItemCell' wx:for="{{recommendgoods}}">
+            <navigator url='../productDetails/productDetails?goodid={{item.id}}"' hover-class='none'>
+              <image class='shopImage' src='{{item.pic}}'></image>
+              <view class='shopBox'>
+                <view class='shopName'>{{item.name}}</view>
+                <view class='shopInfo'>
+                  <view class='shopMoney'>￥{{item.discount}}</view>
+                  <view class='shopXiaoshou'>
+                    销售：{{item.sum}}
+                  </view>
+                </view>
+              </view>
+            </navigator>
+          </view>
+
+          <!--------------------------------  -->
+
+
+        </view>
+
+      </view>
+
+      <!--相似推荐 结束  -->
+
+
+
+
+
+
+
+    </view>
+
+  </view>
+
+  
+
+
+  <!-- <view class='jionShopCar'>
+  <view class='jionShopCarBtn' bindtap='jionShopCar' >
+  加入购物车
+  </view>
+</view> -->
+
+  <!--加入购物车 结束 -->
+</scroll-view>
+
+<view class='btnbackHome' catchtap='backHome'>
+  <image src='{{image}}home.png'></image>
+</view>
+
+<!--加入购物车  -->
+
+  <view class="bottomView" style="font-size:30rpx;">
+
+
+    <view class="customView textClass" data-phone='{{phone}}' bindtap="calling" style='background-color:#55b665;display:inline-block;'>
+      <icon class='icon-service'>
+      </icon>客服
+    </view>
+    <view class="carView" style='background-color:#06881c;color:#ffffff;' bindtap='jionShopCar'>加入购物车</view>
+  </view>

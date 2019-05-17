@@ -1,0 +1,236 @@
+/* pages/personnel/personnel.wxss */
+@import "../wx_decorationcompany/wx_decorationcompany.wxss";
+page
+{
+  background: #ebebeb;
+}
+button{
+  border: none;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+}
+button::after{
+ 
+border:none;
+ 
+}
+image{
+ width:100%;
+height:100%;
+
+}
+.bgClass{
+  background-color: #ffffff;
+}
+.titleClass{
+	font-size: 30rpx;
+	font-weight: 600;
+}
+.paddingClass{
+	padding: 20rpx;
+}
+.paddingClass1{
+	padding:30rpx 20rpx;
+}
+.paddingClass2{
+	padding: 20rpx 0;
+}
+.introduction{
+	line-height:40rpx;
+	letter-spacing:4rpx;
+}
+.qrcodeView{
+	display:flex;
+	justify-content:center;
+}
+.qrcodeText{
+	text-align: center;
+}
+.qrcodeImg{
+	width: 230rpx;
+	height: 230rpx;
+}
+.desImg{
+	width:100%;
+	height:750rpx;
+
+}
+.gongImg{
+	width:100%;
+	height:400rpx;
+
+}
+
+.tab-h{
+  height: 100%;
+  width: 100%; 
+  box-sizing: border-box;
+  overflow: hidden;
+  line-height: 80rpx; 
+  white-space: nowrap;
+  }
+.tab-item{
+	font-size: 35rpx;
+  margin:0 30rpx;
+  display: inline-block;
+  }
+.tab-item.active{
+  color: #06881c;
+	font-size: 35rpx;
+  position: relative;
+  }
+.tab-item.active:after{ 
+  content: "";
+  display: block;
+  height: 8rpx;
+  width: 100%;
+  background: #06881c;
+  position: absolute; 
+  bottom: 0;
+  left: 0;
+  border-radius: 16rpx;
+  }
+.scoll-h{height: 100%;}
+.caseitem{
+	width:350rpx;
+	margin-right:20rpx;
+	display: inline-block;
+
+}
+.caseImg{
+	width: 350rpx;
+	height: 200rpx;
+}
+
+.areas{ 
+  height:152rpx; 
+  font-size: 30rpx; 
+  text-indent: 28rpx; 
+  border: 1rpx solid gainsboro; 
+  padding-top: 30rpx; 
+  margin: 0 auto; 
+  overflow: hidden; 
+  position: relative; 
+  } 
+  .currentWordNumber{ 
+    font-size: 28rpx; 
+    color: gray; 
+    position: absolute; 
+    left: 593rpx; 
+    top: -6rpx; 
+    }
+.pingView{
+	height: 150rpx;
+}
+
+.tijiao{
+	width:200rpx;
+	float:left;
+	font-size:35rpx;
+	border-radius:50rpx;
+	margin:20rpx 0;
+
+}
+.comment{
+	border-bottom:1px solid #dddddd;
+
+}
+.commentTitle{
+	overflow: hidden;
+	height:100rpx;
+	line-height:100rpx;
+	margin-bottom:40rpx
+}
+.commentImg{
+	width:100rpx;
+	height:100rpx;
+	float: left;
+	border-radius:50%;
+	margin-right: 20rpx;
+
+}
+.commentImg image{
+	border-radius:50%;
+}
+.commentName{
+	float: left;
+}
+.commentTime{
+	float: right;
+}
+
+
+.conts{ 
+	width: 100%; 
+	height: auto; 
+	border: 1rpx soldi #DDDDDD; 
+	margin-top: 30rpx; 
+	} 
+	.areas{ 
+		height:152rpx; 
+		font-size: 30rpx; 
+		text-indent: 28rpx; 
+		border: 1rpx solid gainsboro; 
+		overflow: hidden; 
+		position: relative;
+		 border-radius:25rpx;
+      width:100%
+		} 
+		
+		.currentWordNumber{ 
+			font-size: 28rpx; 
+			color: gray; 
+			position: absolute; 
+			left: 593rpx; 
+			top: 100rpx; 
+			} 
+      .bottomView{
+	position:fixed;
+	bottom:0;
+	left:0;
+	width:100%;
+	height:100rpx;
+	overflow:hidden;
+	line-height:100rpx;
+	text-align:center;
+
+}
+.customView{
+	float: left;
+	width: 25%;
+	background-color: #8ad497;
+}
+.huanhang{
+  width: 100%;
+  word-break: break-all;
+  white-space: normal;
+  
+}
+.text-deal{
+    overflow : hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-line-clamp: 1;
+    /* text-align:center; */
+
+}
+.btnbackHome
+ {
+   width: 70rpx;
+   height: 70rpx;
+   position: fixed;
+   bottom: 250rpx;
+   right: 20rpx;
+   background: #06881c;
+   padding: 10rpx;
+   box-sizing: border-box;
+   border-radius: 8rpx;
+
+   
+ }
+  .btnbackHome image
+  {
+    width: 100%;
+    height: 100%;
+  }

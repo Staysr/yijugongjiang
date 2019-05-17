@@ -1,0 +1,110 @@
+<!--pages/refreshService/refreshService.wxml-->
+<view class="container">
+  <form bindsubmit="formSubmit">
+
+    <!--顶部轮播图  -->
+    <view class='topGearMap'>
+      <swiper class='topGearMapSwiper' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}} " indicator-dots="true" indicator-color="rgba(255,255,255,1)" indicator-active-color="#ff9606" circular="true">
+        <block wx:for="{{offerpic}}" wx:key="{{index}}">
+          <swiper-item bindtap="bindTapImg" data-goodsid="{{item.goodsid}}" data-sellerid="{{item.sellerid}}" data-classid="{{item.classid}}">
+            <image src="{{item.pic}}" mode="aspectFill" class="slide-image" />
+          </swiper-item>
+
+        </block>
+      </swiper>
+    </view>
+    <!--顶部轮播图结束  -->
+
+    <!--刷新服务标题  -->
+    <view class='refreshServiceTitle'>
+
+      <view class='fucaiBgText'>您的装修预算</view>
+
+    </view>
+
+    <view class='refresmoney' style='{{code_key == 2?"height:auto":""}}'>
+
+      <view class='moneyText'>{{money}} 元</view>
+      <view class='nomoeny' wx:if="{{code_key == 1}}">
+        <span class="text_money">人工费:?元</span>
+        <span>材料费:?元</span>
+      </view>
+      <view class='nomoeny' wx:if="{{code_key == 1}}">
+        <span class="text_money">设计费:?元</span>
+        <span>质检费:?元</span>
+      </view>
+
+      <!-- wx:if="{{code_key == 2}}" -->
+
+    </view>
+    <view class="padding-sm" wx:if="{{code_key == 2}}">
+      <view class="bg-gradual-green padding radius text-center shadow-blur">
+        <view class="text-lg">稍后客服会与您取得联系</view>
+      </view>
+    </view>
+    <!--刷新服务标题结束  -->
+
+
+    <!--填写信息  -->
+
+    <view class='fillInformation'>
+      <view class="cu-form-group viewPage" style='margin:20rpx;border-radius:5px;width:99%;margin-left:1px;'>
+        <!-- <view class='title'>地址选择</view> -->
+        <picker mode="region" bindchange="RegionChange" name="region" value="{{region}}" custom-item="{{customItem}}">
+          <view class="picker">
+            {{region[0]}}，{{region[1]}}，{{region[2]}}
+          </view>
+        </picker>
+      </view>
+
+      <input type='digit' class='inputCell viewPage' bindinput="bindinputaddress" name="addressa" placeholder='房屋面积:'>
+      <text class=''>㎡</text>
+      </input>
+
+
+
+      <view class="cu-form-group viewPage" style='margin:20rpx;border-radius:5px;width:99%;margin-left:1px;'>
+        <picker mode="multiSelector" bindchange="MultiChange" bindcolumnchange="MultiColumnChange" name='multiIndex' value="{{multiArray[0][multiIndex[0]]}},{{multiArray[1][multiIndex[1]]}}，{{multiArray[2][multiIndex[2]]}},{{multiArray[3][multiIndex[3]]}}，{{multiArray[4][multiIndex[4]]}}"
+          data-name='{{multiArray[0][multiIndex[0]]}},{{multiArray[1][multiIndex[1]]}}，{{multiArray[2][multiIndex[2]]}},{{multiArray[3][multiIndex[3]]}}，{{multiArray[4][multiIndex[4]]}}' range="{{multiArray}}">
+          <view class="picker">
+            {{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}，{{multiArray[2][multiIndex[2]]}},{{multiArray[3][multiIndex[3]]}}，{{multiArray[4][multiIndex[4]]}}
+          </view>
+        </picker>
+      </view>
+
+
+      <view class='getCode viewPage'>
+        <input type='number' class='inputCell' maxlength='11' disabled='false' value='{{phone}}' bindinput="bindinputphone" name="phone" placeholder='房屋面积'>
+        </input>
+        <button class='getCodebutton' bindtap="verifyCodeEvent" disabled="{{buttonDisable}}">{{verifyCodeTime}}</button>
+      </view>
+
+      <input type='number' class='inputCell viewPage' maxlength='6' name="keycode" placeholder='输入验证码'></input>
+
+      <input class='userid' type="text" name="userid" value='{{userid}}'></input>
+      <input class='userid' type='text' name="offer" value='{{offer}}'></input>
+      <!-- <input  class='userid' type='text' name="offer" value='{{aid}}'></input> -->
+    </view>
+
+    <!--填写信息结束  -->
+
+    <!--提交按钮  -->
+
+    <view class='submitInforMation'>
+      <button wx:if="{{button == 1}}" class='submitInforMationBtn {{issatisfy?"colorActive":"colorNormal"}}' style='border-radius:0;' form-type="submit">立即报价</button>
+      <view class='palView'></view>
+    </view>
+
+    <!--提交按钮结束  -->
+    <view bindtap='phone' data-phone="{{phone1}}">
+      <image class='imag' src="{{image}}waiter-calculator.png"></image>
+      <view class="te">
+        <view class="calculator">联系客服,定制更精准的预算规划</view>
+      </view>
+
+    </view>
+
+  </form>
+
+
+</view>

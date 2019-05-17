@@ -1,0 +1,186 @@
+<!--pages/shoppingCartConfirOrder/shoppingCartConfirOrder.wxml-->
+<view class='container' wx:if="{{card}}">
+
+
+  <view class='shoppingCartConfirOrder'>
+    <view class='shoppingCartConfirOrderBox'>
+
+
+      <!--地址  -->
+      <view class='myAddress'>
+        <navigator url='../myAddress/myAddress?isSelect=2' hover-class='none'>
+          <image src='{{image}}adicon.png'></image>
+          <view class='addressInfoMation'>
+            <view class='aduserName'>
+              <view>收货人：{{address.name}}</view>
+              <view>{{address.phone}}</view>
+            </view>
+            <view class='aduserAdBox'>
+              <view class='aduserAd'>
+                收货地址：{{address.address}}
+              </view>
+              <view>
+                <image class='nextBg' src='{{image}}nextb.png'></image>
+              </view>
+            </view>
+          </view>
+        </navigator>
+      </view>
+      <!--地址  结束  -->
+
+
+
+
+      <!--商品信息  -->
+      <view class='shopInforMationStatus'>
+        <view class='shopInforMationCell' wx:for="{{card}}" wx:for-item="carditem" wx:for-index="cardindex">
+          <view class='shopInforMationCellBox'>
+            <navigator url='../brandShop/brandShop?shopid={{carditem.sellerid}}&shopname={{carditem.name}}' hover-class='none' class='shopNav'>
+              <image src='{{carditem.logo}}'></image>
+              <view class='isAllShopTitle'>{{carditem.name}}</view> 
+            </navigator>
+          </view>
+          <!--商品信息  -->
+          <view class='goodsInforMation'>
+            <view class='goodsInforMationCell' wx:for="{{carditem.goods}}" wx:for-item="goodsitem">
+              <view class='goodsInforMationCellBox'>
+                <image class='goodImg' src='{{goodsitem.pic}}'></image>
+                <view class='goodInformation'>
+                  <view class='goodName'>
+                    {{goodsitem.name}}
+                  </view>
+                  <view class='goodType'>
+                    {{goodsitem.specname}}
+                  </view>
+                  <view class='goodNumber'>
+                    <view class='goodPrice'>￥{{goodsitem.price}}</view>
+                    <view class='goodNum'>x{{goodsitem.count}}</view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+          <!--商品信息 结束  -->
+          <!--商品合计总金额  -->
+          <view class='shopGoodAllPrice'>
+            共{{carditem.goods.length}}件商品 合计：
+            <view class='greenColor'>￥{{carditem.priceall}}</view>
+          </view>
+          <!--商品合计总金额 结束 -->
+         <!--使用说明  -->
+      <view class='instructions' wx:if="{{workclass!=0&&carditem.sid==0}}">
+
+        <view class='instrucTionsCell'>
+
+          <view class='isUseNumberCurrent {{isNBtn?"":"isNBcolor" }}'>
+            使用
+            <view class='stepper '>
+              <text class='{{minusStatus}}' type='number' bindtap='{{isNBtn?"bindMinus":""}}'>-</text>
+              <view class='inputDiv' bindtap='{{isNBtn?"bindManual":"" }}'>{{currenty}}</view>
+              <text bindtap='{{isNBtn?"bindPlus":""}}'>+</text>
+            </view>
+            个宅币抵扣(￥{{biBlance}})
+          </view>
+
+
+          <view class='moreText'>
+            最多可用{{needCurrenty}}个宅币抵扣（当前宅币共{{zhaibi}}个）
+          </view>
+        </view>
+
+
+
+        <view class='instructionsCell {{isselected==0?"isNBcolor":"" }}'>
+          <view class='instructionBox'>
+            <view class='isSelected' bindtap='{{isselected==0?"":isselected==1?"isUserBanner":"isUserNoBanner"}}'>
+              <image wx:if="{{isselected == 0}}" src='{{image}}sele01.png'></image>
+              <image wx:if="{{isselected == 1}}" src='{{image}}sele02.png'></image>
+              <image wx:if="{{isselected == 2}}" src='{{image}}sele03.png'></image>
+            </view>
+
+            余额(当前余额￥{{money}}）
+          </view>
+
+          <view class='garyText'>￥{{needBalace}}</view>
+        </view>
+
+
+        <view class='instructionsCell'>
+          <view class='garyText'>还需要支付</view>
+
+          <view class='greenColortext'>￥{{moreShopAllMoeny}}</view>
+        </view>
+
+
+      </view>
+
+
+      <!--使用说明  结束 -->
+        </view>
+      </view>
+
+      <!--商品信息  -->
+     
+
+
+
+
+
+
+
+
+
+
+      <!--合计金额  -->
+
+      <view class='totalAmount'>
+        <view class='totalAmountBox'>
+          <view class='allMoneyEle'>
+            合计金额：
+            <view class='greenColor'>￥{{allMoneyLast}}</view>
+          </view>
+
+          <view class='payMoneyEle' bindtap='payMoeny'>
+            支付
+          </view>
+        </view>
+      </view>
+      <!--合计金额  结束-->
+
+
+
+    </view>
+  </view>
+
+
+
+  <!--修改宅比数量  -->
+  <view class='changeCurreny' wx:if="{{isChangeCurrentyShow}}">
+
+
+    <view class='changeCurrenyBox'>
+      <view class='changeCurrenyBoxTitle'>
+        修改宅币使用数量
+      </view>
+      <view class='changeNumber'>
+        <view class='addEle' bindtap='bindMinusB'>-</view>
+        <input class='inpuNumebr' bindinput='bindinputselect' value='{{currentyNew}}' type='number'></input>
+        <view class='addEle' bindtap='bindPlusB'>+</view>
+      </view>
+
+      <view class='changeCurrenyBot'>
+        <view class='changeCurrenyBotBox'>
+          <view class='calceBtn' bindtap='calceBtn'>
+            取消
+          </view>
+          <view class='okBtn' bindtap='okBtnHide'>
+            确定
+          </view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+  <!--修改宅比数量 结束 -->
+
+</view>

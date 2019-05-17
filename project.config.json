@@ -1,0 +1,317 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"uglifyFileName": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.6.5",
+	"appid": "wxd541085ad2b5bb93",
+	"projectname": "%E5%AE%85%E6%98%93%E8%A3%858.31%E6%AD%A3%E5%BC%8F",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 44,
+			"list": [
+				{
+					"id": -1,
+					"name": "搜索列表",
+					"pathName": "pages/searchList/searchList",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "首页",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "刷新服务",
+					"pathName": "pages/refreshService/refreshService",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "俱乐部",
+					"pathName": "pages/club/club",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "供求信息",
+					"pathName": "pages/bulleInformation/bulleInformation",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "供求信息------发布信息",
+					"pathName": "pages/publiInforContent/publiInforContent",
+					"query": ""
+				},
+				{
+					"id": 6,
+					"name": "个人中心",
+					"pathName": "pages/personalCenter/personalCenter",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "注册页面",
+					"pathName": "pages/registrationPage/registrationPage",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "登录",
+					"pathName": "pages/loginPage/loginPage",
+					"query": ""
+				},
+				{
+					"id": 9,
+					"name": "登录-账号密码登录",
+					"pathName": "pages/userLoginPage/userLoginPage",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "修改密码--用户修改密码",
+					"pathName": "pages/changePassword/changePassword",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "多商家品牌入驻申请",
+					"pathName": "pages/mulbuOccupancy/mulbuOccupancy",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "分销中心",
+					"pathName": "pages/distributionCenter/distributionCenter",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "分销中心--分销列表",
+					"pathName": "pages/distributionCenList/distributionCenList",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "用户信息--用户资料",
+					"pathName": "pages/perInformation/perInformation",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "用户信息--修改用户资料",
+					"pathName": "pages/changePerInfor/changePerInfor",
+					"query": ""
+				},
+				{
+					"id": 16,
+					"name": "平台规则、协议、服务",
+					"pathName": "pages/platRegulation/platRegulation",
+					"query": "status=1"
+				},
+				{
+					"id": -1,
+					"name": "我的信息",
+					"pathName": "pages/myMessage/myMessage",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的信息--历史信息",
+					"pathName": "pages/histInformation/histInformation",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的信息--发布信息",
+					"pathName": "pages/MyReleaseInformation/MyReleaseInformation",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的余额",
+					"pathName": "pages/myBalance/myBalance",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的余额---提现",
+					"pathName": "pages/preBalance/preBalance",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的余额---提现明细",
+					"pathName": "pages/preBalanceDetailed/preBalanceDetailed",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "宅币信息",
+					"pathName": "pages/homeCurrency/homeCurrency",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "宅币信息--兑换",
+					"pathName": "pages/exchangeBalance/exchangeBalance",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的地址",
+					"pathName": "pages/myAddress/myAddress",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的地址--添加&编辑地址",
+					"pathName": "pages/addEditAddress/addEditAddress",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "商城首页",
+					"pathName": "pages/shoppingMall/shoppingMall",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "商城首页--品牌店铺",
+					"pathName": "pages/brandShop/brandShop",
+					"query": ""
+				},
+				{
+					"id": 29,
+					"name": "商城首页--分类店铺",
+					"pathName": "pages/classifiedGoods/classifiedGoods",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的订单",
+					"pathName": "pages/myOrder/myOrder",
+					"query": ""
+				},
+				{
+					"id": 31,
+					"name": "我的订单---订单详情",
+					"pathName": "pages/myOrderDetails/myOrderDetails",
+					"query": "orderid=30&isstate=0"
+				},
+				{
+					"id": -1,
+					"name": "我的订单---发表评价",
+					"pathName": "pages/publicationEvaluation/publicationEvaluation",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "快速下单",
+					"pathName": "pages/quickOrder/quickOrder",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "快速下单---列表",
+					"pathName": "pages/quickOrderList/quickOrderList",
+					"query": ""
+				},
+				{
+					"id": 35,
+					"name": "快速下单---商品详情",
+					"pathName": "pages/productDetails/productDetails",
+					"query": "goodid=65"
+				},
+				{
+					"id": -1,
+					"name": "购物车",
+					"pathName": "pages/shoppingCart/shoppingCart",
+					"query": ""
+				},
+				{
+					"id": 37,
+					"name": "申请注册---成为工人",
+					"pathName": "pages/registerWorker/registerWorker",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "购物车---确认订单",
+					"pathName": "pages/shoppingCartConfirOrder/shoppingCartConfirOrder",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "俱乐部列表",
+					"pathName": "pages/clubList/clubList",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的宅币--兑换明细",
+					"pathName": "pages/exchangeDetails/exchangeDetails",
+					"query": ""
+				},
+				{
+					"id": 41,
+					"name": "我的商铺---商品排序",
+					"pathName": "pages/classifiedGoods/classifiedGoods",
+					"query": "goodsclass2=100"
+				},
+				{
+					"id": 42,
+					"name": "宝贝评价",
+					"pathName": "pages/babyEvaluation/babyEvaluation",
+					"query": "goodsid=77"
+				},
+				{
+					"id": 43,
+					"name": "码码码",
+					"pathName": "pages/productDetails/productDetails",
+					"query": "scene=aid%3D1%26goodsid%3D33",
+					"scene": 1011
+				},
+				{
+					"id": 44,
+					"name": "码码码",
+					"pathName": "pages/productDetails/productDetails",
+					"query": "scene=aid%3D1%26goodsid%3D33",
+					"scene": 1012
+				}
+			]
+		}
+	}
+}

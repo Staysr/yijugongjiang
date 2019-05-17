@@ -1,0 +1,312 @@
+/**index.wxss**/
+
+page
+{
+  background: #ebebeb;
+}
+.aa{
+  bottom: 150rpx;
+}
+.topGearMap
+{
+  width: 100%;
+  height: 300rpx;
+}
+.topGearMap 
+{
+width: 100%
+}
+.topGearMapSwiper
+{
+  width: 100%
+}
+.topGearMap swiper
+{
+  height: 300rpx!important;
+}
+.topGearMapSwiper image
+{
+  width: 100%;
+  height: 300rpx;
+}
+.topGearMap navigator
+{
+ display: block;
+ width: 100%;
+ height: 100%;
+}
+
+
+
+
+
+
+
+
+
+.searchBoxView
+{
+  background: #ebebeb;
+  padding: 20rpx;
+}
+.searchBoxViewNav
+{
+  height: 75rpx;
+  width: 100%;
+  background: #fff;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 75rpx;
+}
+
+.classificationsBox
+{
+  padding: 20rpx;
+  display: flex;
+  justify-content: flex-start;  background: #fff;
+  flex-wrap:wrap;
+
+}
+.classificationsCell 
+{
+  width: 25%;
+  text-align: center;
+  padding: 20rpx 0;
+
+}
+.classificationsCell image
+{
+  width: 100rpx;
+  height: 100rpx;
+}
+.classifiCationText
+{
+  font-size: 26rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.bullInformation
+{
+  padding: 0 20rpx;
+  position: relative;
+  background: #fff;
+}
+.bullInformationTitle
+{
+  font-size: 30rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  
+}
+.slidInformation
+{
+  height: 100rpx;
+}
+.sliderContent
+{
+  height: 50rpx;
+  width: 100%;
+  
+  line-height: 50rpx;
+  font-size: 24rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  position: relative;
+  padding-left: 30rpx;
+  box-sizing: border-box;
+  letter-spacing: 2rpx;
+}
+.sliderContent::before
+{
+content: "";
+width: 18rpx;
+height: 18rpx;
+border-radius: 50%;
+position: absolute;
+top: 16rpx;
+left: 0;
+background: #999;
+
+}
+.slidInformation swiper
+{
+   height: 100rpx;
+}
+.slidInformation
+{
+  padding: 0 0 20rpx 0;
+}
+.auxiMaterials
+{
+  /* height: 100rpx; */
+  background: #ebebeb;
+
+}
+.auxiMaterialsTitle
+{
+  height: 100rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 100rpx;
+  position: relative;
+}
+.auxiMaterialsList
+{
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.auxiMaterialsCell
+{
+  width: calc(50% - 15rpx);
+  padding: 20rpx;
+  box-sizing: border-box;
+ background: #fff;
+ margin: 10rpx 0;
+}
+
+.shopImg
+{
+  width: 300rpx;
+  height: 300rpx;
+  display: block;
+
+}
+.shopTitle
+{
+  font-size: 26rpx;
+  height: 36rpx;
+  line-height: 36rpx;
+  white-space: nowrap;
+  text-align: justify;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  position: relative;
+  margin: 15rpx 0;
+
+  box-sizing: border-box
+}
+.shopMuch
+{
+  font-size: 25rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.shopMuchRed
+{
+  color: red;
+}
+
+.brandRecommendConetnt
+{
+  background: #ebebeb;
+  display: flex;
+  justify-content:flex-start ;
+  flex-wrap: wrap;
+  padding: 20rpx  20rpx;
+}
+
+.brandRecommendCell
+{
+  width: 160rpx;
+  height: 160rpx;
+  margin: 15rpx 0  15rpx;
+  margin-right: calc((100% - 640rpx) / 3);
+
+}
+.brandRecommendCell:nth-child(4n)
+{
+  margin-right: 0;
+}
+.brandRecommendCell image
+{
+  width: 100%;
+  height: 100%
+}
+.brandRecommendTitle
+{
+  height: 100rpx;
+  line-height: 100rpx;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 36rpx;
+  position: relative
+
+}
+.isStatus1::before
+{
+  content: '自营';
+  width: 50rpx;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 36rpx;
+  background: #ff0000;font-size: 20rpx;
+  color: #fff;
+  border-radius: 8rpx;
+
+
+}
+.searchImg
+{
+  height: 38rpx;
+  width: 38rpx;
+
+}
+.searchBoxViewNav
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.fucaiBg
+{
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0;
+left: 0;
+z-index: 0;
+}
+.fucaiBgText
+{
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0;
+left: 0;
+z-index: 2;
+text-align: center;
+line-height: 100rpx;
+}
+
+.catchBtn
+{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.catchBtn navigator
+{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.bullInformationBox
+{
+  /* height: 190rpx; */
+  height: 210rpx;
+}

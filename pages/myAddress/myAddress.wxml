@@ -1,0 +1,68 @@
+<!--pages/myAddress/myAddress.wxml-->
+
+
+<view class='container'>
+
+  <!-- 我的地址 -->
+  <view class='myAddressBox'>
+    <view class='myAddress'>
+
+      <!--我的地址列表  -->
+      <view class='myAddressList'>
+        <view class='myAddressCell' wx:for="{{addresslist}}"  wx:for-index="activeindex">
+          <view class='myAddressInforMation' bindtap='selectBindClick' data-activeindex='{{activeindex}}'>
+            <view class='myAddressName'>{{item.name}} {{item.phone}}</view>
+            <view class='myAddressContent'>{{item.province}}{{item.city}}{{item.area}}{{item.address}}</view>
+          </view>
+          <view class='setDefaluteAddress'>
+            <view class='setDefalutAddressBtn  {{item.state==0?"":"selectAddress"}}' bindtap='setAddressClick'
+            data-addressid="{{item.id}}" data-addstate="{{item.state}}">
+              <image class='setUp01' src='{{image}}noAddre.png'></image>
+              <image class='setUp02' src='{{image}}seAddre.png'></image>
+              <view class='setDefalutText'>设置默认地址</view>
+            </view>
+            <view class='addressOperation'>
+              <view class='addressEdit' data-addressindex='{{activeindex}}' bindtap='editAddress'>
+                <image src='{{image}}edit.png'></image> 编辑
+              </view>
+              <view class='addressDelet' bindtap='deletAddress'  
+                                          data-addressid="{{item.id}}" 
+                                          data-addstate="{{item.state}}" >
+                <image src='{{image}}delete.png'></image> 删除
+              </view>
+            </view>
+          </view>
+        </view> 
+        <!-- --------------------------------- -->
+
+      </view>
+      <!--我的地址列表 结束  -->
+
+
+      <!--添加地址  -->
+      <view class='addAddressBox'>
+        <navigator class='addAddressBtn' hover-class='none' url='../addEditAddress/addEditAddress?status=1'>+添加地址</navigator>
+
+      </view>
+      <!--添加地址结束  -->
+    </view>
+  </view>
+
+  <!--我的地址 结束  -->
+
+
+
+</view>
+
+
+<!-- 你还没有地址 -->
+
+  <view class='gouwuceh' wx:if="{{ishasData }}" >
+          <view class='gowuchebox'>
+              <image class='gouImg' src='../../pages/images/go3.png'></image>
+              <view class='gouwutext'>你还没有添加过收货地址哦~</view>
+
+          </view>
+  </view>
+  
+<!-- 你还没有地址 -->

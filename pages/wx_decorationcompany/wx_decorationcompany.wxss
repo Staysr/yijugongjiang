@@ -1,0 +1,198 @@
+/* pages/wx_decorationcompany/wx_decorationcompany.wxss */
+
+button {
+  border: none;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+}
+
+button::after {
+  border: none;
+}
+
+.titleClass {
+  font-size: 30rpx;
+  font-weight: 600;
+}
+
+.paddingClass {
+  padding: 20rpx;
+}
+
+.case {
+  font-size: 35rpx;
+  color: black;
+  margin-top: 29rpx;
+  margin-left: 19rpx;
+}
+
+.list_data {
+  width: 94%;
+  height: 100%;
+  margin-top: 30rpx;
+  margin-left: 20rpx;
+}
+
+.textai {
+  margin-top: 16rpx;
+  color: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  width: 258rpx;
+}
+
+.length {
+  font-size: 28rpx;
+  color: gray;
+  left: 593rpx;
+  top: -6rpx;
+  display: inline-block;
+}
+
+.imag {
+  width: 271rpx;
+  height: 173rpx;
+}
+.mabottom15{
+  margin-bottom: 15rpx;
+}
+.conter {
+  margin: 0 auto;
+  display: inline-block;
+  margin-right: 30rpx;
+}
+
+.bger {
+  background-color: #fff;
+}
+
+.designer {
+  background-color: #fff;
+  width: 100%;
+  height: 233rpx;
+  margin-top: 20rpx;
+  margin-bottom: 23rpx;
+}
+
+.textleft_wx {
+  text-align: center;
+  margin-top: 12rpx;
+  color: rgb(29, 29, 29);
+  font-size: 29rpx;
+}
+
+.luichen {
+  width: 100%;
+  overflow: hidden;
+}
+
+.liecehng {
+  margin-top: 20rpx;
+}
+
+.erweim {
+  width: 100%;
+  height: 430rpx;
+  background-color: #fff;
+  margin-top: 22rpx;
+  margin-bottom: 12rpx;
+}
+
+.weerm {
+  width: 287rpx;
+  height: 243rpx;
+  margin-left: 252rpx;
+  margin-top: 34rpx;
+}
+
+.weweim_wx {
+  text-align: center;
+  margin-top: 28rpx;
+}
+
+.pingl {
+  background-color: #fff;
+  margin-top: 12rpx;
+  margin-bottom: 16rpx;
+  padding-top: 10rpx;
+}
+
+.widff {
+  width: 91%;
+  height: 275rpx;
+  border-radius: 14px;
+  margin-left: 30rpx;
+  border: 1rpx solid #e0e0e0;
+  position: relative;
+  margin-top: 20rpx;
+}
+
+.textareall {
+  margin-top: 35rpx;
+  margin-left: 20rpx;
+  height: 240rpx;
+  width: 650rpx;
+}
+
+.bindtp {
+  margin: 25rpx;
+}
+
+.time {
+  display: inline;
+  margin-left: 108rpx;
+  color: rgb(136, 136, 136);
+}
+
+.screen-swiper {
+  height: 375rpx;
+}
+
+.he_wx {
+  height: calc(100vh - 580rpx);
+}
+
+.wx_ooloer {
+  position: absolute;
+  bottom: 0;
+  right: 2rpx;
+  margin-right: 3rpx;
+}
+
+.bottomView {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100rpx;
+  overflow: hidden;
+  line-height: 100rpx;
+  text-align: center;
+}
+
+.customView {
+  float: left;
+  width: 25%;
+  background-color: #8ad497;
+}
+
+.btnbackHome {
+  width: 70rpx;
+  height: 70rpx;
+  position: fixed;
+  bottom: 250rpx;
+  right: 20rpx;
+  background: #06881c;
+  padding: 10rpx;
+  box-sizing: border-box;
+  border-radius: 8rpx;
+}
+
+.btnbackHome image {
+  width: 100%;
+  height: 100%;
+}

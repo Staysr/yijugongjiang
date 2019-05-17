@@ -1,0 +1,85 @@
+<!--pages/changePerInfor/changePerInfor.wxml-->
+<view class='container'>
+
+
+
+  <!--修改个人信息  -->
+  <view class='changUserInfoBox'>
+    <view class='changUserInfo'>
+
+      <!-- 修改姓名 -->
+<form bindsubmit="changeName" >
+      <view class='changeUserName' wx:if="{{isWhoComeOn == 1}}">
+
+        <view class=' changeUserNameinputBox'>
+          <input class='changeUserNameInput' name="name" maxlength='4' value='{{name}}' type='text' placeholder='请输入姓名'></input>
+        </view>
+        <view class='changeUserBtn'>
+              <button class='successBtn' form-type="submit">保存</button>
+        </view>
+
+      </view>
+   </form>
+      <!--修改姓名结束  -->
+
+
+
+
+      <!-- 修改姓名 -->
+<form bindsubmit="changeNeed" >
+      <view class='changeUserName' wx:if="{{isWhoComeOn == 2}}">
+
+        <view class=' changeUserNameinputBox'>
+          <input class='changeUserNameInput' name="need" value='{{need}}' type='text' placeholder='平台需求'></input>
+        </view>
+        <view class='changeUserBtn'>
+              <button class='successBtn' form-type="submit">保存</button>
+        </view>
+
+      </view>
+   </form>
+      <!--修改姓名结束  -->
+
+
+
+      <!-- 修改姓名 -->
+<form bindsubmit="changeIdeny" >
+      <view class='changeUserName' wx:if="{{isWhoComeOn == 3}}">
+
+        <view class=' changeUserNameinputBox'>
+          <input class='changeUserNameInput'  name="identity" value='{{identity}}' type='text' placeholder='身份证号'></input>
+        </view>
+        <view class='changeUserBtn'>
+              <button class='successBtn' form-type="submit" >完成</button>
+        </view>
+
+      </view>
+   </form>
+      <!--修改姓名结束  -->
+
+
+      <!-- 修改姓名 -->
+<form bindsubmit="changeIntroduce" >
+      <view class='changeUserName' wx:if="{{isWhoComeOn == 4}}">
+
+        <view class=' changeUserNameinputBox'>
+         <textarea class='changeTextarea'  name="introduce"  value='{{introduce}}' placeholder='个人介绍'>
+         
+         </textarea>
+        </view>
+        <view class='changeUserBtn'>
+              <button class='successBtn' form-type="submit">完成</button>
+        </view>
+
+      </view>
+   </form>
+      <!--修改姓名结束  -->
+
+
+
+
+    </view>
+  </view>
+  <!--修改个人信息 结束 -->
+
+</view>

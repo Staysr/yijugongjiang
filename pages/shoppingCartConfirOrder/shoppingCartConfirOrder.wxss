@@ -1,0 +1,581 @@
+/* pages/shoppingCartConfirOrder/shoppingCartConfirOrder.wxss */
+page
+{
+  background: #ebebeb;
+}
+.shoppingCartConfirOrder
+{
+  padding: 20rpx 0;
+}
+.myAddress
+{
+
+background: #fff;
+ 
+}
+.myAddress navigator
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+    padding: 20rpx;
+}
+.myAddress image {
+  width: 44rpx;
+  height: 44rpx;
+}
+.addressInfoMation
+{
+  width: calc(100%  - 84rpx);
+font-size: 26rpx;
+color: #333;text-align: justify
+}
+.aduserName
+{
+  height: 50rpx;
+  line-height: 50rpx;
+  display: flex;
+  justify-content: space-between;
+  text-align: justify
+}
+.aduserAd
+{
+  line-height: 45rpx;
+  width: 550rpx;
+  /* background: #ff0000; */
+}
+.nextBg
+{
+  width: 35rpx;
+  height: 35rpx;
+}
+.aduserAdBox
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.greenColor
+{
+  color: #06881c;
+}
+
+.allMoneyEle
+{
+  font-size: 30rpx;
+
+}
+.greenColor
+{
+  color: #06881c;
+  font-size: 30rpx;
+}
+.totalAmount
+{
+  height: 100rpx;
+
+}
+
+.totalAmountBox
+{
+  height: 100rpx;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20rpx;
+  align-items: center;
+  box-sizing: border-box;
+}
+.allMoneyEle
+{
+  display: flex;
+  justify-content: flex-start;
+
+}
+.payMoneyEle
+{
+  height: 60rpx;
+  width: 150rpx;
+  line-height: 60rpx;
+  border-radius: 30rpx;
+  background: #06881c;
+  text-align: center;
+  font-size: 30rpx;
+  color: #fff;
+}
+
+.instructionsCell
+{
+  height: 90rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.garyText
+{
+
+  font-size: 22rpx;
+}
+.instructionBox
+{
+  font-size: 22rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 50rpx;
+}
+.greenColortext
+{
+font-size: 22rpx;
+color: #06881c;
+}
+.instructionsCell
+{
+  border-bottom: 2rpx solid #ddd;
+}
+.instructions
+{
+  padding: 0 20rpx;
+  background: #fff;
+
+  
+}
+.moreText
+{
+    font-size: 22rpx;
+    color: #666;
+    height: 60rpx;
+    line-height: 60rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*----------------  */
+
+/* pages/myOrderDetails/myOrderDetails.wxss */
+
+
+
+
+
+
+
+
+.shopInforMationCell
+{
+  margin-top: 20rpx;
+}
+
+.shopInforMationCellBox
+{
+  display: flex;
+  justify-content: space-between;
+}
+.shopInforMationCellBox image
+{
+width: 40rpx;
+height: 40rpx;
+}
+.shopInforMationCellBox
+{
+  height: 85rpx;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20rpx; font-size: 26rpx;
+  color: #333;
+}
+.goodPrice
+{
+  color:#06881c;
+}
+.shopNameInforTime
+{
+  font-size: 22rpx;
+  color: #999;
+}
+.goodsInforMation
+{
+  padding: 0 20rpx;
+  background: #f8f8f8;
+}
+.goodsInforMationCell
+{
+  border-bottom: 2rpx solid #ddd;
+}
+.goodsInforMationCell:last-child
+{
+  border: none;
+}
+.goodsInforMationCellBox
+{
+ display: flex;  padding: 20rpx 0;
+  justify-content: space-between;
+}
+.shopGoodAllPrice
+{
+  height: 85rpx;
+  line-height: 85rpx;
+  background: #fff;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.btnBox
+{
+  display: flex;
+  justify-content: flex-end;
+  height: 90rpx;
+  align-items: center;
+}
+.btnBox
+{
+ border-top: 2rpx solid #ddd;
+}
+.pingjia
+{
+  height: 60rpx;
+  width: 100rpx;
+  border-radius: 60rpx;
+  color: #06881c;font-size: 22rpx;
+  text-align: center;line-height: 60rpx;
+  border: 2rpx solid #06881c;
+  margin-left: 20rpx;
+}
+.goodImg
+{
+  width: 205rpx;
+  height: 205rpx;
+}
+.userGetGoods
+{
+  padding: 20rpx 20rpx;
+}
+.userGetGoodsCell
+{
+  display: flex;
+  justify-content: space-between;
+
+}
+.goodInformation
+{
+  width: calc(100% - 225rpx)
+}
+.goodName
+{
+ font-size: 26rpx;
+ color: #333;
+ height: 90rpx;
+ overflow: hidden;
+ line-height: 45rpx;
+ display: flex;
+ align-items: center;
+ flex-wrap: wrap;
+ 
+}
+.goodType
+{
+ font-size: 24rpx;
+ color: #999;
+ height: 50rpx;
+ line-height: 50rpx;
+}
+.goodNumber
+{
+  display: flex;
+  justify-content: space-between;
+  font-size: 22rpx;
+  height: 40rpx;
+ line-height: 40rpx;
+}
+.payInformation
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #fff;
+  padding: 0 20rpx;
+  border-bottom: 2rpx solid #ebebeb;
+}
+
+.shopGoodAllPrice
+{
+  font-size: 22rpx;
+
+  text-align: right;
+
+  padding: 0 20rpx;
+}
+
+.copyInforMation
+{
+  font-size: 24rpx;
+  line-height: 50rpx;
+  color: #999;
+  background: #fff;
+  padding: 30rpx 20rpx;
+  position: relative;
+}
+.shopInforMationStatus
+{
+  margin: 0px  0;
+}
+.myOrderDetailsTopList
+{
+  margin-top: 20rpx;
+}
+
+.copyText
+{
+  position: absolute;
+  top: 25rpx;
+  right: 20rpx;
+  width: 130rpx;
+  height: 50rpx;
+  text-align: center;
+  line-height: 50rpx;
+  border: 1rpx solid #ddd;
+}
+
+
+
+
+.shopNav
+{
+ display: flex;
+ justify-content: flex-start;
+ align-items: center;
+}
+.isAllShopTitle
+{
+  margin:0 10rpx 0 15rpx;
+  position: relative;
+}
+.isziying::after
+{
+  content: '自营';
+  background: #ff0000;
+  color: #fff;
+  font-size: 18rpx;
+  padding: 2rpx 10rpx;
+  border-radius: 10rpx;
+  margin-left: 10rpx;
+}
+.isUseNumberCurrent
+{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 60rpx;
+  font-size: 22rpx;
+
+}
+.stepper
+{
+  margin:  0  10rpx;
+}
+.instrucTionsCell
+{
+  border-bottom: 2rpx solid #ddd;
+  padding:15rpx 0 ;  border-top: 2rpx dashed #333;
+}
+
+.isNBcolor
+{
+  color: #999!important;
+}
+.isSelected
+{
+  margin-right: 8rpx;
+}
+.isSelected image
+{
+  width: 24rpx;
+  height: 24rpx;
+  display: block
+}
+
+
+/*合计金额  */
+
+
+.totalAmount
+{
+  height: 100rpx;
+  
+}
+
+/*合计金额 结束  */
+
+
+
+
+
+
+
+
+
+
+/*------------------  */
+
+/*主容器*/
+.stepper {
+ 
+  height:40rpx;
+
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+/*加号和减号*/
+.stepper text {
+  float: left;
+  width: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+}
+/*数值*/
+.stepper .inputDiv {
+  min-width: 40rpx;
+  padding:0 20rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  float: left;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 22rpx;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+/*普通样式*/
+.stepper .normal {
+  color:black;
+}
+/*禁用样式*/
+.stepper .disable {
+  color: #ccc;
+}
+
+
+
+
+
+
+/*修改宅币  */
+.changeCurreny
+{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+.changeCurrenyBox
+{
+  width: 480rpx;
+ 
+  background: #fff;
+  border-radius: 10rpx;
+  overflow: hidden;
+  padding-top: 20rpx;
+  margin-bottom: 50rpx;
+
+}
+.changeCurrenyBoxTitle
+{
+    font-size: 30rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+      padding:0 20rpx ;
+
+}
+.changeNumber
+{
+  height: 130rpx;
+ 
+  padding: 0 20rpx;
+}
+.changeCurrenyBot
+{
+  background: #eee;
+}
+.changeCurrenyBotBox
+{
+  width: 310rpx;
+  height: 120rpx;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.calceBtn
+{
+  width: 110rpx;
+  height: 60rpx;
+  border-radius: 30rpx;
+  border: 2rpx solid #666;
+    text-align: center;
+  line-height: 60rpx;  font-size: 30rpx;
+}
+.okBtn
+{
+   width: 110rpx;
+  height: 60rpx;
+  color: #06881c;
+  border-radius: 30rpx;
+  border: 2rpx solid #06881c;
+  text-align: center;
+  line-height: 60rpx;
+  font-size: 30rpx;
+
+
+}
+.addEle
+{
+  width: 60rpx;
+  text-align: center;
+
+  line-height: 60rpx;
+   height: 60rpx;
+   color: #666;
+   font-size: 30;
+}
+.changeNumber
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+ 
+}
+.inpuNumebr
+{
+    width: 100rpx;
+    height: 60rpx;
+   border-bottom: 2rpx solid #666;
+  color: #06881c;
+  text-align: center;
+}
+/*修改宅币结束  */

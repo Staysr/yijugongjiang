@@ -1,0 +1,155 @@
+<!--pages/classifiedGoods/classifiedGoods.wxml-->
+<import src="../../utils/template.wxml" />
+<view class='container'>
+
+
+  <view class='classifiedGoodsBox'>
+    <view class='classifiedGoods'>
+
+      <!-- 价格分类操作排序  -->
+      <view class='classifiedGoodsSort'>
+        <view class='classifiedGoodsSortList'>
+
+          <view class='classifiedGoodsSortCell' bindtap='shopGoodsSort' data-sortindex='1'>
+            <view>
+              价格
+            </view>
+
+            <view class='sortImagesBoxList {{isWhoEle==1?isWhoEleTop?"isWhoEleTop":"isWhoEleBtm":""}}'>
+              <view class='sortImagesBox1'>
+                <image class='im01' src='{{image}}up-normal.png'></image>
+                <image class='im02' src='{{image}}up-selected.png'></image>
+              </view>
+              <view class='sortImagesBox2'>
+                <image class='im03' src='{{image}}down-normal.png'></image>
+                <image class='im04' src='{{image}}down-selected.png'></image>
+              </view>
+            </view>
+
+          </view>
+          <!------------------------------------------------------  -->
+          <view class='classifiedGoodsSortCell' bindtap='shopGoodsSort' data-sortindex='2'>
+            <view>
+              销量
+            </view>
+
+            <view class='sortImagesBoxList {{isWhoEle==2?isWhoEleTop?"isWhoEleTop":"isWhoEleBtm":""}}'>
+              <view class='sortImagesBox1'>
+                <image class='im01' src='{{image}}up-normal.png'></image>
+                <image class='im02' src='{{image}}up-selected.png'></image>
+              </view>
+              <view class='sortImagesBox2'>
+                <image class='im03' src='{{image}}down-normal.png'></image>
+                <image class='im04' src='{{image}}down-selected.png'></image>
+              </view>
+            </view>
+
+          </view>
+
+          <!----------------------------------------------------  -->
+          <view class='classifiedGoodsSortCell' bindtap='shopGoodsSort' data-sortindex='3'>
+            <view>
+              上架时间
+            </view>
+
+            <view class='sortImagesBoxList {{isWhoEle==3?isWhoEleTop?"isWhoEleTop":"isWhoEleBtm":""}}'>
+              <view class='sortImagesBox1'>
+                <image class='im01' src='{{image}}up-normal.png'></image>
+                <image class='im02' src='{{image}}up-selected.png'></image>
+              </view>
+              <view class='sortImagesBox2'>
+                <image class='im03' src='{{image}}down-normal.png'></image>
+                <image class='im04' src='{{image}}down-selected.png'></image>
+              </view>
+            </view>
+
+          </view>
+
+          <!----------------------------------------------------  -->
+          <view class='classifiedGoodsSortCell' bindtap='shopGoodsSort' data-sortindex='4'>
+            <view>
+              评价
+            </view>
+
+            <view class='sortImagesBoxList {{isWhoEle==4?isWhoEleTop?"isWhoEleTop":"isWhoEleBtm":""}}'>
+              <view class='sortImagesBox1'>
+                <image class='im01' src='{{image}}up-normal.png'></image>
+                <image class='im02' src='{{image}}up-selected.png'></image>
+              </view>
+              <view class='sortImagesBox2'>
+                <image class='im03' src='{{image}}down-normal.png'></image>
+                <image class='im04' src='{{image}}down-selected.png'></image>
+              </view>
+            </view>
+
+          </view>
+
+
+          <view class='classifiedGoodsSortCell' bindtap="showModal" data-target="1" data-sortindex='5'>
+            <view>
+              品牌
+            </view>
+          </view>
+          <!----------------------------------------------------  -->
+        </view>
+      </view>
+
+      <!-- 价格分类操作排序 结束  -->
+
+      <view class="cu-modal drawer-modal justify-end {{modalName=='1'?'show':''}}" bindtap="hideModal">
+        <view class="cu-dialog basis-lg" catchtap style="top:{{CustomBar}}px;height:calc(100vh - {{CustomBar}}px)">
+          <view class="cu-list menu text-left"   wx:if="{{storelist}}">
+            <view class="cu-item arrow" wx:for="{{storelist}}" wx:key>
+              <view class="content">
+
+      <view bindtap='brandShoplist' data-brandShoplistid="{{item.id}}">{{item.brand}}</view>
+              </view>
+            </view>
+          </view>
+
+          <view style="line-height:350rpx;" wx:else>
+          <text  decode="true">
+            ————&emsp;暂无品牌&emsp;————
+          </text>
+          </view>
+          <button class="cu-btn bg-grey lg" style="bottom: 0;position: fixed;width: 100%;padding: 0;margin: 0;left: 0;" bindtap='moern'>默认</button>
+        </view>
+      </view>
+
+
+      <!--标题所对应的内容  -->
+
+      <view class='shopItemList' wx:if="{{goods}}">
+        <view class='shopItemCell' wx:for="{{goods}}" wx:for-item="shopitem">
+          <navigator url='../productDetails/productDetails?goodid={{shopitem.id}}' hover-class='none'>
+            <image class='shopImage' src='{{shopitem.pic}}'></image>
+            <view class='shopBox'>
+              <view class='shopName {{shopitem.sellerid == 0 ? "isziying":""}}'>{{shopitem.name}}</view>
+              <view class='shopInfo'>
+                <view class='shopMoney'>￥{{shopitem.discount}}</view>
+                <view class='shopXiaoshou'>销量：{{shopitem.sum}}</view>
+              </view>
+            </view>
+          </navigator>
+        </view>
+
+
+      </view>
+
+      <!--标题所对应的内容 结束  -->
+
+    </view>
+  </view>
+
+  <!--加载中样式  -->
+  <template is="loadNow" wx:if="{{isLoadding}}"></template>
+  <!--加载中样式  -->
+  <!--暂无数据  -->
+  <template is="isDataNull" wx:if="{{isHasShop}}"> </template>
+  <!--暂无数据  -->
+  <!--暂无数据  -->
+  <template is="noMoreCell" wx:if="{{isHasMoredata}}"> </template>
+  <!--暂无数据  -->
+
+
+</view>

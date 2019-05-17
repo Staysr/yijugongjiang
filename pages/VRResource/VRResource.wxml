@@ -1,0 +1,54 @@
+<!--pages/VRResource/VRResource.wxml-->
+<!--pages/VRResource/VRResource.wxml-->
+<import src="../../utils/template.wxml" />
+<view class="container">
+
+  <view class='pageTitle'>
+    <form bindsubmit="formSubmit">
+      <view class="cu-bar search bg-white">
+        <view class='search-form round'>
+          <text class="icon-search"></text>
+          <input type="text" placeholder="搜索" name="name" confirm-type="search"></input>
+        </view>
+        <view class='action'>
+          <button class='cu-btn bg-green shadow-blur round' form-type="submit">搜索</button>
+        </view>
+      </view>
+    </form>
+
+    <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
+      <view class="tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">品牌馆</view>
+      <view class="tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="swichNav">产品</view>
+      <view class="tab-item {{currentTab==3?'active':''}}" data-current="3" bindtap="swichNav">装修公司</view>
+      <view class="tab-item {{currentTab==4?'active':''}}" data-current="4" bindtap="swichNav">设计师</view>
+      <view class="tab-item {{currentTab==5?'active':''}}" data-current="5" bindtap="swichNav">工长</view>
+    </scroll-view>
+  </view>
+
+
+  <scroll-view bindscrolltolower="onReach" data-onid="{{currentTab}}" class="tab-content" style="height:{{winHeight}}rpx;padding-top: 230rpx;" scroll-y="true" class="scoll-h">
+    <view class="items" wx:for="{{vrlist}}"  catchtap='navNext'data-onid="{{currentTab}}" data-id='{{item.id}}' data-name='{{item.title}}' >
+      <view class="itemsImg itemsImg1" >
+        <image src="{{item.pic}}"></image>
+      </view>
+      <view class="itemsText itemsText1 textClass">{{item.title}}</view>
+      <button data-vrid='{{item.id}}' open-type="share" bindtap='onShareAppMessage' class="itemsShare">分享</button>
+    </view>
+    <!-- 改 -->
+    <!--加载中样式  -->
+    <template is="loadNow" wx:if="{{isLoadding}}"></template>
+    <!--加载中样式  -->
+    <!--暂无数据  -->
+    <template is="noMoreCell" wx:if="{{isHasData}}"> </template>
+    <!--暂无数据  -->
+    <!-- 改 -->    
+  </scroll-view>
+
+
+
+
+</view>
+
+
+
+<!-- <view class='pladiv'></view> -->

@@ -1,0 +1,346 @@
+<import src="../../utils/template.wxml" />
+<view class='container'>
+  <view class="swiper-tab">
+    <view class="swiper-tab-list {{currentTab==6 ? 'on' : ''}}" data-current="6" bindtap="swichNav">全部</view>
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">代付款</view>
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">代发货</view>
+    <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">待收货</view>
+    <view class="swiper-tab-list {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">待评价</view>
+    <view class="swiper-tab-list {{currentTab==4 ? 'on' : ''}}" data-current="4" bindtap="swichNav">已完成</view>
+    <view class="swiper-tab-list {{currentTab==5 ? 'on' : ''}}" data-current="5" bindtap="swichNav">已取消</view>
+</view>
+
+  <view class='plaZhanwei'>
+  </view>
+
+  <!--订单内容列表  -->
+  <view class='myOrderListBox'>
+    <view class='myOrderList'>
+
+
+      <!--全部订单  -->
+      <view class='myOrderAllList'>
+        <view class='substitutePaymentCell' wx:for="{{order}}" 
+        wx:for-item="ordershop"
+        wx:for-index="orderindex">
+          <!--==============代付款===============  -->
+        
+          <view class='substitutePaymentCell' wx:if="{{ordershop.state==0}}">
+            <view class='shopNameInfor'>
+              <view class='shopNameInforLeft'>
+                <navigator class='{{ordershop.sellerid==0?"isziying":""}}'>
+                  <image src='{{ordershop.storelogo}}'></image> {{ordershop.brand}} 
+                </navigator>
+              </view>
+             <view class='shopNameInforTime '>{{ordershop.creattime}}</view>
+            </view>
+
+            <view class='userGetGoods'>
+              <navigator 
+              url='../myOrderDetails/myOrderDetails?orderid={{ordershop.id}}&isstate=0' hover-class='none'>
+                <view class='userGetGoodsCell' wx:for="{{ordershop.goods}}" wx:for-item="goods">
+                  <image class='goodImg' src='{{goods.goodspic }}'></image>
+                  <view class='goodInformation'>
+                    <view class='goodName'>
+                      {{goods.goodsname  }}
+                    </view>
+                    <view class='goodType'>
+                      {{goods.specname  }}
+                    </view>
+                    <view class='goodNumber'>
+                      <view class='goodPrice'>￥{{goods.price}}</view>
+                      <view class='goodNum'>x{{goods.count}}</view>
+                    </view>
+                  </view>
+                </view>
+              </navigator>
+            </view>
+
+            <view class='payInformation'>
+              <view class='payStatus'>
+                等待买家付款
+              </view>
+              <view class='payUserInfor'>共{{ordershop.goods.length}}件商品 合计:￥{{ordershop.priceall}}</view>
+            </view>
+
+            <view class='goodsBtmBox'>
+             
+
+              <view class='caleOrder' bindtap='cancelOrder'  
+              data-orderindx="{{orderindex}}" 
+              data-orderid="{{ordershop.id}}">取消订单</view>
+              <view class='nowPay'>立即付款</view>
+            </view>
+
+
+          </view>
+          <!--==============代付款  结束===============  -->
+          <!--==============代发货==============  -->
+          <view class='substitutePaymentCell' wx:if="{{ordershop.state==1}}">
+            <view class='shopNameInfor'>
+              <view class='shopNameInforLeft'>
+                <navigator  class='{{ordershop.sellerid==0?"isziying":""}}'>
+                  <image src='{{ordershop.storelogo}}'></image> {{ordershop.brand}} 
+                </navigator>
+              </view>
+
+              <view class='shopNameInforTime'>{{ordershop.creattime}}</view>
+            </view>
+            <view class='userGetGoods'>
+              <navigator url='../myOrderDetails/myOrderDetails?orderid={{ordershop.id}}&isstate=1' hover-class='none'>
+                <view class='userGetGoodsCell' wx:for="{{ordershop.goods}}" wx:for-item="goods">
+                  <image class='goodImg' src='{{goods.goodspic}}'></image>
+
+                  <view class='goodInformation'>
+                    <view class='goodName'>
+                      {{goods.goodsname}}
+                    </view>
+                    <view class='goodType'>
+                      {{goods.specname}}
+                    </view>
+                    <view class='goodNumber'>
+                      <view class='goodPrice'>￥{{goods.price}}</view>
+                      <view class='goodNum'>x{{goods.count}}</view>
+                    </view>
+                  </view>
+                </view>
+              </navigator>
+            </view>
+            <view class='payInformation'>
+              <view class='payStatus'>
+                等待买家付款
+              </view>
+              <view class='payUserInfor'>共{{goods.length}}件商品 合计:￥{{ordershop.priceall}}</view>
+            </view>
+            <view class='goodsBtmBox'>
+              <view class='tixing'>提醒发货</view>
+            </view>
+          </view>
+          <!--==============代发货 结束==============  -->
+          <!--==============待收货 ==============  -->
+          <view class='substitutePaymentCell' wx:if="{{ordershop.state==2}}">
+            <view class='shopNameInfor'>
+              <view class='shopNameInforLeft'>
+                <navigator  class='{{ordershop.sellerid==0?"isziying":""}}'>
+                   <image src='{{ordershop.storelogo}}'></image> {{ordershop.brand}} 
+                </navigator>
+              </view>
+
+        <view class='shopNameInforTime'>{{ordershop.creattime}}</view>
+            </view>
+            <view class='userGetGoods'>
+              <navigator url='../myOrderDetails/myOrderDetails?orderid={{ordershop.id}}&isstate=2' hover-class='none'>
+                <view class='userGetGoodsCell' wx:for="{{ordershop.goods}}" wx:for-item="goods">
+                   <image class='goodImg' src='{{goods.goodspic}}'></image>
+
+                  <view class='goodInformation'>
+                     <view class='goodName'>
+                      {{goods.goodsname}}
+                    </view>
+                    <view class='goodType'>
+                      {{goods.specname}}
+                    </view>
+                    <view class='goodNumber'>
+                      <view class='goodPrice'>￥{{goods.price}}</view>
+                      <view class='goodNum'>x{{goods.count}}</view>
+                    </view>
+                  </view>
+                </view>
+              </navigator>
+            </view>
+
+            <view class='payInformation'>
+              <view class='payStatus'>
+                等待买家付款
+              </view>
+             <view class='payUserInfor'>共{{goods.length}}件商品 合计:￥{{ordershop.priceall}}</view>
+            </view>
+
+            <view class='goodsBtmBox'>
+      
+              <view class='tixing' 
+                    bindtap='confirmgoods'  
+                    data-orderindex="{{orderindex}}" 
+                    data-orderid="{{ordershop.id}}">确认收货</view>
+
+            </view>
+
+
+          </view>
+          <!--==============待收货 结束==============  -->
+          <!--==============待评价 ==============  -->
+          <view class='substitutePaymentCell' wx:if="{{ordershop.state==3}}">
+            <view class='shopNameInfor'>
+              <view class='shopNameInforLeft'>
+                <navigator  class='{{ordershop.sellerid==0?"isziying":""}}'>
+                    <image src='{{ordershop.storelogo}}'></image> {{ordershop.brand}} 
+                </navigator>
+              </view>
+
+               <view class='shopNameInforTime'>{{ordershop.creattime}}</view>
+            </view>
+
+            <view class='userGetGoods'>
+              <navigator url='../myOrderDetails/myOrderDetails?orderid={{ordershop.id}}&isstate=3' hover-class='none'>
+                <view class='userGetGoodsCell' wx:for="{{ordershop.goods}}" wx:for-item="goods">
+                  <image class='goodImg' src='{{goods.goodspic}}'></image>
+
+                  <view class='goodInformation'>
+                      <view class='goodName'>
+                      {{goods.goodsname}}
+                    </view>
+                    <view class='goodType'>
+                      {{goods.specname}}
+                    </view>
+                    <view class='goodNumber'>
+                      <view class='goodPrice'>￥{{goods.price}}</view>
+                      <view class='goodNum'>x{{goods.count}}</view>
+                    </view>
+                  </view>
+                  <view class='goodsBtmBox1'>
+                        <view class='pingjia'
+                          bindtap='pingjiaClick'
+                          data-goodsid="{{ordershop.id}}"
+                          data-orderid="{{ordershop.id}}"
+                          >评价</view>
+                  </view>
+                </view>
+              </navigator>
+            </view>
+
+            <view class='payInformation'>
+              <view class='payStatus'>
+                等待买家付款
+              </view>
+              <view class='payUserInfor'>共{{ordershop.goods.length}}件商品 合计:￥{{ordershop.priceall}}</view>
+            </view>
+
+            <view class='goodsBtmBox'>
+              <view class='pingjia'
+                    bindtap='pingjiaClick'
+                    data-goodsid="{{ordershop.id}}"
+                    data-orderid="{{ordershop.id}}"
+                    >评价</view>
+            </view>
+          </view>
+          <!--==============待评价 结束==============  -->
+          <!--==============已完成 ==============  -->
+          <view class='substitutePaymentCell' wx:if="{{ordershop.state==4}}">
+            <view class='shopNameInfor'>
+              <view class='shopNameInforLeft'>
+                <navigator  class='{{ordershop.sellerid==0?"isziying":""}}'>
+                   <image src='{{ordershop.storelogo}}'></image> {{ordershop.brand}} 
+                </navigator>
+              </view>
+
+               <view class='shopNameInforTime'>{{ordershop.creattime}}</view>
+            </view>
+
+            <view class='userGetGoods'>
+              <navigator url='../myOrderDetails/myOrderDetails?orderid={{ordershop.id}}&isstate=4' hover-class='none'>
+                 <view class='userGetGoodsCell' wx:for="{{ordershop.goods}}" wx:for-item="goods">
+                  <image class='goodImg' src='{{goods.goodspic}}'></image>
+
+                  <view class='goodInformation'>
+                      <view class='goodName'>
+                      {{goods.goodsname}}
+                    </view>
+                    <view class='goodType'>
+                      {{goods.specname}}
+                    </view>
+                    <view class='goodNumber'>
+                      <view class='goodPrice'>￥{{goods.price}}</view>
+                      <view class='goodNum'>x{{goods.count}}</view>
+                    </view>
+                  </view>
+                </view>
+              </navigator>
+            </view>
+
+            <view class='payInformation'>
+              <view class='payStatus'>
+                等待买家付款
+              </view>
+              <view class='payUserInfor'>共{{goods.length}}件商品 合计:￥{{ordershop.priceall}}</view>
+            </view>
+
+            <view class='goodsBtmBox'>
+ 
+
+              <view class='tixing' bindtap='showOrder'>查看订单</view>
+            </view>
+
+
+          </view>
+          <!--==============已完成 结束==============  -->
+          <!--==============已取消 ==============  -->
+          <view class='substitutePaymentCell' wx:if="{{ordershop.state==5}}">
+            <view class='shopNameInfor'>
+              <view class='shopNameInforLeft'>
+                <navigator  class='{{ordershop.sellerid==0?"isziying":""}}'>
+                    <image src='{{ordershop.storelogo}}'></image> {{ordershop.brand}} 
+                </navigator>
+              </view>
+
+              <view class='shopNameInforTime'>{{ordershop.creattime}}</view>
+            </view>
+
+            <view class='userGetGoods'>
+              <navigator url='../myOrderDetails/myOrderDetails?orderid={{ordershop.id}}&isstate=5' hover-class='none'>
+                 <view class='userGetGoodsCell' wx:for="{{ordershop.goods}}" wx:for-item="goods">
+                  <image class='goodImg' src='{{goods.goodspic}}'></image>
+
+                  <view class='goodInformation'>
+                      <view class='goodName'>
+                      {{goods.goodsname}}
+                    </view>
+                    <view class='goodType'>
+                      {{goods.specname}}
+                    </view>
+                    <view class='goodNumber'>
+                      <view class='goodPrice'>￥{{goods.price}}</view>
+                      <view class='goodNum'>x{{goods.count}}</view>
+                    </view>
+                  </view>
+                </view>
+              </navigator>
+            </view>
+            <view class='payInformation'>
+              <view class='payStatus'>
+                等待买家付款
+              </view>
+             <view class='payUserInfor'>共{{goods.length}}件商品 合计:￥{{ordershop.priceall}}</view>
+            </view>
+            <view class='goodsBtmBox'>
+       
+
+              <view class='tixing' 
+                    bindtap='deletOrder'  
+                    data-orderindx="{{orderindex}}" 
+                    data-orderid="{{ordershop.id}}"> 删除订单</view>
+            </view>
+          </view>
+          <!--==============已取消 结束==============  -->
+        </view>
+      </view>
+      <!--全部订单结束  -->
+
+
+    </view>
+  </view>
+
+  <!--订单内容列表  -->
+<view class='yangshiBox'>
+   <!--加载中样式  -->
+  <template is="loadNow" wx:if="{{isLoadding}}"></template>
+  <!--加载中样式  -->
+  <!--暂无数据  -->
+  <template is="isDataNull" wx:if="{{isHasShop}}"> </template>
+  <!--暂无数据  -->
+  <!--暂无数据  -->
+  <template is="noMoreCell" wx:if="{{isHasMoredata}}"> </template>
+  <!--暂无数据  -->
+</view>
+
+
+</view>

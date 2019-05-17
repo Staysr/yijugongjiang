@@ -1,0 +1,46 @@
+<!--pages/distributionCenList/distributionCenList.wxml-->
+<import src="../../utils/template.wxml" />
+<view class='container'>
+
+   <!--分销列表  -->
+
+    <view class='distributionListBox'>
+        <view class='distributionList'>
+                  <view class='distributionItem' wx:for="{{user}}">
+                         
+                         <view class='distributionItemLeft'>
+                             <view class='disUserName'>{{item.name}}  {{item.phone}} </view>
+                             <view class='disUserNes'>最新消费时间：{{item.taketime}} </view>
+                         </view>
+
+                         <view class='disUserCurreny'>
+                            累计获得宅币： <view class='myCurrentcolor'>{{item.pzhaibi}}个</view>
+                         </view>
+                  </view>
+                
+         
+                  <!------------------------------------  -->
+                  <!-- <view class='distributionItem'>
+                         
+                         <view class='distributionItemLeft'>
+                             <view class='disUserName'>王五  19976233436</view>
+                             <view class='disUserNes'>最新消费时间：2018-06-14 10:50 </view>
+                         </view>
+
+                         <view class='disUserCurreny'>
+                            累计获得宅币： <view class='myCurrentcolor'>1000个</view>
+                         </view>
+                  </view> -->
+                  <!------------------------------------  -->
+        </view>
+    </view>
+
+  <!--加载中样式  -->
+      <template is="loadNow"  wx:if="{{isLoadding}}"></template>
+<!--加载中样式  --> 
+ <!--暂无数据  -->
+  <template is="loadFail" wx:if="{{isHasData}}"> </template>
+ <!--暂无数据  -->
+   <!--分销列表结束  -->
+
+</view>

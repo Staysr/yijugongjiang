@@ -1,0 +1,4 @@
+<!--pages/VRAddress/VRAddress.wxml-->
+<view class='container'>
+  <web-view src="{{vradd}}"></web-view>
+</view>

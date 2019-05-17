@@ -1,0 +1,295 @@
+<!--个人中心pages/personalCenter/personalCenter.wxml-->
+<view class='container'>
+
+  <!--登录/注册  -->
+  <view class='loginOrRegist'>
+    <!--没有登录  -->
+    <view wx:if="{{isloginStatus==2}}" class='noLogin'>
+      <image class='noUserHearder' src='{{image}}login.png'></image>
+      <view class='noLoginOrRegist'>
+        <navigator url='../registrationPage/registrationPage' hover-class='none'>
+          登录/注册
+        </navigator>
+      </view>
+    </view>
+    <!--没有登录结束  -->
+    <!--登录状太  -->
+    <view wx:if="{{isloginStatus==1&&userInfomation}}" class='yesLogin'>
+      <navigator url='../perInformation/perInformation?userid={{userInfomation.id}}' hover-class='none'>
+        <image class='yesLoginHearder' src='{{userInfomation.pic==""?"{{image}}login.png":userInfomation.pic}}'></image>
+        <view class='yesLoginInfot'>
+          <view class='yesLoginInfotText'>
+            <view class='userName'>{{userInfomation.name}}</view>
+            <view class='userregion'>{{userInfomation.introduce}}</view>
+          </view>
+          <view class='yesLoginInfotText'>
+            <view class='userIphone'>电话：{{userInfomation.phone}}</view>
+            <view class='userOccupation'>平台需求：{{userInfomation.need==""?"未发布需求":userInfomation.need}}</view>
+          </view>
+        </view>
+
+        <image class='nextBtn' src='{{image}}nextb.png'></image>
+
+      </navigator>
+    </view>
+
+    <!--登录状太结束 -->
+  </view>
+  <!--登录/注册  -->
+
+
+
+  <!--我的订单  -->
+
+  <view class='myOrderBox'>
+    <view class='myOrder'>
+      <view class='myOrderTitle'>
+
+        <view class='myOrderText'>我的订单</view>
+        <navigator url='{{isloginStatus==2?"../registrationPage/registrationPage":"../myOrder/myOrder?showall=6"}}' hover-class='none' class='seeAll'>查看全部></navigator>
+      </view>
+      <!--我的订单跳转  -->
+      <view class='myOrderNav'>
+        <view class='myOrderNavCell'>
+          <navigator url='{{isloginStatus==2?"../registrationPage/registrationPage":"../myOrder/myOrder?showall=0"}}' hover-class='none'>
+            <image src='{{image}}unpaid.png'> </image>
+            <view class='myorderText'>待付款</view>
+          </navigator>
+        </view>
+        <!------------------------------------------  -->
+        <view class='myOrderNavCell'>
+          <navigator url='{{isloginStatus==2?"../registrationPage/registrationPage":"../myOrder/myOrder?showall=1"}}' hover-class='none'>
+            <image src='{{image}}del.png'> </image>
+            <view class='myorderText'>待发货</view>
+          </navigator>
+        </view>
+        <!------------------------------------------  -->
+        <view class='myOrderNavCell'>
+          <navigator url='{{isloginStatus==2?"../registrationPage/registrationPage":"../myOrder/myOrder?showall=2"}}' hover-class='none'>
+            <image src='{{image}}confirm.png'> </image>
+            <view class='myorderText'>待收货</view>
+          </navigator>
+        </view>
+        <!------------------------------------------  -->
+        <view class='myOrderNavCell'>
+          <navigator url='{{isloginStatus==2?"../registrationPage/registrationPage":"../myOrder/myOrder?showall=3"}}' hover-class='none'>
+            <image src='{{image}}eva.png'> </image>
+            <view class='myorderText'>待评价</view>
+          </navigator>
+        </view>
+
+        <!------------------------------------------  -->
+        <view class='myOrderNavCell'>
+          <navigator url='{{isloginStatus==2?"../registrationPage/registrationPage":"../myOrder/myOrder?showall=4"}}' hover-class='none'>
+            <image src='{{image}}com.png'> </image>
+            <view class='myorderText'>已完成</view>
+          </navigator>
+        </view>
+        <!------------------------------------------  -->
+        <view class='myOrderNavCell'>
+          <navigator url='{{isloginStatus==2?"../registrationPage/registrationPage":"../myOrder/myOrder?showall=5"}}' hover-class='none'>
+            <image src='{{image}}cancel.png'> </image>
+            <view class='myorderText'>已取消</view>
+          </navigator>
+        </view>
+      </view>
+      <!--我的订单跳转结束  -->
+    </view>
+  </view>
+
+  <!--我的订单 结束 -->
+
+  <!-- 个人中心列表 -->
+  <view class='personalCenterListBox'>
+    <view class='personalCenterList'>
+      <view class='personalCenterCell'>
+        <navigator url='{{isloginStatus==2?"../registrationPage/registrationPage":"../myAddress/myAddress?isSelect=1"}}' hover-class='none'>
+          <image class='listImg' src='{{image}}small01.png'> </image>
+          <view class='listText'>地址管理</view>
+          <image class='nexTbtn' src='{{image}}nextb.png'></image>
+        </navigator>
+      </view>
+      <!---------------------------------------------------------------------  -->
+      <view class='personalCenterCell' wx:if="{{isloginStatus==1 && clubid > 0}}">
+        <navigator url='../homeCurrency/homeCurrency' hover-class='none'>
+          <image class='listImg' src='{{image}}small010.png'></image>
+          <view class='listText'>宅币</view>
+          <image class='nexTbtn' src='{{image}}nextb.png'></image>
+
+        </navigator>
+      </view>
+      <!---------------------------------------------------------------------  -->
+      <view class='personalCenterCell' wx:if="{{isloginStatus==1 && clubid > 0}}">
+        <navigator url='../myBalance/myBalance' hover-class='none'>
+
+          <image class='listImg' src='{{image}}small11.png'>
+
+          </image>
+
+          <view class='listText'>余额</view>
+
+
+          <image class='nexTbtn' src='{{image}}nextb.png'></image>
+        </navigator>
+      </view>
+
+
+      <view class='personalCenterCell' wx:if="{{isloginStatus==1}}">
+        <navigator url="../myMessage/myMessage" hover-class='none'>
+          <image class='listImg' src='{{image}}small02.png'> </image>
+          <view class='listText'>
+            平台消息
+          </view>
+          <image class='nexTbtn' src='{{image}}nextb.png'></image>
+        </navigator>
+      </view>
+      <!---------------------------------------------------------------------  -->
+      <view class='personalCenterCell' wx:if="{{status == 2}}">
+        <navigator bindtap='bliub' hover-class="none">
+
+          <image class='listImg' src='{{image}}club.png'>
+
+          </image>
+
+          <view class='listText'>我的俱乐部</view>
+
+
+          <image class='nexTbtn' src='{{image}}nextb.png'></image>
+        </navigator>
+      </view>
+      <!---------------------------------------------------------------------  -->
+      <view class='personalCenterCell' wx:if="{{isloginStatus==1}}">
+        <navigator url="../distributionCenter/distributionCenter" hover-class='none'>
+          <image class='listImg' src='{{image}}small03.png'> </image>
+          <view class='listText'>
+            分销中心
+          </view>
+          <image class='nexTbtn' src='{{image}}nextb.png'></image>
+        </navigator>
+      </view>
+
+      <!---------------------------------------------------------------------  -->
+      <!-- <view class='personalCenterCell' wx:if="{{userInfomation.workclass != 1}}" >
+    <navigator url='{{isloginStatus==2?"../registrationPage/registrationPage":"../registerWorker/registerWorker"}}' hover-class='none'>
+            <image class='listImg' src='{{image}}small012.png'></image>
+            <view class='listText'>
+            申请注册
+            </view>
+            <image class='nexTbtn' src='{{image}}nextb.png'></image>
+    </navigator>    
+</view> -->
+      <!-------------------------------------申请注册二期修改---------------------------------------------- -->
+      <view class='personalCenterCell' wx:if="{{isloginStatus==1}}">
+        <navigator bindtap='wx_applyregister' hover-class="none">
+          <image class='listImg' src='{{image}}small012.png'></image>
+          <view class='listText'>
+            申请注册
+          </view>
+          <image class='nexTbtn' src='{{image}}nextb.png'></image>
+        </navigator>
+      </view>
+      <!---------------------------------------------------------------------  -->
+      <view class='personalCenterCell'>
+        <navigator url='{{isloginStatus==2?"../registrationPage/registrationPage":"../mulbuOccupancy/mulbuOccupancy"}}' hover-class='none'>
+
+          <image class='listImg' src='{{image}}small04.png'>
+
+          </image>
+
+          <view class='listText'>多商家品牌入住申请</view>
+
+
+          <image class='nexTbtn' src='{{image}}nextb.png'></image>
+        </navigator>
+      </view>
+      <!---------------------------------------------------------------------  -->
+      <view class='personalCenterCell'>
+        <navigator url='../platRegulation/platRegulation?status=1' hover-class='none'>
+
+          <image class='listImg' src='{{image}}small05.png'>
+
+          </image>
+
+          <view class='listText'>平台规则</view>
+
+
+          <image class='nexTbtn' src='{{image}}nextb.png'></image>
+        </navigator>
+      </view>
+      <!---------------------------------------------------------------------  -->
+      <view class='personalCenterCell'>
+        <navigator url='../platRegulation/platRegulation?status=2' hover-class='none'>
+
+          <image class='listImg' src='{{image}}small06.png'>
+
+          </image>
+
+          <view class='listText'>平台协议</view>
+
+
+          <image class='nexTbtn' src='{{image}}nextb.png'></image>
+        </navigator>
+      </view>
+      <!---------------------------------------------------------------------  -->
+      <view class='personalCenterCell'>
+        <navigator url='../platRegulation/platRegulation?status=3' hover-class='none'>
+
+          <image class='listImg' src='{{image}}small07.png'>
+
+          </image>
+
+          <view class='listText'>服务介绍</view>
+
+
+          <image class='nexTbtn' src='{{image}}nextb.png'></image>
+        </navigator>
+      </view>
+      <!---------------------------------------------------------------------  -->
+       <view class='personalCenterCell'>
+        <navigator url='../platRegulation/platRegulation?status=4' hover-class='none'>
+
+          <image class='listImg' src='../images/wechat.png'>
+
+          </image>
+
+          <view class='listText'>关注微信公众号</view>
+
+
+          <image class='nexTbtn' src='{{image}}nextb.png'></image>
+        </navigator>
+      </view>
+<!---------------------------------------------------------------------  -->
+
+    </view>
+
+  </view>
+
+
+  <!-- 个人中心列表结束 -->
+
+
+
+  <!--退出登录   -->
+  <view class='exitLogon' wx:if="{{isloginStatus==1}}" bindtap='exitLogon'>
+    <view class='exitLogonBtn'>退出登录</view>
+    <view class='zhanweiview'></view>
+  </view>
+  <!--退出登录结束   -->
+
+
+</view>
+
+<view class="cu-modal {{modalName=='RadioModal'?'show':''}}" bindtap='hideModal'>
+  <view class="cu-dialog" catchtap>
+    <radio-group class="block">
+      <view class='cu-list menu text-left' >
+        <view class='cu-item' wx:for="{{register}}"   wx:key>
+          <label    class='flex justify-between align-center flex-sub'>
+            <view class='flex-sub'>{{item.name}}</view>
+            <radio bindtap='wx_apply'   data-type="{{item.type}}"  class='round'></radio>
+          </label>
+        </view>
+      </view>
+    </radio-group>
+  </view>
+</view>

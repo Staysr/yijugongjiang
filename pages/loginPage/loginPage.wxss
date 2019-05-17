@@ -1,0 +1,105 @@
+/* pages/loginPage/loginPage.wxss */
+/* pages/registrationPage/registrationPage.wxss */
+
+.registraInformation
+{
+  padding: 0 20rpx;
+
+}
+.registraInforItem
+{
+  display: flex;
+  justify-content: space-between;
+  height: 130rpx;
+  align-items: flex-end;
+  position: relative;
+}
+.registraInrItemIphone
+{
+  width: 520rpx;
+  border-bottom: 2rpx solid #ddd;
+  font-size: 30rpx;
+  color: #333;
+  
+}
+
+.getCode
+{
+  width: 160rpx;
+  height: 75rpx;
+  background: #06881c;
+  color: #fff;
+  font-size: 26rpx;
+  text-align: center;
+  line-height: 75rpx; border-radius: 8rpx;
+  padding: 0
+}
+
+.registraInrItemOtphone
+{
+  width: 100%;
+  border-bottom: 2rpx solid #ddd;
+  font-size: 30rpx;
+    color: #333;
+}
+.canSee
+{
+  width: 50rpx;
+  height: 50rpx;
+
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.canSee image
+{
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0;
+left: 0;
+z-index: 333
+}
+.btnClickSubmit
+{
+  padding: 0 20rpx;
+}
+.registerInfo
+{
+  width: 100%;
+  height: 85rpx;
+  background: #06881c;
+  color: #fff;
+  font-size: 34rpx;
+  text-align: center;
+  line-height: 85rpx;
+  margin-top: 45rpx;
+}
+.isGologin
+{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20rpx;
+}
+
+.isGologin navigator
+{
+
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 26rpx;
+
+  letter-spacing: 3rpx;
+}
+.isLoginDuan
+{
+  color: #333;  line-height: 100rpx;
+  text-align: center;
+  font-size: 26rpx;
+
+  letter-spacing: 3rpx;
+}
+.remberPas
+{
+  color: #06881c;
+}

@@ -1,0 +1,203 @@
+<!--pages/personnel/personnel.wxml-->
+<import src="../../utils/template.wxml" />
+<scroll-view style='margin-bottom:50rpx;' bindscrolltolower="onReachBottom" scroll-y scroll-with-animation class="container" style='height: calc(100vh - 120rpx)'>
+  <view class='personnelImg {{type == 2?"desImg":"gongImg"}} '>
+    <image src='{{info.pic}}'></image>
+  </view>
+  <view>
+    <view class="titleClass paddingClass">个人简介</view>
+    <view class="bgClass paddingClass1 introduction">{{info.intro}}</view>
+  </view>
+  <view>
+    <view class="titleClass paddingClass">二维码</view>
+    <view class="bgClass paddingClass commentView">
+      <view class="qrcodeView">
+        <image class="qrcodeImg" bindtouchstart='timestart' bindtouchend='timeend' bindtap='saveImg' data-image="{{info.code}}" src="{{info.code}}"></image>
+      </view>
+      <view class="qrcodeText" style="margin-top:20rpx;">长按下载二维码</view>
+
+    </view>
+  </view>
+
+  <view>
+    <view class="titleClass paddingClass">案例</view>
+    <view class="bgClass paddingClass1">
+
+      <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
+        <view class="tab-item {{currentTab==index?'active':''}}" wx:for="{{wcase}}" data-current="{{index}}" data-type="case" bindtap="swichNav">{{item.name}}</view>
+      </scroll-view>
+
+      <view style="width: 100%;height: 280rpx;">
+
+
+        <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
+          <view class="caseitem" wx:for="{{wcase[currentTab].case}}" wx:for-item="items">
+            <view class="caseImg">
+              <image data-id='{{items.id}}' data-name="{{items.title}}" data-image="{{items.pic}}" bindtap='infotitle' mode='aspectFill' src="{{items.pic}}"></image>
+            </view>
+            <view class='text-deal' >{{items.title}}</view>
+          </view>
+
+
+        </scroll-view>
+
+      </view>
+    </view>
+
+  </view>
+
+  <view>
+    <view class="titleClass paddingClass">装修过的小区</view>
+    <view class="bgClass paddingClass1">
+      <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
+        <view class="tab-item {{x_currentTab==0?'active':''}}" data-current="0" data-type="xiaoqu" bindtap="swichNav">施工中</view>
+        <view class="tab-item {{x_currentTab==1?'active':''}}" data-current="1" data-type="xiaoqu" bindtap="swichNav">施工完</view>
+
+      </scroll-view>
+
+      <view style="width: 100%;height: 280rpx;">
+        <scroll-view hidden="{{x_currentTab==0 ? false:true}}" scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
+
+          <!-- <view class="caseitem" wx:for="{{slist}}">
+            <view class="caseImg">
+              <image bindtap='seeimages' mode='aspectFill' data-image="{{item.pic}}" src="{{item.pic}}"></image>
+            </view>
+            <view class='huanhang'>{{item.title}}</view>
+          </view> -->
+          <view class='caseitem' wx:for="{{slist}}">
+            <view class='caseImg'>
+              <image bindtap='seeimages' mode='aspectFill' data-content='{{item.content}}' data-image="{{item.title}}" src='{{item.pic}}'></image>
+            </view>
+            <view class='text-deal'>
+              {{item.title}}
+            </view>
+          </view>
+          
+        </scroll-view>
+
+        <scroll-view hidden="{{x_currentTab==1 ? false:true}}" scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
+          <!-- <view class="caseitem" wx:for="{{wlist}}">
+            <view class="caseImg">
+              <image bindtap='seeimages' mode='aspectFill' data-image="{{item.pic}}" src="{{item.pic}}"></image>
+            </view>
+            <view class='huanhang'>{{item.title}}</view>
+          </view> -->
+
+          <view class='caseitem' wx:for="{{wlist}}">
+            <view class='caseImg'>
+              <image bindtap='seeimages' mode='aspectFill' data-image="{{item.pic}}" src='{{item.pic}}'></image>
+            </view>
+            <view class='text-deal'>
+              {{item.title}}
+            </view>
+          </view>
+          
+        </scroll-view>
+
+      </view>
+    </view>
+
+  </view>
+
+
+  <view class="">
+    <view class="titleClass paddingClass"> 荣誉证书</view>
+
+    <view class="bgClass paddingClass1">
+
+      <view style="width: 100%;height: 280rpx;">
+
+
+        <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
+          <view class="caseitem" wx:for="{{honor}}">
+            <view class="caseImg">
+              <image bindtap='seeimages' mode='aspectFill' data-image="{{item.pic}}" src="{{item.pic}}"></image>
+            </view>
+            <view class='text-deal'>{{item.title}}</view>
+          </view>
+
+
+        </scroll-view>
+
+      </view>
+    </view>
+
+  </view>
+
+
+
+
+  <!-- <view class="bgClass paddingClass1">
+      <view style="width: 100%;height: 280rpx;">
+        <scroll-view scroll-x="true" class="scoll-h" scroll-left="{{scrollLeft}}">
+          <view class="caseitem" wx:for="{{honor}}">
+            <view class="caseImg">
+              <image bindtap='seeimages' mode='aspectFill' data-image="{{item.pic}}" src="{{item.pic}}"></image>
+            </view>
+            <view>{{item.title}}</view>
+          </view>
+
+        </scroll-view>
+      </view>
+    </view> -->
+  <!-- </view> -->
+
+  <view style=''>
+    <view class="titleClass paddingClass">发表评论</view>
+    <view class="pingl">
+      <view class='widff'>
+
+        <textarea class='textareall' value="{{searchinput}}" bindinput="getInput" minlength="{{min}}" maxlength="{{max}}" placeholder='请输入您的评'>
+
+
+        </textarea>
+        <text class="wx_ooloer">{{wx_ooloer|0}}/{{max}}</text>
+      </view>
+      <view class='bindtp'>
+        <buttion class='cu-btn round bg-olive' data-pingjia="{{pingjia}}" bindtap="pingjia">提交评价</buttion>
+      </view>
+      <view class="cu-list menu menu-avatar comment solids-top" style='margin-bottom:62px'>
+        <view class="cu-item" wx:for="{{comment}}" wx:key>
+          <view class="cu-avatar round" style="background-image:url({{item.head}});"></view>
+          <view class='content'>
+            <view class='text-grey' style='display:inline-block'>{{item.name}}</view>
+            <view class='time'>{{item.add_time}}</view>
+            <view class='text-gray text-content text-df'>
+              {{item.content}}
+            </view>
+          </view>
+        </view>
+        <!--加载中样式  -->
+        <template is="loadNow" wx:if="{{isLoadding}}"></template>
+        <!--加载中样式  -->
+        <!--暂无数据  -->
+        <template is="noMoreCell" wx:if="{{isHasData}}"> </template>
+        <!--暂无数据  -->
+
+      </view>
+
+
+    </view>
+
+  </view>
+
+
+</scroll-view>
+
+<view class="bottomView" style="font-size:30rpx;">
+  <button bindtap='onShareAppMessage' open-type="share" class="customView  textClass" style='background-color:#8ad497;display:inline-block;font-size:30rpx;height:100%;line-height:100rpx;'>
+    <icon class='icon-share'>
+
+    </icon>分享
+  </button>
+
+  <view class="customView textClass" data-phone="{{phone}}" bindtap="calling" style='background-color:#55b665;display:inline-block;'>
+    <icon class='icon-service'>
+
+    </icon>客服
+  </view>
+  <view class="carView" style='background-color:#06881c;color:#ffffff;' bindtap="shejis">{{gong}}</view>
+</view>
+<view class='btnbackHome' catchtap='backHome'>
+  <image src='{{image}}home.png'></image>
+</view>

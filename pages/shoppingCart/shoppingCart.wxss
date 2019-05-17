@@ -1,0 +1,364 @@
+/* pages/shoppingCart/shoppingCart.wxss */
+page
+{
+  background: #ebebeb;
+}
+.deleteIcon
+{
+  width: 40rpx;
+  height: 40rpx;
+
+}
+.shoppingCartDelect
+{
+
+  height: 90rpx;
+  background: #FFF;
+ 
+}
+.shoppingCartDelectBox
+{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; padding:  0 20rpx;
+  height: 90rpx;
+  box-sizing: border-box;
+  background: #fff;
+}
+.shopCarDele
+{
+  font-size: 26rpx;
+    display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: #fff;
+  z-index: 100
+}
+
+
+.shopIconLogo
+{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 8rpx;
+}
+.shopLogoNav
+{
+  height: 90rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 26rpx;
+}
+.isCellShopGoods
+{
+  width: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.isCellShopGoods image
+{
+  width: 40rpx;
+  height: 40rpx;
+}
+.shopCarGoodsCellTitle
+{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: #fff;
+  padding:  0 20rpx;
+}
+.shopCarGoodsBox
+{
+  padding: 20rpx 0;
+}
+
+.isShopGoodsItem
+{
+   width: 60rpx;
+}
+.shopGoodsInforCell
+{
+  height: 220rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding:  0 20rpx;
+  border-bottom: 2rpx solid #ddd;
+}
+.isShopGoodsItem image
+{
+width: 40rpx;
+height: 40rpx;
+}
+.shopGoodsInforMation
+{
+  width: calc(100% - 40rpx);
+  height: 195rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.goodImg
+{
+  width: 180rpx;
+  height: 180rpx;
+}
+.goodView
+{
+  width: calc(100% - 220rpx);
+  height: 165rpx;
+}
+
+.goodsName
+{
+  line-height: 40rpx;
+  font-size: 26rpx;
+  height: 80rpx;
+  overflow: hidden;
+  text-align: justify;
+  display: flex;
+  align-items: center;
+  
+}
+
+.goodsType
+{
+ line-height: 50rpx;
+ font-size: 26rpx;
+ color: #999;
+}
+.goodsPrice
+{
+line-height: 35rpx;
+color: #333;
+font-size: 22rpx;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.shopGoodsInforList
+{
+  background: #f8f8f8;
+}
+.shopCarGoodsList
+{
+  padding-bottom: 20rpx;
+  background: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+/*主容器*/
+.stepper {
+   width:166rpx; 
+  height:40rpx;
+
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+/*加号和减号*/
+.stepper text {
+  float: left;
+  width: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+}
+/*数值*/
+.stepper .inputDiv {
+  width: 70rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  float: left;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 22rpx;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+/*普通样式*/
+.stepper .normal {
+  color:black;
+}
+/*禁用样式*/
+.stepper .disable {
+  color: #ccc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.shopCarBottom
+{
+  height: 100rpx;
+  width: 100%;
+}
+
+.shopCarBottomBox
+{
+  width: 100%;
+  height: 100rpx;
+  background: #009944;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+.shopCarBot022
+{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.shopCarBot0301
+{
+  font-size: 30rpx;
+}
+.shopCarBot0302
+{
+  font-size: 30rpx;
+  height: 60rpx;
+width: 140rpx;
+  border-radius: 40rpx;
+  background: #fff;
+  text-align: center;
+  line-height: 60rpx;
+  color: #009944;
+  margin-left: 20rpx;
+
+}
+.shopCarBot0301
+{
+  color: #fff;
+
+}
+.iswidth
+{
+  width: 150rpx;
+  color: #fff;
+  font-size: 30rpx;
+  display: flex;
+  justify-content: flex-start;
+
+}
+.allSelect
+{
+margin-left: 10rpx;
+}
+
+
+.btnClickAlert
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.btnClickAlertTil
+{
+  line-height: 50rpx;
+  padding: 20rpx;
+  text-align: center;
+  font-size: 30rpx;
+  background: #FFF;  
+  
+}
+.btnClickAlertBtnBox
+{
+  height: 120rpx;
+  background: #eee;
+  display: flex;
+  justify-content: space-between;
+align-items: center;  padding:0 60rpx ;
+}
+.calceBtn
+{
+  width: 120rpx;
+  height: 60rpx;  font-size: 30rpx;
+  border: 2rpx solid #06881c;
+  text-align: center;
+  line-height: 60rpx;
+  border-radius: 30rpx;
+  color: #06881c;
+
+}
+.okBtn
+{
+    width: 120rpx;
+  height: 60rpx;
+  font-size: 30rpx;
+  border: 2rpx solid #999;  text-align: center;
+  line-height: 60rpx;
+    border-radius: 30rpx;
+}
+.btnClickAlertBox
+{
+  width: 450rpx;
+
+  box-sizing: border-box;
+  position: relative;
+  bottom: 100rpx;
+  border-radius: 8rpx;
+  overflow: hidden;
+}
+
+
+.isziying::after
+{
+  content: '自营';
+  background: #ff0000;
+  color: #fff;
+  font-size: 18rpx;
+  padding: 2rpx 10rpx;
+  border-radius: 10rpx;
+  margin-left: 10rpx;
+}
+
+.isDenglu
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 34rpx;
+  color: #333;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 999
+
+}

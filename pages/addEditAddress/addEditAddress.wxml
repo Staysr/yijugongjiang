@@ -1,0 +1,96 @@
+<!--pages/addEditAddress/addEditAddress.wxml-->
+<view class='container'>
+
+<form bindsubmit="formSubmit" >
+  <!--添加地址  -->
+
+  <view class='addEditAddressBox'>
+    <view class='addEditAddress'>
+      <view class='addEditAddressInfeo'>
+        <view class='addEditAddressInfeoCell'>
+          <view class='cellName'>收货人</view>
+          <input class='cellInput' name="name"  value='{{name}}' maxlength='4' placeholder-style="color:#999"
+
+ type='text' placeholder='请输入姓名'></input>
+        </view>
+        <view class='addEditAddressInfeoCell'>
+          <view class='cellName'>联系电话</view>
+          <input class='cellInput' name="phone" type='number' maxlength='12' value='{{phone}}' placeholder-style="color:#999"
+
+ type='text' placeholder='请输入联系电话'></input>
+        </view>
+        <view class='addEditAddressInfeoCell'>
+          <view class='cellName'>收货地址</view>
+          <view class='bindCitys placClassd '  wx:if="{{province =='请选择收货地址'}}"   bindtap="open">
+                {{province}}
+          </view>
+          <!-- {{province =="请选择收货地址"?"placClassd":"placClass"}} -->
+          <view class='bindCitys placClass' wx:if="{{province !='请选择收货地址'}}"   bindtap="open">
+                {{province}}-{{city}}-{{county}}
+          </view>
+          <input class='userid' name="userid" value='{{userid}}'></input>
+            <input class='userid' name="province" value='{{province}}'></input>
+              <input class='userid' name="city" value='{{city}}'></input>
+                <input class='userid' name="area" value='{{county}}'></input>
+                   <input class='userid' name="addressid" value='{{addressid}}'></input>
+                <input class='userid' name="state" value='{{isDefalutAddress==1 ?1:0}}'></input>
+        </view>
+        <view class='addEditAddressInfeoCell'>
+          <view class='cellName'>详细地址</view>
+          <input class='cellInput ' maxlength='15' name="address" value='{{address}}'   placeholder-style="color:#999"
+
+ type='text' placeholder='请输入详细地址'></input>
+        </view>
+        <view class='isSelectAddress {{isDefalutAddress == 1?"selectAddress":""}} ' bindtap='selectAddress'>
+          <image class='setUp01' src='{{image}}noAddre.png'></image>
+          <image class='setUp02' src='{{image}}seAddre.png'></image>
+          <view class='setDefalutText'>设置默认地址</view>
+        </view>
+      </view>
+
+
+<!--保存或者修改成功  -->
+       <view class='saveOrChange'>
+          <button></button>
+          <button class='saveOrChangeBtn'  form-type="submit">  保存 </button>
+           
+       </view>
+<!--保存或者修改成功  -->
+
+    </view>
+  </view>
+
+  <!--添加地址 结束  -->
+</form>
+
+
+
+
+
+
+
+  <!--城市联动.wxml-->
+  <view wx:if="{{condition}}" class="citypicker" catchtap="catchBind">
+    <picker-view indicator-style="height: 50px;" style="width: 100%; height: 250px;" value="{{value}}" bindchange="bindChange" class="citybody">
+      <picker-view-column>
+        <view wx:for="{{provinces}}" wx:key="item" style="line-height: 50px;padding-left:10px;text-align: center">{{item}}</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{citys}}" wx:key="item" style="line-height: 50px;padding-left:10px;text-align: center">{{item}}</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{countys}}" wx:key="item" style="line-height: 50px;padding-left:10px;text-align: center">{{item}}</view>
+      </picker-view-column>
+    </picker-view>
+    <view class="cityheader">
+      <view bindtap="openTrue" class="city-true">确定</view>
+    </view>
+  </view>
+  <!--城市联动.wxml-->
+
+
+
+
+
+
+</view>

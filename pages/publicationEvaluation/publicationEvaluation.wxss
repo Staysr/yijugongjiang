@@ -1,0 +1,167 @@
+/* pages/publicationEvaluation/publicationEvaluation.wxss */
+page
+{
+  background: #ebebeb;
+}
+.starCom
+{
+  width: 40rpx;
+  height: 40rpx;
+  position: relative;
+}
+.starCom image
+{
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  top: 0;
+  left: 0
+}
+.startComsBox
+{
+  display: flex;
+  justify-content: flex-start;
+}
+.publiEvalComment
+{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 90rpx;
+  padding: 0 20rpx;
+  font-size: 26rpx; 
+}
+.startComsBox
+{
+  margin-left: 30rpx
+}
+.starCom
+{
+  margin-right: 20rpx;
+}
+.publiEvalMessage
+{
+ padding: 0 20rpx;
+}
+.publiEvalTextarea
+{
+  padding: 20rpx 0;
+
+  height: 180rpx;
+  line-height: 45rpx;
+ 
+  width: 100%;
+  font-size: 26rpx;
+  text-align: justify;
+  }
+
+  .userUpLoadItem
+  {
+    width: 220rpx;
+    height: 220rpx;
+    border: 1px dashed #ddd;
+    font-size: 26rpx;
+    text-align: center;
+   position: relative;
+   display: block;
+   box-sizing: border-box;
+   margin-bottom: 20rpx;
+  }
+  .imgDefalutBox
+  {
+    width: 100%;
+    height: 100%;
+    display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  }
+.showImgUser
+{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9
+}
+.userUploadImg
+{
+  padding: 0 20rpx;
+}
+
+.userUpLoadList
+{
+  justify-content: flex-start;
+  display: flex;
+  flex-wrap: wrap;  border-bottom: 2rpx solid #ddd;
+  padding: 10rpx 0;
+  
+}
+.userUpLoadItem
+{
+  margin-right: calc((100% - 660rpx ) / 2)
+} 
+.userUpLoadItem:nth-child(3n)
+{
+  margin-right: 0;
+}
+.closeBtn
+{
+position: absolute;
+top: -35rpx;
+right: -20rpx;
+color: #fff;
+width: 70rpx;
+height: 70rpx;
+ background: #fff; 
+line-height: 70rpx;
+text-align: center;
+ border-radius: 50%; 
+z-index: 10;
+}
+.closeBtn image
+{
+  width: 100%;
+  height: 100%;
+}
+.jiyu
+{
+ font-size: 26rpx;
+ height: 80rpx;
+ line-height: 80rpx;
+ padding: 0 20rpx;
+ color: #999;
+}
+.tijiao
+{
+  padding:  0 20rpx;
+}
+.tijiaoBtn
+{
+  background: #06881c;
+  color: #fff;
+  font-size: 26rpx;
+  text-align: center;
+  line-height: 80rpx;
+  height: 80rpx;
+  margin-top: 40rpx;
+
+}
+.publiEvalContainer
+{
+  background: #fff;
+
+}
+.campng
+{
+  width: 64rpx;
+  height: 64rpx;
+}
+.camtex
+{
+  width: 100%;
+  height: 60rpx;
+  line-height:60rpx;
+}

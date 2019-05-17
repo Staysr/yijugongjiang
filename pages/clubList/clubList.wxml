@@ -1,0 +1,68 @@
+<!--pages/clubList/clubList.wxml-->
+<import src="../../utils/template.wxml" />
+<wxs module="filter" src="../../utils/filter.wxs"></wxs>
+
+<view class='container'>
+<view  class='load-progress {{loadProgress!=0?"show":"hide"}}'>
+  <view class='load-progress-bar bg-green' style="transform: translate3d(-{{100-loadProgress}}%, 0px, 0px);"></view>
+  <view class='load-progress-spinner text-green'></view>
+</view>
+
+  <!--信息  -->
+  <view class='workInformation'>
+  
+    <view class='workInformationBox'>
+
+      <block wx:for="{{clublist}}" wx:key="{{index}}">
+        <view class='workInformationCell'>
+
+          <navigator url='../clubdetails/clubdetails?id={{item.id}}&name={{name}}' hover-class='none' hover-class='none'>
+            <view class='workinForSection' style='height:100%'>
+              <view class="cu-avatar round margin-left" style="background-image:url({{item.head}});margin-left:0rpx;"></view>
+              <view class='workinForItem'>
+                {{item.cname}}
+              </view>
+            </view>
+            </navigator>
+            <view class='workinForSection'>
+              <view class='workinForItem1'>
+                电话：{{item.phone}}
+              </view>
+              <button data-phone='{{item.phone}}' bindtap='phone' class='cu-btn round bg-green round shadow'>一键拨打</button>
+            </view>
+            <view class='workinForText1'style='width:99%;padding:0px;float:left;margin-left:12rpx;margin-top:12rpx;'>
+              <!-- <view class='workinForItem1' style='width:25%;padding:0px;float:left;'>
+                工种：{{item.clubname}}
+              </view> -->
+              <view class='workinForItem1' style='width:45%;padding:0px;float:left;'>
+                价格区间：{{item.price_range}}
+              </view>
+
+              <view class='workinForItem1' >
+                从业年龄：{{item.workyear}}
+              </view>
+            </view>
+
+            <view class='workinForText1'>
+              <image src='{{item.pic}}' data-img="{{item.pic}}" bindtap='images' style='height:144px;width:100%;margin-top:26px;'></image>
+            </view>
+            <view class='workinForText'>
+       {{item.content}}
+            </view>
+        </view>
+      </block>
+        <view class='whiteview' style=''>
+        </view>
+       <view class='bottomview' style='margin:20rpx' wx:if="{{status == 0}}">
+       <button class='cu-btn bg-grey lg' bindtap='releaseinformation' style='background-color:rgb(18,120,22);margin-top:20px;width:90%;margin-left:35rpx'>+发布信息</button>
+       </view>
+      <!--加载中样式  -->
+      <template is="loadNow" wx:if="{{isLoadding}}"></template>
+      <!--加载中样式  -->
+      <!--暂无数据  -->
+      <!-- <template is="isDataNull" wx:if="{{isHasData}}"> </template> -->
+      <!--暂无数据  -->
+    </view>
+  </view>
+  <!--信息展示  -->
+</view>

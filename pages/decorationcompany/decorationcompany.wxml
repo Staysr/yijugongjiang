@@ -1,0 +1,86 @@
+<!--pages/decorationcompany/decorationcompany.wxml-->
+<!-- <text>pages/decorationcompany/decorationcompany.wxml</text> -->
+<import src="../../utils/template.wxml" />
+<view class='classifiedGoodsSort'>
+  <view class='classifiedGoodsSortList'>
+    <view class='classifiedGoodsSortCell' bindtap='decoration' data-sortindex='1'>
+      <view>
+        默认
+      </view>
+
+    </view>
+    <!------------------------------------------------------  -->
+    <view class='classifiedGoodsSortCell' bindtap='shopGoodsSort' data-sortindex='2'>
+      <view>
+        口碑
+      </view>
+
+      <view class='sortImagesBoxList {{isWhoEle==2?isWhoEleTop?"isWhoEleTop":"isWhoEleBtm":""}}'>
+        <view class='sortImagesBox1'>
+          <image class='im01' src='{{image}}up-normal.png'></image>
+          <image class='im02' src='{{image}}up-selected.png'></image>
+        </view>
+        <view class='sortImagesBox2'>
+          <image class='im03' src='{{image}}down-normal.png'></image>
+          <image class='im04' src='{{image}}down-selected.png'></image>
+        </view>
+      </view>
+
+    </view>
+
+    <!----------------------------------------------------  -->
+    <view class='classifiedGoodsSortCell' bindtap='shopGoodsSort' data-sortindex='3'>
+      <view>
+        成交量
+      </view>
+
+      <view class='sortImagesBoxList {{isWhoEle==3?isWhoEleTop?"isWhoEleTop":"isWhoEleBtm":""}}'>
+        <view class='sortImagesBox1'>
+          <image class='im01' src='{{image}}up-normal.png'></image>
+          <image class='im02' src='{{image}}up-selected.png'></image>
+        </view>
+        <view class='sortImagesBox2'>
+          <image class='im03' src='{{image}}down-normal.png'></image>
+          <image class='im04' src='{{image}}down-selected.png'></image>
+        </view>
+      </view>
+
+    </view>
+    <!----------------------------------------------------  -->
+  </view>
+</view>
+<view class='searchBox'></view>
+
+<view class="cu-list menu menu-avatar">
+  <view class="cu-item" bindtap='wx_details' data-type="1" data-id='{{item.id}}'data-name="{{item.name}}" wx:for="{{companylist}}" wx:key>
+    <view class="cu-avatar round lg" style="background-image:url({{item.head}}); margin-top:12rpx;"></view>
+    <view class='content'>
+      <view class='text-grey' style="float:left;margin-left: 20rpx;color:black; overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;width:64px;">{{item.name}}</view>
+      <view class='cu-tag bg-green' style="margin-left: 25rpx;width:107rpx;height:40rpx; ">已认证</view>
+      <view class='cu-tag bg-red' style="margin-left: 25rpx;width:107rpx;height:40rpx; " wx:if="{{item.strict==1}}">严选</view>
+
+      <view class='text-gray text-sm' style="margin-left: 20rpx">
+        口碑评分:{{item.praise}} 口碑评分:{{item.turnover}}</view>
+
+    </view>
+  </view>
+</view>
+
+
+
+
+<!-- <view class='pladiv'></view> -->
+
+<!--加载中样式  -->
+<!-- <view style='text-align:center;font-size:30rpx;' wx:if="{{isLoadding}}">没有更多了.....</view> -->
+<!--加载中样式  -->
+<!--暂无数据  -->
+<!-- <view  style='text-align:center;font-size:30rpx;' wx:if="{{isHasData}}">没有更多了.....</view> -->
+<!--暂无数据  -->
+
+<!--加载中样式  -->
+<template is="loadNow" wx:if="{{isLoadding}}"></template>
+<!--加载中样式  -->
+<!--暂无数据  -->
+<template is="noMoreCell" wx:if="{{isHasData}}"> </template>
+<!--暂无数据  -->

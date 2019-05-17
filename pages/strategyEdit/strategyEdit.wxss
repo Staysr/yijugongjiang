@@ -1,0 +1,36 @@
+/* pages/strategyEdit/strategyEdit.wxss */
+.container{
+  width: 100%;
+  height: 100%;
+}
+.title_wx{
+  font-size: 50rpx;
+  color:rgb(74,74,74);
+  margin-left: 47rpx;
+  margin-top:20rpx;
+
+}
+.add_time{
+  font-size:28rpx;
+margin-left:53rpx;
+color:rgb(135,135,135);
+margin-top:20rpx;
+
+}
+.pageview{
+  margin-left:96rpx;
+
+}
+.content{
+width:90%;
+height:100%;
+margin:33rpx;
+
+}
+.bottomview{
+  position:fixed;
+  bottom:3%;
+  width:100%;
+  left:0;
+
+}

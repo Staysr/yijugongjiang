@@ -1,0 +1,89 @@
+<!--pages/myBalance/myBalance.wxml-->
+<import src="../../utils/template.wxml" />
+<view class='container' wx:if="{{money}}">
+
+  <view class='myblanceZhawei'></view>
+
+  <view class='myBalanceBox'>
+    <view class='myBalance'>
+      <!--余额信息  -->
+      <view class='myBalanceMoneyBox'>
+        <view class='myBalanceMoneyBoxWhite'>
+          <view class='myBalanceMoneyLeft'>
+            <view class='myBalanceTitle'>我的余额(￥)</view>
+            <view class='myBalanceMoney'>{{money}}</view>
+          </view>
+          <view class='myBalanceMoneyRight'>
+            <navigator url='../preBalance/preBalance' hover-class='none' class='myBalanceGetMoney'>余额提现</navigator>
+          </view>
+        </view>
+      </view>
+      <!--余额信息 结束  -->
+
+      <!--余额收入明细 和余额支出明细  -->
+
+      <view class='balanceOperation'>
+        <!--余额明细标题  -->
+        <view class='balanceOperationTiBox'>
+          <view class='balanceOperationName {{activeLineShow?"activeLineShow":""}}' bindtap='changeBalanceStatus1'>
+            余额收入记录
+            <view class='greenLine'></view>
+          </view>
+          <view class='balanceOperationName {{!activeLineShow?"activeLineShow":""}}' bindtap='changeBalanceStatus2'>
+            余额支出记录
+            <view class='greenLine'></view>
+          </view>
+        </view>
+        <!--余额明细标题 结束 -->
+        <!-- 余额明细内容 -->
+        <view class='balanceOperationContent'>
+
+          <!--收入记录列表  -->
+          <view class='balanceOperationPush' wx:if="{{activeLineShow}}">
+            <view class='balanceOperationPushCell' wx:for="{{incomePush}}">
+              <view class='balanceOperationPushCellLeft'>
+
+                <view class="push01">{{item.state==2?"购买商品返利":item.state==3?"币转余额":item.state==4?"取消订单返":"提现失败退还"}}</view>
+                <view class="push02">订单编号：{{item.ordernum}}</view>
+                <view class="push03">{{item.add_time}}</view>
+              </view>
+              <view class='balanceOperationPushCellLeft'>
+                +{{item.money}}
+              </view>
+            </view>
+            <!------------------------------------------  -->
+
+              <!--加载中样式  -->
+              <template is="loadNow"  wx:if="{{isShopLoaddingPush}}"></template>
+              <template is="isDataNull"  wx:if="{{isFristPush}}"></template>
+              <template is="noMoreCell"  wx:if="{{!isShopLoaddingPush&&incomePush.length>0}}"></template>
+              <!--加载中样式  --> 
+          </view>
+          <!--收入记录列表 结束  -->
+          <!--支出列表  -->
+          <view class='balanceOperationPush' wx:if="{{!activeLineShow}}">
+            <view class='balanceOperationPushCell' wx:for="{{incomePop}}">
+              <view class='balanceOperationPushCellLeft'>
+                <view class="push01">{{item.state==0?"提现":"购物消费"}}</view>
+                <view class="push02">订单编号：{{item.ordernum}}</view>
+                <view class="push03">{{item.add_time}}</view>
+              </view>
+              <view class='balanceOperationPushCellLeft'>
+                -{{item.money}}
+              </view>
+            </view>
+            <!-----------------------------------------------------  -->
+              <!--加载中样式  -->
+              <!-- <template is="loadNow"   style="margin-top:411rpx;" wx:if="{{isShopLoaddingPop}}"></template>
+                   <template is="isDataNull" style="margin-top:411rpx;" wx:if="{{isFristPop}}"></template>
+              <template is="noMoreCell"   style="margin-top:411rpx;" wx:if="{{!isShopLoaddingPop&&incomePop.length>0}}"></template> -->
+              <!--加载中样式  --> 
+          </view>
+          <!--支出列表 结束 -->
+        </view>
+        <!-- 余额明细内容 结束-->
+      </view>
+      <!--余额收入明细 和余额支出明细 结束 -->
+    </view>
+  </view>
+</view>
